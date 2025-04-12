@@ -7,7 +7,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getLocale } from "next-intl/server";
 
 import Navbar from "@/components/navbar/NavbarWrapper";
-import { fontSans } from "@/config/fonts";
+import { fontCalistoga, fontMono, fontSans } from "@/config/fonts";
 import { siteConfig } from "@/config/site";
 import { Providers } from "@/providers/providers";
 
@@ -42,6 +42,8 @@ export default async function RootLayout({
 				className={clsx(
 					"bg-background font-sans antialiased",
 					fontSans.variable,
+					fontMono.variable,
+					fontCalistoga.variable,
 				)}
 			>
 				<NextIntlClientProvider>

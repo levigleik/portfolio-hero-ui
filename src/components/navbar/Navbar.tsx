@@ -92,22 +92,26 @@ export default function NavbarComp({ logo, menu }: NavbarProps) {
 			</NavbarContent>
 
 			<Drawer
-				closeButton={
-					<Button isIconOnly variant="bordered">
-						<FaTimes size={24} />
-					</Button>
-				}
+				hideCloseButton
+				// closeButton={
+				// 	<Button isIconOnly variant="bordered">
+				// 		<FaTimes size={16} />
+				// 	</Button>
+				// }
 				classNames={{
 					closeButton: "top-6 right-6",
 				}}
 				isOpen={isMenuOpen}
 				onOpenChange={setIsMenuOpen}
+				size="xs"
 			>
-				<DrawerContent className="p-6">
+				<DrawerContent className="p-6 bg-background">
 					{(onClose) => (
 						<>
 							<DrawerHeader className="flex flex-col gap-1">
-								<NavbarItem>Levi Gleik</NavbarItem>
+								<NavbarItem className="text-4xl font-calistoga tracking-wide">
+									Levi Gleik
+								</NavbarItem>
 							</DrawerHeader>
 							<DrawerBody>
 								{menu.map((item, index) => (
@@ -117,15 +121,14 @@ export default function NavbarComp({ logo, menu }: NavbarProps) {
 											color={path === item.url ? "primary" : "foreground"}
 											href={item.url}
 											size="lg"
+											onPress={onClose}
 										>
 											{item.title}
 										</Link>
 									</NavbarItem>
 								))}
-								<NavbarItem className="hidden sm:flex">
+								<NavbarItem className="flex gap-2 items-center">
 									<LanguageSelector />
-								</NavbarItem>
-								<NavbarItem>
 									<ThemeSelector />
 								</NavbarItem>
 							</DrawerBody>
