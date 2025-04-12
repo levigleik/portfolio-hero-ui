@@ -1,11 +1,12 @@
 "use client";
 import { Tab, Tabs } from "@heroui/tabs";
+import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import AboutSection from "../components/AboutSection";
 import ProjectSection from "../components/ProjectSection";
 import TabExperience from "../components/TabExperience";
 import TabFormation from "../components/TabFormation";
-import { motion } from "framer-motion";
+
 export default function HomeComp() {
 	const t = useTranslations("HomePage");
 	return (

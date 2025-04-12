@@ -48,9 +48,11 @@ export default async function RootLayout({
 			>
 				<NextIntlClientProvider>
 					<Providers>
-						<div className="container mx-auto flex max-w-3xl flex-col gap-8 px-2 py-6 sm:px-6 md:px-8 ">
+						<div className="container mx-auto flex max-w-5xl flex-col gap-8 px-2 py-6 sm:px-6 md:px-8 ">
 							<Navbar />
-							{children}
+							<main className="mt-4 flex flex-col items-center justify-center gap-4 font-sans lg:mt-10">
+								{children}
+							</main>
 						</div>
 					</Providers>
 				</NextIntlClientProvider>
