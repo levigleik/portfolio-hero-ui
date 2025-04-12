@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	/* * {
+		@apply border;
+	} */
+	*::-webkit-scrollbar {
+		width: 6px;
+	}
+	*::-webkit-scrollbar-thumb {
+		background: var(--sb-thumb-color);
+		border-radius: 7px;
+	}
+	@supports not selector(::-webkit-scrollbar) {
+		body {
+			scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+		}
+	}
+	body {
+		@apply bg-background text-foreground w-screen overflow-x-hidden font-sans;
+	}
+}

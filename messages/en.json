@@ -1,0 +1,106 @@
+{
+	"HomePage": {
+		"front-end-developer": "Front-end Developer",
+		"experience": "Experience",
+		"formation": "Formation",
+		"projects": "Projects",
+		"resume": "Resume"
+	},
+	"TabExperience": {
+		"macedo-soft-house": {
+			"title": "Macedo Soft House",
+			"subtitle": "Front-End Developer",
+			"date": "January 2023 - January 2025",
+			"responsibilities": {
+				"1": "Development of web applications using React.js",
+				"2": "Integration with RESTful APIs in NodeJS"
+			}
+		},
+		"greendot": {
+			"title": "Greendot",
+			"subtitle": "Front-End Developer",
+			"date": "May 2020 - December 2022",
+			"responsibilities": {
+				"1": "Developed a system to schedule, organize, and visualize internal company meetings",
+				"2": "Created applications to improve the accuracy of services provided",
+				"3": "Deployed on AWS using S3, EC2, Elastic Beanstalk, among others"
+			}
+		}
+	},
+	"TabFormation": {
+		"farias-brito": {
+			"title": "Centro Universitário Farias Brito",
+			"subtitle": "Bachelor in Computer Science",
+			"date": "Completed in 2024",
+			"responsibilities": {
+				"1": "Data science",
+				"2": "Programming paradigms",
+				"3": "Calculus"
+			}
+		},
+		"icaro": {
+			"title": "Ícaro de Sousa Moreira",
+			"subtitle": "Computer Networks",
+			"date": "Completed in 2016",
+			"responsibilities": {
+				"1": "Computer networks",
+				"2": "Information security",
+				"3": "Object-oriented programming"
+			}
+		}
+	},
+	"Projects": {
+		"project-1": {
+			"title": "Project 1",
+			"description": "Description of project 1",
+			"technologies": {
+				"1": "React",
+				"2": "Node.js",
+				"3": "Express"
+			}
+		},
+		"project-2": {
+			"title": "Project 2",
+			"description": "Description of project 2",
+			"technologies": {
+				"1": "JavaScript",
+				"2": "HTML",
+				"3": "CSS"
+			}
+		},
+		"project-3": {
+			"title": "Project 3",
+			"description": "Description of project 3",
+			"technologies": {
+				"1": "Python",
+				"2": "Django",
+				"3": "PostgreSQL"
+			}
+		}
+	},
+	"Navbar": {
+		"home": "Home",
+		"contact": "Contact",
+		"projects": "Projects"
+	},
+	"ErrorPage": {
+		"error": "error",
+		"something-went-wrong": "Something went wrong",
+		"refresh": "Refresh"
+	},
+	"NotFoundPage": {
+		"error-404": "Error 404",
+		"page-not-found": "Page not found",
+		"go-back": "Go back to home"
+	},
+	"ThemeSelector": {
+		"change-theme": "Change theme",
+		"dark-theme": "Dark theme",
+		"light-theme": "Light theme"
+	},
+	"LanguageSelector": {
+		"select-language": "Select language",
+		"english": "English",
+		"portuguese": "Portuguese"
+	}
+}

@@ -1,0 +1,106 @@
+{
+	"HomePage": {
+		"front-end-developer": "Desenvolvedor Front-end",
+		"experience": "Experiência",
+		"formation": "Formação",
+		"projects": "Projetos",
+		"resume": "Currículo"
+	},
+	"TabExperience": {
+		"macedo-soft-house": {
+			"title": "Macedo Soft House",
+			"subtitle": "Desenvolvedor Front-End",
+			"date": "Janeiro 2023 - Janeiro 2025",
+			"responsibilities": {
+				"1": "Desenvolvimento de aplicações web utilizando React.js",
+				"2": "Integração com APIs RESTful em NodeJS"
+			}
+		},
+		"greendot": {
+			"title": "Greendot",
+			"subtitle": "Desenvolvedor Front-End",
+			"date": "Maio 2020 - Dezembro 2022",
+			"responsibilities": {
+				"1": "Desenvolvi sistema para marcar, organizar e visualizar reuniões internas da empresa",
+				"2": "Criação de aplicações para facilitar a precisão dos serviços prestados",
+				"3": "Deploy na AWS com S3, EC2, Elastic Beanstalk, entre outros"
+			}
+		}
+	},
+	"TabFormation": {
+		"farias-brito": {
+			"title": "Centro Universitário Farias Brito",
+			"subtitle": "Bacharel em Ciência da Computação",
+			"date": "Concluído em 2024",
+			"responsibilities": {
+				"1": "Ciência de dados",
+				"2": "Paradigmas da programação",
+				"3": "Cálculos"
+			}
+		},
+		"icaro": {
+			"title": "Ícaro de Sousa Moreira",
+			"subtitle": "Redes de computadores",
+			"date": "Concluído em 2016",
+			"responsibilities": {
+				"1": "Redes de computadores",
+				"2": "Segurança da informação",
+				"3": "Programação Orientada a Objeto"
+			}
+		}
+	},
+	"Projects": {
+		"project-1": {
+			"title": "Projeto 1",
+			"description": "Descrição do projeto 1",
+			"technologies": {
+				"1": "React",
+				"2": "Node.js",
+				"3": "Express"
+			}
+		},
+		"project-2": {
+			"title": "Projeto 2",
+			"description": "Descrição do projeto 2",
+			"technologies": {
+				"1": "JavaScript",
+				"2": "HTML",
+				"3": "CSS"
+			}
+		},
+		"project-3": {
+			"title": "Projeto 3",
+			"description": "Descrição do projeto 3",
+			"technologies": {
+				"1": "Python",
+				"2": "Django",
+				"3": "PostgreSQL"
+			}
+		}
+	},
+	"Navbar": {
+		"home": "Início",
+		"contact": "Contato",
+		"projects": "Projetos"
+	},
+	"ErrorPage": {
+		"error": "erro",
+		"something-went-wrong": "Algo deu errado",
+		"refresh": "Atualizar"
+	},
+	"NotFoundPage": {
+		"error-404": "Erro 404",
+		"page-not-found": "Página não encontrada",
+		"go-back": "Voltar para a página inicial"
+	},
+	"ThemeSelector": {
+		"change-theme": "Trocar tema",
+		"dark-theme": "Tema escuro",
+		"light-theme": "Tema claro"
+	},
+	"LanguageSelector": {
+		"select-language": "Selecionar idioma",
+		"english": "Inglês",
+		"portuguese": "Português"
+	}
+}
