@@ -50,32 +50,19 @@
 		}
 	},
 	"Projects": {
+		"projects": "Projects",
+		"view-more": "view more",
 		"project-1": {
-			"title": "Project 1",
-			"description": "Description of project 1",
-			"technologies": {
-				"1": "React",
-				"2": "Node.js",
-				"3": "Express"
-			}
+			"title": "Chrono Study",
+			"description": "Organize your studies"
 		},
 		"project-2": {
 			"title": "Project 2",
-			"description": "Description of project 2",
-			"technologies": {
-				"1": "JavaScript",
-				"2": "HTML",
-				"3": "CSS"
-			}
+			"description": "Description of project 2"
 		},
 		"project-3": {
 			"title": "Project 3",
-			"description": "Description of project 3",
-			"technologies": {
-				"1": "Python",
-				"2": "Django",
-				"3": "PostgreSQL"
-			}
+			"description": "Description of project 3"
 		}
 	},
 	"Navbar": {

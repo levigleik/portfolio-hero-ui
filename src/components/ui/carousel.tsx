@@ -245,7 +245,7 @@ const CarouselNext = React.forwardRef<
 				className,
 			)}
 			disabled={!canScrollNext}
-			onClick={scrollNext}
+			onPress={scrollNext}
 			{...props}
 		>
 			<ArrowRight className="h-4 w-4" />

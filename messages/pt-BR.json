@@ -50,32 +50,19 @@
 		}
 	},
 	"Projects": {
+		"projects": "Projetos",
+		"view-more": "ver mais",
 		"project-1": {
-			"title": "Projeto 1",
-			"description": "Descrição do projeto 1",
-			"technologies": {
-				"1": "React",
-				"2": "Node.js",
-				"3": "Express"
-			}
+			"title": "Chrono Study",
+			"description": "Ajuda a cronometrar e organizar os estudos. Pode adicionar disciplinas e verificar estatísticas de estudos por gráficos e tabelas."
 		},
 		"project-2": {
-			"title": "Projeto 2",
-			"description": "Descrição do projeto 2",
-			"technologies": {
-				"1": "JavaScript",
-				"2": "HTML",
-				"3": "CSS"
-			}
+			"title": "Saulo Imóveis",
+			"description": "Desenvolvido para divulgação dos melhores imóveis de luxo de Fortaleza."
 		},
 		"project-3": {
-			"title": "Projeto 3",
-			"description": "Descrição do projeto 3",
-			"technologies": {
-				"1": "Python",
-				"2": "Django",
-				"3": "PostgreSQL"
-			}
+			"title": "ServRent",
+			"description": "Possibilita a compra e aluguel de carros."
 		}
 	},
 	"Navbar": {
