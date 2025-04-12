@@ -6,7 +6,7 @@ export default function TabFormation() {
 	const t = useTranslations("TabFormation");
 	return (
 		<div className="flex flex-col gap-4 p-4">
-			<Card className="gap-0 p-4">
+			<Card className="gap-0 p-4 bg-primary-50/20" shadow="sm">
 				<CardBody>
 					<span className="text-muted-foreground text-sm">
 						{t("farias-brito.date")}
@@ -22,7 +22,7 @@ export default function TabFormation() {
 					</ul>
 				</CardBody>
 			</Card>
-			<Card className="gap-0 p-4">
+			<Card className="gap-0 p-4 bg-primary-50/20" shadow="sm">
 				<CardBody>
 					<span className="text-muted-foreground text-sm">
 						{t("icaro.date")}

@@ -1,7 +1,6 @@
 import "@/styles/globals.css";
-import "flag-icons/css/flag-icons.min.css";
-import { Link } from "@heroui/link";
 import clsx from "clsx";
+import "flag-icons/css/flag-icons.min.css";
 import type { Metadata, Viewport } from "next";
 import { NextIntlClientProvider } from "next-intl";
 
@@ -41,15 +40,15 @@ export default async function RootLayout({
 			<head />
 			<body
 				className={clsx(
-					"min-h-screen bg-background font-sans antialiased",
+					"bg-background font-sans antialiased",
 					fontSans.variable,
 				)}
 			>
 				<NextIntlClientProvider>
 					<Providers>
-						<div className="container mx-auto flex h-screen max-w-3xl flex-col gap-8 px-2 py-6 sm:px-6 md:px-8">
+						<div className="container mx-auto flex max-w-3xl flex-col gap-8 px-2 py-6 sm:px-6 md:px-8 ">
 							<Navbar />
-							<main>{children}</main>
+							{children}
 						</div>
 					</Providers>
 				</NextIntlClientProvider>

@@ -1,19 +1,20 @@
 "use client";
 import { Button } from "@heroui/button";
 import { cn } from "@heroui/theme";
+import { useIsSSR } from "@react-aria/ssr";
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 
 export default function ThemeSelector({ className }: { className?: string }) {
 	const { setTheme, theme } = useTheme();
-	const [mounted, setMounted] = useState(false);
+	// const [mounted, setMounted] = useState(false);
 	const t = useTranslations("ThemeSelector");
+	const isSSR = useIsSSR();
 
-	useEffect(() => {
-		setMounted(true);
-	}, []);
+	// useEffect(() => {
+	// 	setMounted(true);
+	// }, []);
 
 	return (
 		<Button
@@ -25,7 +26,7 @@ export default function ThemeSelector({ className }: { className?: string }) {
 			size="sm"
 			isIconOnly
 		>
-			{mounted && (theme === "dark" ? <FaSun /> : <FaMoon />)}
+			{isSSR || theme === "dark" ? <FaSun /> : <FaMoon />}
 		</Button>
 	);
 }

@@ -7,18 +7,23 @@
 		@apply border;
 	} */
 	*::-webkit-scrollbar {
-		width: 6px;
+		@apply h-2 w-2;
 	}
 	*::-webkit-scrollbar-thumb {
-		background: var(--sb-thumb-color);
-		border-radius: 7px;
+		@apply bg-primary-50 rounded-full;
 	}
 	@supports not selector(::-webkit-scrollbar) {
 		body {
-			scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+			@apply bg-primary;
 		}
 	}
 	body {
-		@apply bg-background text-foreground w-screen overflow-x-hidden font-sans;
+		@apply bg-background text-foreground font-sans;
+	}
+	/* html {
+		@apply h-screen;
+	} */
+	:root {
+		--radius: 0.5rem;
 	}
 }

@@ -1,6 +1,7 @@
 "use client";
+import { Button } from "@heroui/button";
+import { Link } from "@heroui/link";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 import { FaEnvelope, FaFilePdf, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function AboutSection() {
@@ -16,34 +17,31 @@ export default function AboutSection() {
 				</span>
 			</div>
 			<div className="mt-4 flex justify-center gap-4">
-				<Link
-					href="https://github.com/levigleik"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<FaGithub size={30} className="hover:text-gray-600" />
+				<Link href="https://github.com/levigleik" isExternal color="foreground">
+					<FaGithub size={30} />
 				</Link>
 				<Link
 					href="https://linkedin.com/in/levi-gleik"
-					target="_blank"
-					rel="noopener noreferrer"
+					isExternal
+					color="foreground"
 				>
-					<FaLinkedin size={30} className="hover:text-gray-600" />
+					<FaLinkedin size={30} />
 				</Link>
-				<Link href="mailto:levigleik@gmail.com">
-					<FaEnvelope size={30} className="hover:text-gray-600" />
+				<Link href="mailto:levigleik@gmail.com" color="foreground">
+					<FaEnvelope size={30} />
 				</Link>
 			</div>
-			<div className="flex w-full justify-center ">
-				<Link
+			<div className="flex w-full justify-center mt-4">
+				<Button
+					variant="bordered"
+					radius="full"
+					as={Link}
 					href="/resume.pdf"
-					target="_blank"
-					rel="noopener noreferrer"
-					className="inline-flex items-center gap-2 rounded-md border border-gray-300 px-4 py-2 font-medium text-sm shadow-sm transition-colors hover:bg-gray-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+					isExternal
 				>
 					{t("resume")}
 					<FaFilePdf size={20} />
-				</Link>
+				</Button>
 			</div>
 		</>
 	);

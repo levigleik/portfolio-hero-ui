@@ -1,7 +1,4 @@
 "use client";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import {
 	Carousel,
 	CarouselContent,
@@ -10,9 +7,12 @@ import {
 	CarouselPrevious,
 } from "@/components/ui/carousel";
 import { PROJECT_TECHONOLOGIES } from "@/lib/constants";
+import { Button } from "@heroui/button";
+import { Card, CardBody, CardHeader } from "@heroui/card";
+import { Chip } from "@heroui/chip";
+import { Image } from "@heroui/image";
 import Autoplay from "embla-carousel-autoplay";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 
 export default function ProjectSection() {
 	const t = useTranslations("Projects");
@@ -23,8 +23,9 @@ export default function ProjectSection() {
 					Projects
 				</span>
 				<Button
-					variant="link"
+					variant="light"
 					className="font-sans text-xl italic transition-all duration-300 ease-in"
+					radius="full"
 				>
 					ver mais
 				</Button>
@@ -39,7 +40,7 @@ export default function ProjectSection() {
 						delay: 3000,
 					}),
 				]}
-				className="w-full"
+				className="w-full [&>div]:p-3"
 			>
 				<CarouselContent>
 					{PROJECT_TECHONOLOGIES.map((project, index) => (
@@ -47,35 +48,33 @@ export default function ProjectSection() {
 							key={project.name}
 							className="md:basis-1/2 lg:basis-1/2"
 						>
-							<div className="p-1">
-								<Card>
-									<CardContent className="flex flex-col items-center p-6">
-										<Image
-											src={PROJECT_TECHONOLOGIES[index].photo}
-											alt={PROJECT_TECHONOLOGIES[index].name}
-											width={800}
-											height={800}
-											className="mb-4 aspect-square w-full object-contain transition-all duration-300 ease-in hover:scale-105"
-											loading="lazy"
-										/>
-										<span className="mb-2 font-semibold text-xl">
-											{t(`project-${index + 1}.title`)}
-										</span>
-										<p className="mb-4 text-center text-gray-600 text-sm">
-											{t(`project-${index + 1}.description`)}
-										</p>
-										<div className="flex flex-wrap gap-2">
-											{PROJECT_TECHONOLOGIES[index].techonologies.map(
-												(tech) => (
-													<Badge key={tech} className="font-semibold text-sm">
-														{tech}
-													</Badge>
-												),
-											)}
-										</div>
-									</CardContent>
-								</Card>
-							</div>
+							<Card className="py-4 bg-primary-50/20" shadow="sm">
+								<CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
+									<h1 className="font-bold text-lg">
+										{t(`project-${index + 1}.title`)}
+									</h1>
+									<small className="text-default-500">
+										{t(`project-${index + 1}.description`)}
+									</small>
+								</CardHeader>
+								<CardBody className="overflow-visible py-2">
+									<Image
+										src={PROJECT_TECHONOLOGIES[index].photo}
+										alt={PROJECT_TECHONOLOGIES[index].name}
+										width={1000}
+										className="aspect-square w-full object-contain transition-all duration-300 ease-in hover:scale-105"
+										loading="lazy"
+										isZoomed
+									/>
+									<div className="flex flex-wrap gap-2">
+										{PROJECT_TECHONOLOGIES[index].techonologies.map((tech) => (
+											<Chip key={tech} className="font-semibold text-sm">
+												{tech}
+											</Chip>
+										))}
+									</div>
+								</CardBody>
+							</Card>
 						</CarouselItem>
 					))}
 				</CarouselContent>

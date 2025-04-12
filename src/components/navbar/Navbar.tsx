@@ -9,19 +9,28 @@ import {
 	NavbarMenuItem,
 	NavbarMenuToggle,
 } from "@heroui/navbar";
-import React from "react";
 
 import logoImage from "@/assets/images/logo.png";
+import { Button } from "@heroui/button";
+import {
+	Drawer,
+	DrawerBody,
+	DrawerContent,
+	DrawerFooter,
+	DrawerHeader,
+} from "@heroui/drawer";
 import { Image } from "@heroui/image";
+import { usePathname } from "next/navigation";
+import { type ReactNode, useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 import LanguageSelector from "./LanguageSelector";
 import ThemeSelector from "./ThemeSelector";
-import { usePathname } from "next/navigation";
 
 interface MenuItem {
 	title: string;
 	url: string;
 	description?: string;
-	icon?: React.ReactNode;
+	icon?: ReactNode;
 }
 
 interface NavbarProps {
@@ -34,18 +43,18 @@ interface NavbarProps {
 }
 
 export default function NavbarComp({ logo, menu }: NavbarProps) {
-	const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const path = usePathname();
 
-	console.log("path", path);
-
 	return (
-		<NavbarHeroUI onMenuOpenChange={setIsMenuOpen}>
-			<NavbarContent>
-				<NavbarMenuToggle
-					aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-					className="sm:hidden"
-				/>
+		<NavbarHeroUI
+			onMenuOpenChange={setIsMenuOpen}
+			isMenuOpen={false}
+			classNames={{
+				wrapper: "bg-background",
+			}}
+		>
+			<NavbarContent className="hidden sm:flex gap-4">
 				<NavbarBrand>
 					<Image src={logo.src} alt={logo.alt} width={40} height={40} />
 				</NavbarBrand>
@@ -65,34 +74,65 @@ export default function NavbarComp({ logo, menu }: NavbarProps) {
 					</NavbarItem>
 				))}
 			</NavbarContent>
-			<NavbarContent justify="end">
-				<NavbarItem className="hidden lg:flex">
+			<NavbarContent justify="end" className="sm:hidden">
+				<NavbarMenuToggle
+					icon={<FaBars />}
+					className="w-10 h-10 rounded-full p-0 min-w-min border-medium border-default"
+					// as={Button}
+					// variant="bordered"
+				/>
+			</NavbarContent>
+			<NavbarContent justify="end" className="gap-2 hidden lg:flex">
+				<NavbarItem>
 					<LanguageSelector />
 				</NavbarItem>
 				<NavbarItem>
 					<ThemeSelector />
 				</NavbarItem>
 			</NavbarContent>
-			<NavbarMenu>
-				<NavbarMenuItem className="hidden sm:flex">
-					<LanguageSelector />
-				</NavbarMenuItem>
-				<NavbarMenuItem>
-					<ThemeSelector />
-				</NavbarMenuItem>
-				{menu.map((item, index) => (
-					<NavbarMenuItem key={`${item.title}-${index}`}>
-						<Link
-							className="w-full"
-							color={path === item.url ? "primary" : "foreground"}
-							href={item.url}
-							size="lg"
-						>
-							{item.title}
-						</Link>
-					</NavbarMenuItem>
-				))}
-			</NavbarMenu>
+
+			<Drawer
+				closeButton={
+					<Button isIconOnly variant="bordered">
+						<FaTimes size={24} />
+					</Button>
+				}
+				classNames={{
+					closeButton: "top-6 right-6",
+				}}
+				isOpen={isMenuOpen}
+				onOpenChange={setIsMenuOpen}
+			>
+				<DrawerContent className="p-6">
+					{(onClose) => (
+						<>
+							<DrawerHeader className="flex flex-col gap-1">
+								<NavbarItem>Levi Gleik</NavbarItem>
+							</DrawerHeader>
+							<DrawerBody>
+								{menu.map((item, index) => (
+									<NavbarItem key={`${item.title}-${index}`}>
+										<Link
+											className="w-full"
+											color={path === item.url ? "primary" : "foreground"}
+											href={item.url}
+											size="lg"
+										>
+											{item.title}
+										</Link>
+									</NavbarItem>
+								))}
+								<NavbarItem className="hidden sm:flex">
+									<LanguageSelector />
+								</NavbarItem>
+								<NavbarItem>
+									<ThemeSelector />
+								</NavbarItem>
+							</DrawerBody>
+						</>
+					)}
+				</DrawerContent>
+			</Drawer>
 		</NavbarHeroUI>
 	);
 }
