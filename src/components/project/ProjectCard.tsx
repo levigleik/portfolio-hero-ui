@@ -5,11 +5,11 @@ import { Button } from "@heroui/button";
 import { Card, CardBody, CardFooter, CardHeader } from "@heroui/card";
 import { Chip } from "@heroui/chip";
 import { Divider } from "@heroui/divider";
-import { Image } from "@heroui/image";
 import { Link } from "@heroui/link";
 import { useTranslations } from "next-intl";
 import { FaGithub } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
+import Image from "../ui/image";
 
 type ProjectCardProps = (typeof PROJECT_TECHONOLOGIES)[number] & {
 	title: string;
@@ -33,6 +33,7 @@ export default function ProjectCard(project: ProjectCardProps) {
 					className="object-contain transition-all duration-300 ease-in hover:scale-105 rounded-xl"
 					loading="lazy"
 					isZoomed
+					link={project.url}
 				/>
 				<div className="flex flex-wrap gap-2 mt-4">
 					{project.techonologies.map((tech) => (
