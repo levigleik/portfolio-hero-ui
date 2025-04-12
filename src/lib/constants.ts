@@ -20,12 +20,29 @@ export const PROJECT_TECHONOLOGIES = [
 		name: "saulo-imoveis",
 		photo: sauloImoveis.src,
 		techonologies: ["WordPress", "HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+		git: null,
 		url: "https://sauloimoveisce.com.br",
 	},
 	{
 		name: "servrent",
 		photo: servrent.src,
 		techonologies: ["WordPress", "HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+		git: null,
 		url: "http://servrent.com.br",
 	},
+	// {
+	// 	name: "servrent2",
+	// 	photo: servrent.src,
+	// 	techonologies: ["WordPress", "HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+	// 	git: null,
+	// 	url: "http://servrent.com.br",
+	// },
+
+	// {
+	// 	name: "servrent3",
+	// 	photo: servrent.src,
+	// 	techonologies: ["WordPress", "HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+	// 	git: null,
+	// 	url: "http://servrent.com.br",
+	// },
 ];
