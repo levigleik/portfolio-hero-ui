@@ -52,17 +52,49 @@
 	"Projects": {
 		"projects": "Projetos",
 		"view-more": "ver mais",
-		"project-1": {
+		"project-chrono-study": {
 			"title": "Chrono Study",
 			"description": "Ajuda a cronometrar e organizar os estudos. Pode adicionar disciplinas e verificar estatísticas de estudos por gráficos e tabelas."
 		},
-		"project-2": {
+		"project-dispatch-system": {
+			"title": "Dispatch System",
+			"description": "Importe contatos do Excel e envie mensagem a eles pelo WhatsApp."
+		},
+		"project-dlav": {
+			"title": "D'Lav",
+			"description": "Organize todo o processo de lavagem. É gerado QR Codes onde podemos controlar todas as etapas da lavagem."
+		},
+		"project-gestao-clinica": {
+			"title": "Gestão Clínica",
+			"description": "Sistema robusto para gestão de clínicas com agendamento, cadastro, gerenciamento e pagamento."
+		},
+		"project-osc-manager": {
+			"title": "OSC Manager",
+			"description": "Gerenciamento de projetos para OSCs. Visualize, analise e acompanhe os projetos"
+		},
+		"project-pesquisa-satisfacao": {
+			"title": "Pesquisa de Satisfação",
+			"description": "Projeto que gerencia pesquisas e gera gráficos com resumos das pesquisas."
+		},
+		"project-reunioes": {
+			"title": "Sistema de reuniões",
+			"description": "Sistema completo de reuniões. Gerencie e crie reuniões. Gere atas, pautas e ações para cada usuário."
+		},
+		"project-saulo-imoveis": {
 			"title": "Saulo Imóveis",
 			"description": "Desenvolvido para divulgação dos melhores imóveis de luxo de Fortaleza."
 		},
-		"project-3": {
+		"project-servrent": {
 			"title": "ServRent",
 			"description": "Possibilita a compra e aluguel de carros."
+		},
+		"project-vacation-plan": {
+			"title": "Vacation Plan",
+			"description": "Veja as férias de seus amigos e organize no calendário."
+		},
+		"project-viu-ganhou": {
+			"title": "Viu Ganhou",
+			"description": "Veja anúncios e complete tarefas para ganhar dinheiro e sacar em criptomoedas."
 		}
 	},
 	"Navbar": {

@@ -52,17 +52,49 @@
 	"Projects": {
 		"projects": "Projects",
 		"view-more": "view more",
-		"project-1": {
+		"project-chrono-study": {
 			"title": "Chrono Study",
-			"description": "Organize your studies"
+			"description": "Helps time and organize your studies. You can add subjects and view study statistics through charts and tables."
 		},
-		"project-2": {
-			"title": "Project 2",
-			"description": "Description of project 2"
+		"project-dispatch-system": {
+			"title": "Dispatch System",
+			"description": "Import contacts from Excel and send messages to them via WhatsApp."
 		},
-		"project-3": {
-			"title": "Project 3",
-			"description": "Description of project 3"
+		"project-dlav": {
+			"title": "D'Lav",
+			"description": "Organize the entire washing process. QR Codes are generated to track all stages of the wash."
+		},
+		"project-gestao-clinica": {
+			"title": "Clinic Management",
+			"description": "Robust system for managing clinics with scheduling, registration, management, and payment features."
+		},
+		"project-osc-manager": {
+			"title": "OSC Manager",
+			"description": "Project management for NGOs. Visualize, analyze, and track projects."
+		},
+		"project-pesquisa-satisfacao": {
+			"title": "Satisfaction Survey",
+			"description": "Manages surveys and generates charts with summarized results."
+		},
+		"project-reunioes": {
+			"title": "Meeting System",
+			"description": "Complete meeting system. Manage and create meetings. Generate minutes, agendas, and actions for each user."
+		},
+		"project-saulo-imoveis": {
+			"title": "Saulo Real Estate",
+			"description": "Developed to showcase the finest luxury properties in Fortaleza."
+		},
+		"project-servrent": {
+			"title": "ServRent",
+			"description": "Enables car buying and renting."
+		},
+		"project-vacation-plan": {
+			"title": "Vacation Plan",
+			"description": "See your friends' vacations and organize them on the calendar."
+		},
+		"project-viu-ganhou": {
+			"title": "Watch and Earn",
+			"description": "Watch ads and complete tasks to earn money and withdraw in cryptocurrencies."
 		}
 	},
 	"Navbar": {

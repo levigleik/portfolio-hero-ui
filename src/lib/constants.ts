@@ -1,6 +1,14 @@
 import chronoStudy from "../assets/images/projects/chrono-study.png";
 import sauloImoveis from "../assets/images/projects/saulo-imoveis.png";
 import servrent from "../assets/images/projects/servrent.png";
+import dispatchSystem from "../assets/images/projects/dispatch-system.png";
+import dlav from "../assets/images/projects/dlav.png";
+import gestaoClinica from "../assets/images/projects/gestao-clinica.png";
+import oscManager from "../assets/images/projects/osc-manager.png";
+import reunioes from "../assets/images/projects/reunioes.png";
+import pesquisaSatisfacao from "../assets/images/projects/pesquisa-satisfacao.png";
+import vacationPlan from "../assets/images/projects/vacation-plan.png";
+import viuGanhou from "../assets/images/projects/viu-ganhou.png";
 
 export const PROJECT_TECHONOLOGIES = [
 	{
@@ -17,6 +25,73 @@ export const PROJECT_TECHONOLOGIES = [
 		url: "https://chrono-study.vercel.app",
 	},
 	{
+		name: "dispatch-system",
+		photo: dispatchSystem.src,
+		techonologies: ["Vite", "React", "Ant Design", "NestJS", "Prisma"],
+		git: null,
+		url: "http://dispatch-system.netlify.app",
+	},
+	{
+		name: "dlav",
+		photo: dlav.src,
+		techonologies: [
+			"NextJS",
+			"TailwindCSS",
+			"NextUI",
+			"NestJS",
+			"Prisma",
+			"NodeMailer",
+			"Service Worker",
+			"Redis",
+		],
+		git: "https://github.com/levigleik/front-dlav-public",
+		url: "https://dlav.vercel.app",
+	},
+	{
+		name: "gestao-clinica",
+		photo: gestaoClinica.src,
+		techonologies: ["React", "Vite", "Bootstrap", "NestJS", "Prisma"],
+		git: null,
+		url: "https://novogestaoclinica.netlify.app",
+	},
+	{
+		name: "osc-manager",
+		photo: oscManager.src,
+		techonologies: ["NextJS", "TailwindCSS", "NextUI", "Prisma"],
+		git: "https://github.com/levigleik/osc-manager",
+		url: "https://osc-manager.vercel.app",
+	},
+	{
+		name: "reunioes",
+		photo: reunioes.src,
+		techonologies: [
+			"React",
+			"Bootstrap",
+			"Ant Design",
+			"Socket.IO",
+			"NestJS",
+			"Prisma",
+			"Redis",
+		],
+		git: null,
+		url: "https://atasreunioes.com",
+	},
+	{
+		name: "pesquisa-satisfacao",
+		photo: pesquisaSatisfacao.src,
+		techonologies: [
+			"React",
+			"Material UI",
+			"NestJS",
+			"Prisma",
+			"Redis",
+			"React Chart.js",
+		],
+		git: null,
+		url: "https://pesquisasatisfacao.netlify.app",
+	},
+
+	{
 		name: "saulo-imoveis",
 		photo: sauloImoveis.src,
 		techonologies: ["WordPress", "HTML", "CSS", "JavaScript", "PHP", "MySQL"],
@@ -30,19 +105,25 @@ export const PROJECT_TECHONOLOGIES = [
 		git: null,
 		url: "http://servrent.com.br",
 	},
-	// {
-	// 	name: "servrent2",
-	// 	photo: servrent.src,
-	// 	techonologies: ["WordPress", "HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-	// 	git: null,
-	// 	url: "http://servrent.com.br",
-	// },
-
-	// {
-	// 	name: "servrent3",
-	// 	photo: servrent.src,
-	// 	techonologies: ["WordPress", "HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-	// 	git: null,
-	// 	url: "http://servrent.com.br",
-	// },
+	{
+		name: "vacation-plan",
+		photo: vacationPlan.src,
+		techonologies: ["NextJS", "NextUI", "TailwindCSS", "Prisma"],
+		git: "https://github.com/levigleik/vacation-plan",
+		url: "https://vacation-plan.vercel.app",
+	},
+	{
+		name: "viu-ganhou",
+		photo: viuGanhou.src,
+		techonologies: [
+			"NextJS",
+			"NextUI",
+			"TailwindCSS",
+			"Wagmi",
+			"CCPayment",
+			"Prisma",
+		],
+		git: null,
+		url: null,
+	},
 ];
