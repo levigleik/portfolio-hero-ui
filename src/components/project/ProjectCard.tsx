@@ -33,7 +33,6 @@ export default function ProjectCard(project: ProjectCardProps) {
 					className="object-contain transition-all duration-300 ease-in hover:scale-105 rounded-xl"
 					loading="lazy"
 					isZoomed
-					link={project.url}
 				/>
 				<div className="flex flex-wrap gap-2 mt-4">
 					{project.techonologies.map((tech) => (

@@ -10,7 +10,7 @@ import {} from "react-icons/fa6";
 import { FiZoomIn, FiZoomOut } from "react-icons/fi";
 
 interface ImageProps extends HeroUIImageProps {
-	link: string;
+	// link: string | null;
 }
 
 const MAX_ZOOM = 3;
@@ -19,7 +19,7 @@ const ZOOM_STEP_WHEEL = 0.1;
 const ZOOM_STEP_BUTTON = 0.2;
 // const ROTATION_STEP = 90;
 
-export default function Image({ src, alt, link, ...props }: ImageProps) {
+export default function Image({ src, alt, ...props }: ImageProps) {
 	const [isOpen, setIsOpen] = useState(false);
 
 	// Estados de Transformação
