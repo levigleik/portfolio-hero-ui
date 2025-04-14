@@ -44,21 +44,21 @@ export default function NavbarComp({ logo, menu }: NavbarProps) {
 
 	const router = useTransitionRouter();
 
-	function slideInOut() {
+	function slideLeftToRight() {
 		document.documentElement.animate(
 			[
 				{
-					opactity: 1,
-					transform: "translateY(0)",
+					opacity: 1,
+					transform: "translateX(0)",
 				},
 				{
-					opactity: 0.2,
-					transform: "translateY(-35%)",
+					opacity: 0.05,
+					transform: "translateX(55%)",
 				},
 			],
 			{
-				duration: 1500,
-				easing: "cubic-bezier(0.25, 0.1, 0.25, 1)",
+				duration: 600,
+				easing: "ease-in-out",
 				fill: "forwards",
 				pseudoElement: "::view-transition-old(root)",
 			},
@@ -66,15 +66,56 @@ export default function NavbarComp({ logo, menu }: NavbarProps) {
 		document.documentElement.animate(
 			[
 				{
-					clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+					opacity: 0.05,
+					transform: "translateX(-55%)",
 				},
 				{
-					clipPath: "polygon(0% 100%, 100% 100%, 100% 0% 0% 0%)",
+					opacity: 1,
+					transform: "translateX(0)",
 				},
 			],
 			{
-				duration: 1500,
-				easing: "cubic-bezier(0.25, 0.1, 0.25, 1)",
+				duration: 600,
+				easing: "ease-in-out",
+				fill: "forwards",
+				pseudoElement: "::view-transition-new(root)",
+			},
+		);
+	}
+
+	function slideRightToLeft() {
+		document.documentElement.animate(
+			[
+				{
+					opacity: 1,
+					transform: "translateX(0)",
+				},
+				{
+					opacity: 0.05,
+					transform: "translateX(-55%)",
+				},
+			],
+			{
+				duration: 600,
+				easing: "ease-in-out",
+				fill: "forwards",
+				pseudoElement: "::view-transition-old(root)",
+			},
+		);
+		document.documentElement.animate(
+			[
+				{
+					opacity: 0.05,
+					transform: "translateX(55%)",
+				},
+				{
+					opacity: 1,
+					transform: "translateX(0)",
+				},
+			],
+			{
+				duration: 600,
+				easing: "ease-in-out",
 				fill: "forwards",
 				pseudoElement: "::view-transition-new(root)",
 			},
@@ -106,7 +147,8 @@ export default function NavbarComp({ logo, menu }: NavbarProps) {
 							onClick={(e) => {
 								e.preventDefault();
 								router.push(item.url, {
-									onTransitionReady: slideInOut,
+									onTransitionReady:
+										path !== "/" ? slideLeftToRight : slideRightToLeft,
 								});
 							}}
 						>
