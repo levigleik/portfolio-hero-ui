@@ -5,24 +5,20 @@ import {
 	NavbarContent,
 	Navbar as NavbarHeroUI,
 	NavbarItem,
-	NavbarMenu,
-	NavbarMenuItem,
 	NavbarMenuToggle,
 } from "@heroui/navbar";
 
-import logoImage from "@/assets/images/logo.png";
-import { Button } from "@heroui/button";
 import {
 	Drawer,
 	DrawerBody,
 	DrawerContent,
-	DrawerFooter,
 	DrawerHeader,
 } from "@heroui/drawer";
 import { Image } from "@heroui/image";
+import { useTransitionRouter } from "next-view-transitions";
 import { usePathname } from "next/navigation";
 import { type ReactNode, useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 import LanguageSelector from "./LanguageSelector";
 import ThemeSelector from "./ThemeSelector";
 
@@ -46,6 +42,45 @@ export default function NavbarComp({ logo, menu }: NavbarProps) {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const path = usePathname();
 
+	const router = useTransitionRouter();
+
+	function slideInOut() {
+		document.documentElement.animate(
+			[
+				{
+					opactity: 1,
+					transform: "translateY(0)",
+				},
+				{
+					opactity: 0.2,
+					transform: "translateY(-35%)",
+				},
+			],
+			{
+				duration: 1500,
+				easing: "cubic-bezier(0.25, 0.1, 0.25, 1)",
+				fill: "forwards",
+				pseudoElement: "::view-transition-old(root)",
+			},
+		);
+		document.documentElement.animate(
+			[
+				{
+					clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+				},
+				{
+					clipPath: "polygon(0% 100%, 100% 100%, 100% 0% 0% 0%)",
+				},
+			],
+			{
+				duration: 1500,
+				easing: "cubic-bezier(0.25, 0.1, 0.25, 1)",
+				fill: "forwards",
+				pseudoElement: "::view-transition-new(root)",
+			},
+		);
+	}
+
 	return (
 		<NavbarHeroUI
 			onMenuOpenChange={setIsMenuOpen}
@@ -68,6 +103,12 @@ export default function NavbarComp({ logo, menu }: NavbarProps) {
 							color={path === item.url ? "primary" : "foreground"}
 							href={item.url}
 							size="lg"
+							onClick={(e) => {
+								e.preventDefault();
+								router.push(item.url, {
+									onTransitionReady: slideInOut,
+								});
+							}}
 						>
 							{item.title}
 						</Link>
