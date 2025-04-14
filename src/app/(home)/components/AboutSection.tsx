@@ -1,11 +1,12 @@
 "use client";
 import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { FaEnvelope, FaFilePdf, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function AboutSection() {
 	const t = useTranslations("HomePage");
+	const locale = useLocale();
 	return (
 		<>
 			<div className="flex flex-col gap-1">
@@ -36,7 +37,7 @@ export default function AboutSection() {
 					variant="bordered"
 					radius="full"
 					as={Link}
-					href="/resume.pdf"
+					href={`resume-${locale}.pdf`}
 					isExternal
 				>
 					{t("resume")}
