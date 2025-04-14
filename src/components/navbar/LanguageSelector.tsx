@@ -25,7 +25,6 @@ export default function LanguageSelector() {
 					aria-label={t("select-language")}
 					isIconOnly
 					radius="full"
-					size="sm"
 				>
 					{locale === "pt-BR" ? (
 						<span className="fi fi-br" />

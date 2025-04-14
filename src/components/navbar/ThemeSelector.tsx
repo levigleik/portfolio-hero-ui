@@ -8,13 +8,8 @@ import { FaMoon, FaSun } from "react-icons/fa";
 
 export default function ThemeSelector({ className }: { className?: string }) {
 	const { setTheme, theme } = useTheme();
-	// const [mounted, setMounted] = useState(false);
 	const t = useTranslations("ThemeSelector");
 	const isSSR = useIsSSR();
-
-	// useEffect(() => {
-	// 	setMounted(true);
-	// }, []);
 
 	return (
 		<Button
@@ -23,7 +18,6 @@ export default function ThemeSelector({ className }: { className?: string }) {
 			className={cn(className)}
 			aria-label={t("change-theme")}
 			radius="full"
-			size="sm"
 			isIconOnly
 		>
 			{isSSR || theme === "dark" ? <FaSun /> : <FaMoon />}
