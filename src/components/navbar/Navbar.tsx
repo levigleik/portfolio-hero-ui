@@ -5,24 +5,20 @@ import {
 	NavbarContent,
 	Navbar as NavbarHeroUI,
 	NavbarItem,
-	NavbarMenu,
-	NavbarMenuItem,
 	NavbarMenuToggle,
 } from "@heroui/navbar";
 
-import logoImage from "@/assets/images/logo.png";
-import { Button } from "@heroui/button";
 import {
 	Drawer,
 	DrawerBody,
 	DrawerContent,
-	DrawerFooter,
 	DrawerHeader,
 } from "@heroui/drawer";
 import { Image } from "@heroui/image";
+import { useTransitionRouter } from "next-view-transitions";
 import { usePathname } from "next/navigation";
 import { type ReactNode, useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 import LanguageSelector from "./LanguageSelector";
 import ThemeSelector from "./ThemeSelector";
 
@@ -46,6 +42,86 @@ export default function NavbarComp({ logo, menu }: NavbarProps) {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const path = usePathname();
 
+	const router = useTransitionRouter();
+
+	function slideLeftToRight() {
+		document.documentElement.animate(
+			[
+				{
+					opacity: 1,
+					transform: "translateX(0)",
+				},
+				{
+					opacity: 0.05,
+					transform: "translateX(55%)",
+				},
+			],
+			{
+				duration: 600,
+				easing: "ease-in-out",
+				fill: "forwards",
+				pseudoElement: "::view-transition-old(root)",
+			},
+		);
+		document.documentElement.animate(
+			[
+				{
+					opacity: 0.05,
+					transform: "translateX(-55%)",
+				},
+				{
+					opacity: 1,
+					transform: "translateX(0)",
+				},
+			],
+			{
+				duration: 600,
+				easing: "ease-in-out",
+				fill: "forwards",
+				pseudoElement: "::view-transition-new(root)",
+			},
+		);
+	}
+
+	function slideRightToLeft() {
+		document.documentElement.animate(
+			[
+				{
+					opacity: 1,
+					transform: "translateX(0)",
+				},
+				{
+					opacity: 0.05,
+					transform: "translateX(-55%)",
+				},
+			],
+			{
+				duration: 600,
+				easing: "ease-in-out",
+				fill: "forwards",
+				pseudoElement: "::view-transition-old(root)",
+			},
+		);
+		document.documentElement.animate(
+			[
+				{
+					opacity: 0.05,
+					transform: "translateX(55%)",
+				},
+				{
+					opacity: 1,
+					transform: "translateX(0)",
+				},
+			],
+			{
+				duration: 600,
+				easing: "ease-in-out",
+				fill: "forwards",
+				pseudoElement: "::view-transition-new(root)",
+			},
+		);
+	}
+
 	return (
 		<NavbarHeroUI
 			onMenuOpenChange={setIsMenuOpen}
@@ -68,6 +144,13 @@ export default function NavbarComp({ logo, menu }: NavbarProps) {
 							color={path === item.url ? "primary" : "foreground"}
 							href={item.url}
 							size="lg"
+							onClick={(e) => {
+								e.preventDefault();
+								router.push(item.url, {
+									onTransitionReady:
+										path !== "/" ? slideLeftToRight : slideRightToLeft,
+								});
+							}}
 						>
 							{item.title}
 						</Link>
