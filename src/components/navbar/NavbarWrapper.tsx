@@ -17,11 +17,7 @@ export default function Navbar() {
 				{ title: t("home"), url: "/" },
 				{
 					title: t("projects"),
-					url: "/projects", // Adicione a barra inicial
-				},
-				{
-					title: t("contact"),
-					url: "/contact", // Adicione a barra inicial
+					url: "/projects",
 				},
 			]}
 		/>
