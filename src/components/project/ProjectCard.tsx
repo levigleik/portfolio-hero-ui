@@ -1,5 +1,4 @@
 "use client";
-import {} from "@/components/ui/carousel";
 import { PROJECT_TECHONOLOGIES } from "@/lib/constants";
 import { Button } from "@heroui/button";
 import { Card, CardBody, CardFooter, CardHeader } from "@heroui/card";
