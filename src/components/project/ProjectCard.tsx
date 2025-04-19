@@ -42,25 +42,30 @@ export default function ProjectCard(project: ProjectCardProps) {
 					))}
 				</div>
 			</CardBody>
-			<Divider className="my-2" />
-			<CardFooter className="gap-4">
-				{project.git && (
-					<Button radius="full" as={Link} href={project.git} isExternal>
-						<FaGithub /> Git
-					</Button>
-				)}
-				{project.url && (
-					<Button
-						radius="full"
-						as={Link}
-						href={project.url}
-						isExternal
-						color="primary"
-					>
-						<TbWorld /> Site
-					</Button>
-				)}
-			</CardFooter>
+			{(project.git || project.url) && (
+				<>
+					<Divider className="my-2" />
+
+					<CardFooter className="gap-4">
+						{project.git && (
+							<Button radius="full" as={Link} href={project.git} isExternal>
+								<FaGithub /> Git
+							</Button>
+						)}
+						{project.url && (
+							<Button
+								radius="full"
+								as={Link}
+								href={project.url}
+								isExternal
+								color="primary"
+							>
+								<TbWorld /> Site
+							</Button>
+						)}
+					</CardFooter>
+				</>
+			)}
 		</Card>
 	);
 }
