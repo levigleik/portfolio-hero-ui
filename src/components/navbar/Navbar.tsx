@@ -132,7 +132,7 @@ export default function NavbarComp({ logo, menu }: NavbarProps) {
 		>
 			<NavbarContent className="hidden sm:flex gap-4">
 				<NavbarBrand>
-					<Image src={logo.src} alt={logo.alt} width={40} height={40} />
+					<Image src={logo.src} alt={logo.alt} width={90} height={90} />
 				</NavbarBrand>
 			</NavbarContent>
 
