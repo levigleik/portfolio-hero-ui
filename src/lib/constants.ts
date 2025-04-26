@@ -83,7 +83,9 @@ export const PROJECT_TECHONOLOGIES = [
 		techonologies: [
 			"NextJS",
 			"TailwindCSS",
-			"shadcn/ui",
+			"HeroUI",
+			"framer-motion",
+			"view-transition-api",
 			"zod",
 			"React Hook Form",
 		],
