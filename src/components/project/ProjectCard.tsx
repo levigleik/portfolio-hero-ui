@@ -22,7 +22,9 @@ export default function ProjectCard(project: ProjectCardProps) {
 		<Card className="py-4 bg-primary-50/20 flex flex-col h-full" shadow="sm">
 			<CardHeader className="flex-col items-start md:h-[150px]">
 				<h1 className="font-bold text-lg mb-4">{t(project.title)}</h1>
-				<small className="text-default-500">{t(project.description)}</small>
+				<span className="text-default-500 text-sm">
+					{t(project.description)}
+				</span>
 			</CardHeader>
 			<CardBody className="overflow-visible py-2">
 				<Image

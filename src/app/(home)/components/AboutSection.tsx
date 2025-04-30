@@ -19,7 +19,7 @@ export default function AboutSection() {
 				<span className="font-calistoga text-5xl tracking-widest lg:text-7xl gradient-text">
 					Levi Gleik
 				</span>
-				<span className="font-sans text-xl italic">
+				<span className="font-sans text-lg italic">
 					{t("front-end-developer")}
 				</span>
 			</motion.div>

@@ -7,7 +7,7 @@ export default function ProjectHeader() {
 	const t = useTranslations("Projects");
 	return (
 		<div className="mb-2 flex w-full justify-between gap-2">
-			<span className="font-calistoga text-3xl tracking-widest">
+			<span className="font-calistoga text-2xl tracking-widest">
 				{t("projects")}
 			</span>
 			<Button

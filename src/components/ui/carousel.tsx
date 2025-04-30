@@ -3,11 +3,11 @@
 import useEmblaCarousel, {
 	type UseEmblaCarouselType,
 } from "embla-carousel-react";
-import { ArrowLeft, ArrowRight } from "lucide-react";
 import * as React from "react";
 
 import { Button } from "@heroui/button";
 import { type ButtonVariantProps, cn } from "@heroui/theme";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 type CarouselApi = UseEmblaCarouselType[1];
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
@@ -196,7 +196,7 @@ CarouselItem.displayName = "CarouselItem";
 const CarouselPrevious = React.forwardRef<
 	HTMLButtonElement,
 	React.ComponentProps<typeof Button>
->(({ className, variant = "bordered", size = "sm", ...props }, ref) => {
+>(({ className, variant = "bordered", size = "md", ...props }, ref) => {
 	const { orientation, scrollPrev, canScrollPrev } = useCarousel();
 
 	return (
@@ -207,7 +207,7 @@ const CarouselPrevious = React.forwardRef<
 			radius="full"
 			isIconOnly
 			className={cn(
-				"absolute  h-8 w-8 rounded-full",
+				"absolute",
 				orientation === "horizontal"
 					? "-left-12 top-1/2 -translate-y-1/2"
 					: "-top-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -217,7 +217,7 @@ const CarouselPrevious = React.forwardRef<
 			onPress={scrollPrev}
 			{...props}
 		>
-			<ArrowLeft className="h-4 w-4" />
+			<FaArrowLeft />
 			<span className="sr-only">Previous slide</span>
 		</Button>
 	);
@@ -227,7 +227,7 @@ CarouselPrevious.displayName = "CarouselPrevious";
 const CarouselNext = React.forwardRef<
 	HTMLButtonElement,
 	React.ComponentProps<typeof Button>
->(({ className, variant = "bordered", size = "sm", ...props }, ref) => {
+>(({ className, variant = "bordered", size = "md", ...props }, ref) => {
 	const { orientation, scrollNext, canScrollNext } = useCarousel();
 
 	return (
@@ -238,7 +238,7 @@ const CarouselNext = React.forwardRef<
 			radius="full"
 			isIconOnly
 			className={cn(
-				"absolute h-8 w-8 rounded-full",
+				"absolute",
 				orientation === "horizontal"
 					? "-right-12 top-1/2 -translate-y-1/2"
 					: "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -248,7 +248,7 @@ const CarouselNext = React.forwardRef<
 			onPress={scrollNext}
 			{...props}
 		>
-			<ArrowRight className="h-4 w-4" />
+			<FaArrowRight />
 			<span className="sr-only">Next slide</span>
 		</Button>
 	);
