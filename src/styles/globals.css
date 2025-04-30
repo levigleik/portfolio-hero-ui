@@ -27,3 +27,24 @@
 		--radius: 0.5rem;
 	}
 }
+
+@layer utilities {
+  .gradient-text {
+    background: linear-gradient(270deg, #06b6d4, #6366f1, #f472b6, #06b6d4);
+    background-size: 200% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: gradient-move 3s linear infinite alternate;
+  }
+
+  @keyframes gradient-move {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+}
