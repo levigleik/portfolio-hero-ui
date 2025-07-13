@@ -12,8 +12,8 @@
 			"subtitle": "Front-End Developer",
 			"date": "January 2023 - January 2025",
 			"responsibilities": {
-				"1": "Development of web applications using React.js",
-				"2": "Integration with RESTful APIs in NodeJS"
+				"1": "I have led the development of end-to-end software solutions (Web and PWA) for clients in multiple sectors, managing the entire project lifecycle, fromconception to deployment",
+				"2": "I have managed and executed deployment processes in cloud infrastructures such as AWS (S3, EC2, ElasticBeanstalk) and DigitalOcean, ensuring the configuration, availability and scalability of applications."
 			}
 		},
 		"greendot": {
@@ -21,9 +21,10 @@
 			"subtitle": "Front-End Developer",
 			"date": "May 2020 - December 2022",
 			"responsibilities": {
-				"1": "Developed a system to schedule, organize, and visualize internal company meetings",
-				"2": "Created applications to improve the accuracy of services provided",
-				"3": "Deployed on AWS using S3, EC2, Elastic Beanstalk, among others"
+				"1": "Implemented a complete software solution for meetingmanagement, simplifying the scheduling, organization and visualization processes for employees",
+				"2": "Developed an application to automate the process of pricing services, ensuring greater accuracy in values and agility in the preparation of commercial proposals",
+				"3": "Maintained mobile applications, added a credit card payment system",
+				"4": "Organized and deployed on AWS with S3, EC2, ElasticBeanstalk, among others"
 			}
 		}
 	},
