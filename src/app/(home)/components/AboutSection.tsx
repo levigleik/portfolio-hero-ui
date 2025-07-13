@@ -3,6 +3,7 @@ import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
 import { useLocale, useTranslations } from "next-intl";
 import { FaEnvelope, FaFilePdf, FaGithub, FaLinkedin } from "react-icons/fa";
+import { IoLogoWhatsapp } from "react-icons/io";
 import { motion } from "framer-motion";
 
 export default function AboutSection() {
@@ -41,6 +42,9 @@ export default function AboutSection() {
 				</Link>
 				<Link href="mailto:levigleik@gmail.com" color="foreground">
 					<FaEnvelope size={30} />
+				</Link>
+				<Link href="https://wa.me/5585991437740" color="foreground" isExternal>
+					<IoLogoWhatsapp size={30} />
 				</Link>
 			</motion.div>
 			<motion.div
