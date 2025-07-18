@@ -22,7 +22,7 @@ const config = {
 			colors: {},
 		},
 	},
-	darkMode: ["class", "class"],
+	darkMode: "class",
 	plugins: [
 		heroui({
 			themes: {
