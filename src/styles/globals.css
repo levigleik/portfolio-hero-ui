@@ -5,6 +5,12 @@
 @custom-variant dark (&:is(.dark *));
 
 @layer base {
+	html.dark ::view-transition-new(root) {
+		@apply bg-background;
+	}
+	html:not(.dark) ::view-transition-new(root) {
+		@apply bg-foreground;
+	}
 	*::-webkit-scrollbar {
 		@apply h-2 w-2;
 	}
@@ -39,5 +45,33 @@
 		100% {
 			background-position: 100% 50%;
 		}
+	}
+}
+
+/* Em src/styles/globals.css */
+
+/* Apenas a parte da animação é necessária aqui, o resto é contexto */
+
+::view-transition-old(root),
+::view-transition-new(root) {
+	animation: none;
+	mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+	z-index: 1;
+}
+
+::view-transition-new(root) {
+	z-index: 2;
+	animation: open-from-center 0.6s ease-in-out forwards;
+}
+
+@keyframes open-from-center {
+	from {
+		clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+	}
+	to {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 	}
 }
