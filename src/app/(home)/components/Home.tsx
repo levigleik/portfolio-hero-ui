@@ -14,7 +14,7 @@ export default function HomeComp() {
 			<div className="flex w-full flex-col gap-4 text-center ">
 				<AboutSection />
 			</div>
-			<div className="w-full flex-grow place-items-center py-8">
+			<div className="w-full grow place-items-center py-8">
 				<Tabs
 					classNames={{
 						panel: "w-full",
@@ -44,7 +44,7 @@ export default function HomeComp() {
 					</Tab>
 				</Tabs>
 			</div>
-			<div className="w-full flex-grow py-8">
+			<div className="w-full grow py-8">
 				<ProjectSection />
 			</div>
 		</>

@@ -3,12 +3,8 @@
 
 @source '../../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
 @custom-variant dark (&:is(.dark *));
-@config "../../tailwind.config.js";
 
 @layer base {
-	/* * {
-		@apply border;
-	} */
 	*::-webkit-scrollbar {
 		@apply h-2 w-2;
 	}
@@ -22,12 +18,6 @@
 	}
 	body {
 		@apply bg-background text-foreground font-sans;
-	}
-	/* html {
-		@apply h-screen;
-	} */
-	:root {
-		--radius: 0.5rem;
 	}
 }
 
