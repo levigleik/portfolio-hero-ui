@@ -11,16 +11,29 @@ export default function ThemeSelector({ className }: { className?: string }) {
 	const t = useTranslations("ThemeSelector");
 	const isSSR = useIsSSR();
 
+	const handleThemeChange = () => {
+		const newTheme = theme === "dark" ? "light" : "dark";
+
+		if (!document.startViewTransition) {
+			setTheme(newTheme);
+			return;
+		}
+
+		document.startViewTransition(() => {
+			setTheme(newTheme);
+		});
+	};
+
 	return (
 		<Button
 			variant="bordered"
-			onPress={() => setTheme(theme === "dark" ? "light" : "dark")}
+			onPress={handleThemeChange}
 			className={cn(className)}
 			aria-label={t("change-theme")}
 			radius="full"
 			isIconOnly
 		>
-			{isSSR || theme === "dark" ? <FaSun /> : <FaMoon />}
+			{isSSR ? <FaSun /> : theme === "dark" ? <FaSun /> : <FaMoon />}
 		</Button>
 	);
 }
