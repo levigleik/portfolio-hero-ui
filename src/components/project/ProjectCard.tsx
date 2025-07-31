@@ -1,5 +1,5 @@
 "use client";
-import { PROJECT_TECHONOLOGIES } from "@/lib/constants";
+import { PROJECT_TECHNOLOGIES } from "@/lib/constants";
 import { Button } from "@heroui/button";
 import { Card, CardBody, CardFooter, CardHeader } from "@heroui/card";
 import { Chip } from "@heroui/chip";
@@ -10,7 +10,7 @@ import { FaGithub } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
 import Image from "../ui/image";
 
-type ProjectCardProps = (typeof PROJECT_TECHONOLOGIES)[number] & {
+type ProjectCardProps = (typeof PROJECT_TECHNOLOGIES)[number] & {
 	title: string;
 	description: string;
 	// key?: string
@@ -36,7 +36,7 @@ export default function ProjectCard(project: ProjectCardProps) {
 					isZoomed
 				/>
 				<div className="flex flex-wrap gap-2 mt-4">
-					{project.techonologies.map((tech) => (
+					{project.technologies.map((tech) => (
 						<Chip key={tech} className="font-semibold text-sm">
 							{tech}
 						</Chip>

@@ -10,11 +10,11 @@ import servrent from "../assets/images/projects/servrent.png";
 import vacationPlan from "../assets/images/projects/vacation-plan.png";
 import viuGanhou from "../assets/images/projects/viu-ganhou.png";
 
-export const PROJECT_TECHONOLOGIES = [
+export const PROJECT_TECHNOLOGIES = [
 	{
 		name: "dlav",
 		photo: dlav.src,
-		techonologies: [
+		technologies: [
 			"NextJS",
 			"TailwindCSS",
 			"NextUI",
@@ -30,7 +30,7 @@ export const PROJECT_TECHONOLOGIES = [
 	{
 		name: "reunioes",
 		photo: reunioes.src,
-		techonologies: [
+		technologies: [
 			"React",
 			"Bootstrap",
 			"Ant Design",
@@ -45,14 +45,14 @@ export const PROJECT_TECHONOLOGIES = [
 	{
 		name: "gestao-clinica",
 		photo: gestaoClinica.src,
-		techonologies: ["React", "Vite", "Bootstrap", "AdonisJS", "Lucid ORM"],
+		technologies: ["React", "Vite", "Bootstrap", "AdonisJS", "Lucid ORM"],
 		git: null,
 		url: "https://novogestaoclinica.netlify.app",
 	},
 	{
 		name: "viu-ganhou",
 		photo: viuGanhou.src,
-		techonologies: [
+		technologies: [
 			"NextJS",
 			"NextUI",
 			"TailwindCSS",
@@ -66,7 +66,7 @@ export const PROJECT_TECHONOLOGIES = [
 	{
 		name: "pesquisa-satisfacao",
 		photo: pesquisaSatisfacao.src,
-		techonologies: [
+		technologies: [
 			"React",
 			"Material UI",
 			"NestJS",
@@ -80,7 +80,7 @@ export const PROJECT_TECHONOLOGIES = [
 	{
 		name: "chrono-study",
 		photo: chronoStudy.src,
-		techonologies: [
+		technologies: [
 			"NextJS",
 			"TailwindCSS",
 			"HeroUI",
@@ -95,36 +95,36 @@ export const PROJECT_TECHONOLOGIES = [
 	{
 		name: "dispatch-system",
 		photo: dispatchSystem.src,
-		techonologies: ["Vite", "React", "Ant Design", "NestJS", "Prisma"],
+		technologies: ["Vite", "React", "Ant Design", "NestJS", "Prisma"],
 		git: null,
-		url: "http://dispatch-system.netlify.app",
+		url: "https://dispatch-system.netlify.app",
 	},
 	{
 		name: "vacation-plan",
 		photo: vacationPlan.src,
-		techonologies: ["NextJS", "NextUI", "TailwindCSS", "Prisma"],
+		technologies: ["NextJS", "NextUI", "TailwindCSS", "Prisma"],
 		git: "https://github.com/levigleik/vacation-plan",
-		url: "https://vacation-plan.vercel.app",
+		url: null,
 	},
 	{
 		name: "osc-manager",
 		photo: oscManager.src,
-		techonologies: ["NextJS", "TailwindCSS", "NextUI", "Prisma"],
+		technologies: ["NextJS", "TailwindCSS", "NextUI", "Prisma"],
 		git: "https://github.com/levigleik/osc-manager",
 		url: "https://osc-manager.vercel.app",
 	},
 	{
 		name: "saulo-imoveis",
 		photo: sauloImoveis.src,
-		techonologies: ["WordPress", "HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+		technologies: ["WordPress", "HTML", "CSS", "JavaScript", "PHP", "MySQL"],
 		git: null,
 		url: "https://sauloimoveisce.com.br",
 	},
 	{
 		name: "servrent",
 		photo: servrent.src,
-		techonologies: ["WordPress", "HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+		technologies: ["WordPress", "HTML", "CSS", "JavaScript", "PHP", "MySQL"],
 		git: null,
-		url: "http://servrent.com.br",
+		url: null,
 	},
 ];
