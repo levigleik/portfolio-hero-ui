@@ -9,22 +9,24 @@
 	"TabExperience": {
 		"macedo-soft-house": {
 			"title": "Macedo Soft House",
-			"subtitle": "Desenvolvedor Front-End",
+			"subtitle": "Desenvolvedor Front-End (NextJS)",
 			"date": "Janeiro 2023 - Janeiro 2025",
 			"responsibilities": {
 				"1": "Liderei o desenvolvimento de soluções de software ponta a ponta (Web e PWA) para clientes de múltiplos setores, gerenciando o ciclo de vida completo do projeto, da concepção à implantação",
-				"2": "Gerenciei e executei processos de deploy em infraestruturas de nuvem como AWS (S3, EC2, ElasticBeanstalk) e DigitalOcean, assegurando a configuração, disponibilidade e escalabilidade das aplicações"
+				"2": "Gerenciei e executei processos de deploy em infraestruturas de nuvem como AWS (S3, EC2, ElasticBeanstalk) e DigitalOcean, assegurando a configuração, disponibilidade e escalabilidade das aplicações",
+				"3": "As tecnologias utilizadas foram React, TailwindCSS, shadcnUI, MaterialUI, NestJS, GraphQL, Prisma ORM, Redis e PostgreSQL"
 			}
 		},
 		"greendot": {
 			"title": "Greendot",
-			"subtitle": "Desenvolvedor Front-End",
+			"subtitle": "Desenvolvedor Front-End (React)",
 			"date": "Maio 2020 - Dezembro 2022",
 			"responsibilities": {
 				"1": "Implementei uma solução de software completa para o gerenciamento de reuniões, simplificando os processos de agendamento, organização e visualização para os colaboradores",
 				"2": "Desenvolvi uma aplicação para automatizar o processo de precificação de serviços, garantindo maior precisão nos valores e agilidade na elaboração de propostas comerciais",
 				"3": "Dei manutenção em aplicativos, adicionei sistema de pagamento com cartão de crédito",
-				"4": "Organizei e fiz deploy na AWS com S3, EC2, ElasticBeanstalk, entre outros"
+				"4": "Organizei e fiz deploy na AWS com S3, EC2, ElasticBeanstalk, entre outros",
+				"5": "As tecnologias utilizadas foram React, TailwindCSS, Styled-Components, MaterialUI, NestJS, NodeJS, TypeORM, Prisma ORM, Redis, SQL Server e PostgreSQL"
 			}
 		}
 	},

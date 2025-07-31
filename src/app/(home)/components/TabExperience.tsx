@@ -16,6 +16,7 @@ export default function TabExperience() {
 					<ul className="mt-2 list-inside list-disc text-sm space-y-2">
 						<li>{t("macedo-soft-house.responsibilities.1")}</li>
 						<li>{t("macedo-soft-house.responsibilities.2")}</li>
+						<li>{t("macedo-soft-house.responsibilities.3")}</li>
 					</ul>
 				</CardBody>
 			</Card>
@@ -28,6 +29,8 @@ export default function TabExperience() {
 						<li>{t("greendot.responsibilities.1")}</li>
 						<li>{t("greendot.responsibilities.2")}</li>
 						<li>{t("greendot.responsibilities.3")}</li>
+						<li>{t("greendot.responsibilities.4")}</li>
+						<li>{t("greendot.responsibilities.5")}</li>
 					</ul>
 				</CardBody>
 			</Card>

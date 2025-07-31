@@ -9,22 +9,24 @@
 	"TabExperience": {
 		"macedo-soft-house": {
 			"title": "Macedo Soft House",
-			"subtitle": "Front-End Developer",
+			"subtitle": "Front-End Developer (NextJS)",
 			"date": "January 2023 - January 2025",
 			"responsibilities": {
-				"1": "I have led the development of end-to-end software solutions (Web and PWA) for clients in multiple sectors, managing the entire project lifecycle, fromconception to deployment",
-				"2": "I have managed and executed deployment processes in cloud infrastructures such as AWS (S3, EC2, ElasticBeanstalk) and DigitalOcean, ensuring the configuration, availability and scalability of applications."
+				"1": "I have led the development of end-to-end software solutions (Web and PWA) for clients in multiple sectors, managing the entire project lifecycle, from conception to deployment",
+				"2": "I have managed and executed deployment processes in cloud infrastructures such as AWS (S3, EC2, ElasticBeanstalk) and DigitalOcean, ensuring the configuration, availability and scalability of applications",
+				"3": "Stacks used was React, TailwindCSS, shadcnUI, MaterialUI, NestJS, GraphQL, Prisma ORM, Redis and PostgreSQL"
 			}
 		},
 		"greendot": {
 			"title": "Greendot",
-			"subtitle": "Front-End Developer",
+			"subtitle": "Front-End Developer (React)",
 			"date": "May 2020 - December 2022",
 			"responsibilities": {
-				"1": "Implemented a complete software solution for meetingmanagement, simplifying the scheduling, organization and visualization processes for employees",
+				"1": "Implemented a complete software solution for meeting management, simplifying the scheduling, organization and visualization processes for employees",
 				"2": "Developed an application to automate the process of pricing services, ensuring greater accuracy in values and agility in the preparation of commercial proposals",
 				"3": "Maintained mobile applications, added a credit card payment system",
-				"4": "Organized and deployed on AWS with S3, EC2, ElasticBeanstalk, among others"
+				"4": "Organized and deployed on AWS with S3, EC2, ElasticBeanstalk, among others",
+				"5": "Stacks used was React, TailwindCSS, Styled-Components, MaterialUI, NestJS, NodeJS, TypeORM, Prisma ORM, Redis, SQL Server and PostgreSQL"
 			}
 		}
 	},
