@@ -5,7 +5,13 @@
 		"dev": "next dev -p 3005",
 		"build": "next build",
 		"start": "next start",
-		"lint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix"
+		"lint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix",
+		"prepare": "husky",
+		"pre-commit": "lint-staged"
+	},
+	"lint-staged": {
+		"*.{js,jsx,ts,tsx}": ["npm run lint", "npm run build"],
+		"*.{json,md}": ["prettier --write"]
 	},
 	"dependencies": {
 		"@heroui/button": "2.2.23",
