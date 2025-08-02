@@ -70,6 +70,32 @@ Acesse uma versão de demonstração (caso publicada) ou rode localmente seguind
 
 Este projeto pode ser facilmente publicado no Vercel, Netlify ou qualquer serviço compatível com Next.js.
 
+## CI/CD e Qualidade de Código
+
+Este projeto utiliza Husky para garantir a qualidade do código através de hooks de Git:
+
+- **Pre-commit Hook**: Executa automaticamente lint antes de cada commit
+  - Verifica erros de sintaxe e formatação
+  - Previne commits com código que não segue os padrões de código
+
+- **Pre-push Hook**: Executa o build antes de cada push
+  - Impede pushes para o repositório remoto se o build falhar
+  - Garante que apenas código funcional seja enviado para o repositório remoto
+  - Reduz problemas em ambientes de integração contínua
+
+Para pular a verificação em casos excepcionais (não recomendado):
+```bash
+git commit -m "mensagem" --no-verify
+git push --no-verify
+```
+
+### Configuração
+
+A configuração do Husky está nos arquivos:
+- `.husky/pre-commit`: Hook executado antes de cada commit
+- `.husky/pre-push`: Hook executado antes de cada push
+- `package.json`: Configuração do lint-staged
+
 ## Licença
 
 Distribuído sob a licença MIT. Veja o arquivo [LICENSE](./LICENSE) para mais detalhes.

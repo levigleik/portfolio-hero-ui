@@ -10,8 +10,7 @@
 		"pre-commit": "lint-staged"
 	},
 	"lint-staged": {
-		"*.{js,jsx,ts,tsx}": ["npm run lint", "npm run build"],
-		"*.{json,md}": ["prettier --write"]
+		"*.{js,jsx,ts,tsx}": ["npm run lint"]
 	},
 	"dependencies": {
 		"@heroui/button": "2.2.23",
