@@ -5,7 +5,12 @@
 		"dev": "next dev -p 3005",
 		"build": "next build",
 		"start": "next start",
-		"lint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix"
+		"lint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix",
+		"prepare": "husky",
+		"pre-commit": "lint-staged"
+	},
+	"lint-staged": {
+		"*.{js,jsx,ts,tsx}": ["npm run lint"]
 	},
 	"dependencies": {
 		"@heroui/button": "2.2.23",
@@ -38,7 +43,7 @@
 		"embla-carousel-autoplay": "^8.6.0",
 		"embla-carousel-react": "^8.6.0",
 		"flag-icons": "^7.3.2",
-		"framer-motion": "11.13.1",
+		"framer-motion": "^12.23.12",
 		"intl-messageformat": "^10.5.0",
 		"js-cookie": "^3.0.5",
 		"lucide-react": "^0.487.0",
@@ -62,6 +67,8 @@
 		"@types/react": "^19.1.9",
 		"@types/react-dom": "^19.1.7",
 		"autoprefixer": "10.4.19",
+		"husky": "^9.1.7",
+		"lint-staged": "^16.1.2",
 		"postcss": "^8.5.6",
 		"tailwind-variants": "0.3.0",
 		"tailwindcss": "^4.1.11",
