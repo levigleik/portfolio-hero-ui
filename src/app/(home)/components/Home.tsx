@@ -2,8 +2,8 @@
 import { Tab, Tabs } from "@heroui/tabs";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import AboutSection from "../components/AboutSection";
 import ProjectSection from "../../../components/project/ProjectSection";
+import AboutSection from "../components/AboutSection";
 import TabExperience from "../components/TabExperience";
 import TabFormation from "../components/TabFormation";
 

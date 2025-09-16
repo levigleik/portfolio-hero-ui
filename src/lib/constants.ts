@@ -25,7 +25,8 @@ export const PROJECT_TECHNOLOGIES = [
 			"Redis",
 		],
 		git: "https://github.com/levigleik/front-dlav-public",
-		url: "https://dlav.vercel.app",
+		// url: "https://dlav.vercel.app",
+		url: null,
 	},
 	{
 		name: "reunioes",
@@ -47,7 +48,8 @@ export const PROJECT_TECHNOLOGIES = [
 		photo: gestaoClinica.src,
 		technologies: ["React", "Vite", "Bootstrap", "AdonisJS", "Lucid ORM"],
 		git: null,
-		url: "https://novogestaoclinica.netlify.app",
+		url: null,
+		// url: "https://novogestaoclinica.netlify.app",
 	},
 	{
 		name: "viu-ganhou",
@@ -75,7 +77,8 @@ export const PROJECT_TECHNOLOGIES = [
 			"React Chart.js",
 		],
 		git: null,
-		url: "https://pesquisasatisfacao.netlify.app",
+		// url: "https://pesquisasatisfacao.netlify.app",
+		url: null,
 	},
 	{
 		name: "chrono-study",
@@ -97,7 +100,8 @@ export const PROJECT_TECHNOLOGIES = [
 		photo: dispatchSystem.src,
 		technologies: ["Vite", "React", "Ant Design", "NestJS", "Prisma"],
 		git: null,
-		url: "https://dispatch-system.netlify.app",
+		url: null,
+		// url: "https://dispatch-system.netlify.app",
 	},
 	{
 		name: "vacation-plan",

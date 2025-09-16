@@ -5,7 +5,7 @@
 		"dev": "next dev -p 3005",
 		"build": "next build",
 		"start": "next start",
-		"lint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix",
+		"lint": "biome check src/**/*.{ts,tsx} --write",
 		"prepare": "husky",
 		"pre-commit": "lint-staged"
 	},
