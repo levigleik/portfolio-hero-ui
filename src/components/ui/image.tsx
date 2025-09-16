@@ -5,7 +5,6 @@ import {
 } from "@heroui/image";
 import { Modal, ModalContent, ModalFooter } from "@heroui/modal";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { FaTimes } from "react-icons/fa";
 import {} from "react-icons/fa6";
 import { FiZoomIn, FiZoomOut } from "react-icons/fi";
 

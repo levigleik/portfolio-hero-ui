@@ -1,10 +1,10 @@
 "use client";
 import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
+import { motion } from "framer-motion";
 import { useLocale, useTranslations } from "next-intl";
 import { FaEnvelope, FaFilePdf, FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
-import { motion } from "framer-motion";
 
 export default function AboutSection() {
 	const t = useTranslations("HomePage");
