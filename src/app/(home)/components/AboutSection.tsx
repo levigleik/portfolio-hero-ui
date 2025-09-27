@@ -21,7 +21,7 @@ export default function AboutSection() {
 					Levi Gleik
 				</span>
 				<span className="font-sans text-lg italic">
-					{t("front-end-developer")}
+					{t("full-stack-developer")}
 				</span>
 			</motion.div>
 			<motion.div
