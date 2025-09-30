@@ -2,6 +2,7 @@ import chronoStudy from "../assets/images/projects/chrono-study.png";
 import dispatchSystem from "../assets/images/projects/dispatch-system.png";
 import dlav from "../assets/images/projects/dlav.png";
 import gestaoClinica from "../assets/images/projects/gestao-clinica.png";
+import jogoDaVelha02 from "../assets/images/projects/jogo-da-velha-02.png";
 import oscManager from "../assets/images/projects/osc-manager.png";
 import pesquisaSatisfacao from "../assets/images/projects/pesquisa-satisfacao.png";
 import reunioes from "../assets/images/projects/reunioes.png";
@@ -27,6 +28,13 @@ export const PROJECT_TECHNOLOGIES = [
 		git: "https://github.com/levigleik/front-dlav-public",
 		// url: "https://dlav.vercel.app",
 		url: null,
+	},
+	{
+		name: "jogo-da-velha-02",
+		photo: jogoDaVelha02.src,
+		technologies: ["NextJS", "Framer Motion", "TailwindCSS", "Lottie"],
+		git: null,
+		url: "https://jogo-da-velha-02.vercel.app",
 	},
 	{
 		name: "reunioes",

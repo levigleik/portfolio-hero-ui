@@ -68,6 +68,10 @@
 			"title": "D'Lav",
 			"description": "Organize todo o processo de lavagem. É gerado QR Codes onde podemos controlar todas as etapas da lavagem."
 		},
+		"project-jogo-da-velha-02": {
+			"title": "Jogo da Velha 2.0",
+			"description": "Jogo da velha bem mais estratégico. \nSão 9 tabuleiros de jogo da velha dentro de um tabuleiro maior."
+		},
 		"project-gestao-clinica": {
 			"title": "Gestão Clínica",
 			"description": "Sistema robusto para gestão de clínicas com agendamento, cadastro, gerenciamento e pagamento."
