@@ -1,6 +1,6 @@
 {
 	"HomePage": {
-		"front-end-developer": "Desenvolvedor Front-end",
+		"full-stack-developer": "Desenvolvedor Full-Stack",
 		"about": "Sobre mim",
 		"experience": "Experiência",
 		"formation": "Formação",
@@ -8,7 +8,7 @@
 		"resume": "Currículo",
 		"hero-label": "Portfólio // Levi Gleik",
 		"hero-title": "Construindo <highlight>interfaces, sistemas e produtos digitais</highlight> com foco em clareza e performance.",
-		"hero-description": "Desenvolvedor Front-end com experiência em React.js, Next.js, TypeScript e integração com APIs REST, reunindo projetos reais, ferramentas internas e interfaces para diferentes negócios.",
+		"hero-description": "Desenvolvedor Full-Stack com experiência em React.js, Next.js, TypeScript, Node.js, Nest.js e integração com APIs REST, reunindo projetos reais, ferramentas internas e interfaces para diferentes negócios.",
 		"explore-projects": "Explorar projetos",
 		"contact-me": "Entrar em contato",
 		"snapshot-label": "Resumo rápido",
@@ -19,19 +19,19 @@
 		"linkedin": "LinkedIn",
 		"email": "E-mail",
 		"about-title": "Experiência prática no ecossistema JavaScript/TypeScript",
-		"about-text": "Desenvolvedor de software com mais de 5 anos de experiência no ecossistema JavaScript/TypeScript, com domínio de React.js no front-end e de Node.js/Nest.js no back-end, incluindo integrações com APIs e Prisma ORM. Ao longo da trajetória, fui responsável por desenvolver e implementar soluções web ponta a ponta, criando sistemas para otimizar a precificação de serviços, a gestão de reuniões corporativas e outros fluxos operacionais.",
+		"about-text": "Desenvolvedor de software com mais de 5 anos de experiência no ecossistema JavaScript/TypeScript, com domínio de React.js, Node.js/Nest.js, integrações com APIs e Prisma ORM. Ao longo da trajetória, fui responsável por desenvolver e implementar soluções web ponta a ponta, criando sistemas para otimizar a precificação de serviços, a gestão de reuniões corporativas e outros fluxos operacionais.",
 		"about-stack-label": "Stack principal",
-		"experience-description": "Experiência profissional no desenvolvimento de produtos front-end, integração com APIs REST e entrega de sistemas para operação interna e fluxos voltados ao cliente.",
+		"experience-description": "Experiência profissional no desenvolvimento de produtos full-stack, integração com APIs REST e entrega de sistemas para operação interna e fluxos voltados ao cliente.",
 		"formation-description": "Base acadêmica e técnica que sustenta pensamento de produto, arquitetura de software e os fundamentos por trás das aplicações web.",
 		"contact-kicker": "Contato",
 		"contact-title": "Vamos desenhar a próxima interface?",
-		"contact-description": "Se quiser conversar sobre produto, arquitetura front-end, integração com APIs ou um novo projeto, estou a uma mensagem de distância.",
+		"contact-description": "Se quiser conversar sobre produto, arquitetura full-stack, integração com APIs ou um novo projeto, estou a uma mensagem de distância.",
 		"send-email": "Enviar e-mail"
 	},
 	"TabExperience": {
 		"macedo-soft-house": {
 			"title": "Macedo Soft House",
-			"subtitle": "Desenvolvedor Front-End",
+			"subtitle": "Desenvolvedor Full-Stack",
 			"date": "Janeiro 2023 - Janeiro 2025",
 			"responsibilities": {
 				"1": "Desenvolvimento de aplicações web utilizando React.js",
@@ -40,7 +40,7 @@
 		},
 		"greendot": {
 			"title": "Greendot",
-			"subtitle": "Desenvolvedor Front-End",
+			"subtitle": "Desenvolvedor Full-Stack",
 			"date": "Maio 2020 - Dezembro 2022",
 			"responsibilities": {
 				"1": "Desenvolvi sistema para marcar, organizar e visualizar reuniões internas da empresa",
@@ -86,6 +86,10 @@
 		"project-chrono-study": {
 			"title": "Chrono Study",
 			"description": "Ajuda a cronometrar e organizar os estudos. Pode adicionar disciplinas e verificar estatísticas de estudos por gráficos e tabelas."
+		},
+		"project-jogo-da-velha-02": {
+			"title": "Jogo da Velha 2.0",
+			"description": "Um jogo da velha muito mais estratégico. Existem 9 tabuleiros de jogo da velha dentro de um tabuleiro maior."
 		},
 		"project-transfer-case": {
 			"title": "Transfer Case",
@@ -151,7 +155,7 @@
 		"formation": "Formação",
 		"contact": "Contato",
 		"projects": "Projetos",
-		"brand-tag": "Front-end",
+		"brand-tag": "Full-stack",
 		"toggle-menu": "Alternar menu de navegação"
 	},
 	"ErrorPage": {

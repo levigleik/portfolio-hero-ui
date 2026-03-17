@@ -13,7 +13,7 @@ export default async function ProjectsPage() {
 
 				<div className="mt-6 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
 					<div className="max-w-3xl">
-						<h1 className="text-4xl font-black uppercase tracking-[-0.06em] text-[var(--page-text)] sm:text-5xl lg:text-6xl">
+						<h1 className="text-4xl font-black uppercase tracking-[-0.01em] text-[var(--page-text)] sm:text-5xl lg:text-6xl">
 							{t("archive-title")}
 						</h1>
 						<p className="mt-5 text-base leading-8 text-[var(--page-muted)] sm:text-lg">

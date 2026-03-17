@@ -20,7 +20,7 @@ function SectionIntro({
 	return (
 		<div className="mx-auto mb-14 max-w-3xl text-center">
 			<span className="section-kicker">{badge}</span>
-			<h2 className="mt-6 text-4xl font-black uppercase tracking-[-0.06em] text-[var(--page-text)] sm:text-5xl">
+			<h2 className="mt-6 text-4xl font-black uppercase tracking-[-0.01em] text-[var(--page-text)] sm:text-5xl">
 				{title}
 			</h2>
 			<p className="mt-5 text-base leading-8 text-[var(--page-muted)] sm:text-lg">
@@ -78,7 +78,7 @@ export default function HomeComp() {
 					<div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_300px] lg:items-start">
 						<div>
 							<span className="section-kicker">{t("about")}</span>
-							<h2 className="mt-6 max-w-3xl text-4xl font-black uppercase tracking-[-0.06em] text-[var(--page-text)] sm:text-5xl">
+							<h2 className="mt-6 max-w-3xl text-4xl font-black uppercase tracking-[-0.01em] text-[var(--page-text)] sm:text-5xl">
 								{t("about-title")}
 							</h2>
 							<p className="mt-6 max-w-3xl text-base leading-8 text-[var(--page-muted)] sm:text-lg">
@@ -116,7 +116,7 @@ export default function HomeComp() {
 					<div className="grid gap-8 lg:grid-cols-[minmax(0,1.1fr)_360px] lg:items-end">
 						<div>
 							<span className="section-kicker">{t("contact-kicker")}</span>
-							<h2 className="mt-6 max-w-2xl text-4xl font-black uppercase tracking-[-0.06em] text-[var(--page-text)] sm:text-5xl">
+							<h2 className="mt-6 max-w-2xl text-4xl font-black uppercase tracking-[-0.01em] text-[var(--page-text)] sm:text-5xl">
 								{t("contact-title")}
 							</h2>
 							<p className="mt-5 max-w-2xl text-base leading-8 text-[var(--page-muted)] sm:text-lg">
