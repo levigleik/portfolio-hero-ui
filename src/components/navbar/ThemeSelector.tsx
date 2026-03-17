@@ -24,7 +24,7 @@ export default function ThemeSelector({ className }: { className?: string }) {
 			radius="full"
 			isIconOnly
 		>
-			{isDarkTheme ? <FaSun size={14} /> : <FaMoon size={14} />}
+			{isDarkTheme ? <FaSun size={21} /> : <FaMoon size={21} />}
 		</Button>
 	);
 }
