@@ -11,10 +11,10 @@ import ThemeSelector from "./ThemeSelector";
 
 const sectionIds = [
 	"hero",
+	"about",
 	"projects",
 	"experience",
 	"formation",
-	"about",
 ] as const;
 type SectionId = (typeof sectionIds)[number];
 
@@ -86,7 +86,11 @@ export default function NavbarComp() {
 			label: t("home"),
 			sectionId: "hero",
 		},
-
+		{
+			href: isProjectsPage ? "/#about" : "#about",
+			label: t("about"),
+			sectionId: "about",
+		},
 		{
 			href: isProjectsPage ? "/projects" : "#projects",
 			label: t("projects"),
@@ -101,11 +105,6 @@ export default function NavbarComp() {
 			href: isProjectsPage ? "/#formation" : "#formation",
 			label: t("formation"),
 			sectionId: "formation",
-		},
-		{
-			href: isProjectsPage ? "/#about" : "#about",
-			label: t("about"),
-			sectionId: "about",
 		},
 	];
 

@@ -1,4 +1,5 @@
 "use client";
+import { locales, type AppLocale } from "@/i18n/config";
 import { setLocale } from "@/lib/utils";
 import { Button } from "@heroui/button";
 import {
@@ -17,6 +18,15 @@ export default function LanguageSelector({
 	const router = useRouter();
 	const t = useTranslations("LanguageSelector");
 	const locale = useLocale();
+	const currentLocale = locales.includes(locale as AppLocale)
+		? (locale as AppLocale)
+		: "pt-BR";
+
+	const localeFlagMap: Record<AppLocale, string> = {
+		"pt-BR": "fi fi-br",
+		en: "fi fi-us",
+		es: "fi fi-es",
+	};
 
 	return (
 		<Dropdown>
@@ -31,11 +41,7 @@ export default function LanguageSelector({
 						className,
 					)}
 				>
-					{locale === "pt-BR" ? (
-						<span className="fi fi-br" />
-					) : (
-						<span className="fi fi-us" />
-					)}
+					<span className={localeFlagMap[currentLocale]} />
 				</Button>
 			</DropdownTrigger>
 			<DropdownMenu
@@ -44,10 +50,10 @@ export default function LanguageSelector({
 				selectionMode="single"
 				variant="flat"
 				onSelectionChange={(value) => {
-					setLocale(value.currentKey as "pt-BR" | "en");
+					setLocale(value.currentKey as AppLocale);
 					router.refresh();
 				}}
-				defaultSelectedKeys={[locale]}
+				defaultSelectedKeys={[currentLocale]}
 			>
 				<DropdownItem key="pt-BR" classNames={{ title: "gap-2 flex" }}>
 					<span className="fi fi-br" />
@@ -56,6 +62,10 @@ export default function LanguageSelector({
 				<DropdownItem key="en" classNames={{ title: "gap-2 flex" }}>
 					<span className="fi fi-us" />
 					{t("english")}
+				</DropdownItem>
+				<DropdownItem key="es" classNames={{ title: "gap-2 flex" }}>
+					<span className="fi fi-es" />
+					{t("spanish")}
 				</DropdownItem>
 			</DropdownMenu>
 		</Dropdown>

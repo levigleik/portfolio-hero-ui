@@ -172,6 +172,7 @@
 	"LanguageSelector": {
 		"select-language": "Select language",
 		"english": "English",
-		"portuguese": "Portuguese"
+		"portuguese": "Portuguese",
+		"spanish": "Spanish"
 	}
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import { type AppLocale } from "@/i18n/config";
 import { motion } from "framer-motion";
 import { useLocale, useTranslations } from "next-intl";
 import { FaEnvelope, FaFilePdf, FaGithub, FaLinkedin } from "react-icons/fa";
@@ -22,7 +23,12 @@ const stack = [
 
 export default function AboutSection() {
 	const t = useTranslations("HomePage");
-	const locale = useLocale();
+	const locale = useLocale() as AppLocale;
+	const resumePathByLocale: Record<AppLocale, string> = {
+		"pt-BR": "/resume-pt-BR.pdf",
+		en: "/resume-en.pdf",
+		es: "/resume-en.pdf",
+	};
 
 	return (
 		<section id="hero" className="section-shell scroll-mt-32 pt-32 sm:pt-36">
@@ -81,7 +87,7 @@ export default function AboutSection() {
 						</a>
 
 						<a
-							href={`/resume-${locale}.pdf`}
+							href={resumePathByLocale[locale]}
 							target="_blank"
 							rel="noreferrer"
 							className="action-secondary"
