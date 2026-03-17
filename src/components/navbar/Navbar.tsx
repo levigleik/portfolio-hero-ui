@@ -1,9 +1,9 @@
 "use client";
 
 import clsx from "clsx";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import LanguageSelector from "./LanguageSelector";
@@ -153,13 +153,13 @@ export default function NavbarComp() {
 					</nav>
 
 					<div className="hidden items-center gap-3 md:flex">
-						<LanguageSelector className="border-[var(--page-border)] bg-[var(--page-panel-strong)]" />
-						<ThemeSelector className="border-[var(--page-border)] bg-[var(--page-panel-strong)]" />
+						<LanguageSelector className="p-2" />
+						<ThemeSelector className="p-2" />
 					</div>
 
 					<button
 						type="button"
-						className="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--page-border)] bg-[var(--page-panel-strong)] text-[var(--page-text)] transition-colors hover:border-[var(--page-border-strong)] md:hidden"
+						className="flex h-11 w-11 items-center justify-center rounded-full border text-[var(--page-text)] transition-colors hover:border-[var(--page-border-strong)] md:hidden"
 						aria-expanded={isMenuOpen}
 						aria-label={t("toggle-menu")}
 						onClick={() => setIsMenuOpen((current) => !current)}
@@ -198,8 +198,8 @@ export default function NavbarComp() {
 					</nav>
 
 					<div className="mt-4 flex items-center gap-3 border-t border-[var(--page-border)] pt-4">
-						<LanguageSelector className="border-[var(--page-border)] bg-[var(--page-panel-strong)]" />
-						<ThemeSelector className="border-[var(--page-border)] bg-[var(--page-panel-strong)]" />
+						<LanguageSelector className="p-2" />
+						<ThemeSelector className="p-2" />
 					</div>
 				</div>
 			</div>

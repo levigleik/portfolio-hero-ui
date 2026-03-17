@@ -1,5 +1,6 @@
 "use client";
-import { locales, type AppLocale } from "@/i18n/config";
+
+import { type AppLocale, locales } from "@/i18n/config";
 import { setLocale } from "@/lib/utils";
 import { Button } from "@heroui/button";
 import {
@@ -18,6 +19,7 @@ export default function LanguageSelector({
 	const router = useRouter();
 	const t = useTranslations("LanguageSelector");
 	const locale = useLocale();
+
 	const currentLocale = locales.includes(locale as AppLocale)
 		? (locale as AppLocale)
 		: "pt-BR";
@@ -32,7 +34,7 @@ export default function LanguageSelector({
 	};
 
 	return (
-		<Dropdown>
+		<Dropdown placement="bottom-end">
 			<DropdownTrigger>
 				<Button
 					variant="bordered"
@@ -47,39 +49,43 @@ export default function LanguageSelector({
 					<span className={localeFlagMap[currentLocale]} />
 				</Button>
 			</DropdownTrigger>
+
 			<DropdownMenu
 				disallowEmptySelection
 				aria-label={t("select-language")}
 				selectionMode="single"
 				variant="flat"
+				defaultSelectedKeys={[currentLocale]}
+				classNames={{
+					base: "min-w-[220px] rounded-2xl bg-[var(--page-panel-strong)] p-1 shadow-xl backdrop-blur-xl",
+					list: "gap-1",
+				}}
+				itemClasses={{
+					base: "rounded-xl px-4 py-2 data-[hover=true]:bg-white/10 data-[selected=true]:bg-white/10",
+					title: "text-[var(--page-text)]",
+					selectedIcon: "text-[var(--page-text)]",
+				}}
 				onSelectionChange={(value) => {
 					setLocale(value.currentKey as AppLocale);
 					router.refresh();
 				}}
-				defaultSelectedKeys={[currentLocale]}
 			>
-				<DropdownItem key="pt-BR" classNames={{ title: "gap-2 flex" }}>
-					<span className="fi fi-br" />
+				<DropdownItem key="pt-BR" startContent={<span className="fi fi-br" />}>
 					{t("portuguese")}
 				</DropdownItem>
-				<DropdownItem key="en" classNames={{ title: "gap-2 flex" }}>
-					<span className="fi fi-us" />
+				<DropdownItem key="en" startContent={<span className="fi fi-us" />}>
 					{t("english")}
 				</DropdownItem>
-				<DropdownItem key="es" classNames={{ title: "gap-2 flex" }}>
-					<span className="fi fi-es" />
+				<DropdownItem key="es" startContent={<span className="fi fi-es" />}>
 					{t("spanish")}
 				</DropdownItem>
-				<DropdownItem key="fr" classNames={{ title: "gap-2 flex" }}>
-					<span className="fi fi-fr" />
+				<DropdownItem key="fr" startContent={<span className="fi fi-fr" />}>
 					{t("french")}
 				</DropdownItem>
-				<DropdownItem key="it" classNames={{ title: "gap-2 flex" }}>
-					<span className="fi fi-it" />
+				<DropdownItem key="it" startContent={<span className="fi fi-it" />}>
 					{t("italian")}
 				</DropdownItem>
-				<DropdownItem key="zh" classNames={{ title: "gap-2 flex" }}>
-					<span className="fi fi-cn" />
+				<DropdownItem key="zh" startContent={<span className="fi fi-cn" />}>
 					{t("mandarin")}
 				</DropdownItem>
 			</DropdownMenu>
