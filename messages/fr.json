@@ -1,6 +1,6 @@
 {
 	"HomePage": {
-		"front-end-developer": "Développeur Front-end",
+		"full-stack-developer": "Développeur Full-Stack",
 		"about": "À propos de moi",
 		"experience": "Expérience",
 		"formation": "Formation",
@@ -8,7 +8,7 @@
 		"resume": "CV",
 		"hero-label": "Portfolio // Levi Gleik",
 		"hero-title": "Concevoir <highlight>des interfaces, des systèmes et des produits numériques</highlight> avec un souci de clarté et de performance.",
-		"hero-description": "Développeur front-end expérimenté avec React.js, Next.js, TypeScript et l'intégration d'APIs REST, réunissant des projets réels, des outils internes et des interfaces pour différents secteurs.",
+		"hero-description": "Développeur Full-Stack expérimenté avec React.js, Next.js, TypeScript, Node.js, Nest.js et l'intégration d'APIs REST, réunissant des projets réels, des outils internes et des interfaces pour différents secteurs.",
 		"explore-projects": "Explorer les projets",
 		"contact-me": "Me contacter",
 		"snapshot-label": "Aperçu rapide",
@@ -19,19 +19,19 @@
 		"linkedin": "LinkedIn",
 		"email": "E-mail",
 		"about-title": "Une expérience concrète dans l'écosystème JavaScript/TypeScript",
-		"about-text": "Développeur logiciel avec plus de 5 ans d'expérience dans l'écosystème JavaScript/TypeScript, avec une solide maîtrise de React.js côté front-end et de Node.js/Nest.js côté back-end, y compris l'intégration d'APIs et Prisma ORM. Au fil de mon parcours, j'ai été responsable du développement et de la mise en œuvre de solutions web de bout en bout, en créant des systèmes pour optimiser la tarification des services, la gestion des réunions d'entreprise et d'autres flux opérationnels.",
+		"about-text": "Développeur logiciel avec plus de 5 ans d'expérience dans l'écosystème JavaScript/TypeScript, avec une solide maîtrise de React.js, Node.js/Nest.js, de l'intégration d'APIs et de Prisma ORM. Au fil de mon parcours, j'ai été responsable du développement et de la mise en œuvre de solutions web de bout en bout, en créant des systèmes pour optimiser la tarification des services, la gestion des réunions d'entreprise et d'autres flux opérationnels.",
 		"about-stack-label": "Stack principale",
-		"experience-description": "Expérience professionnelle dans le développement de produits front-end, l'intégration d'APIs REST et la livraison de systèmes pour les opérations internes et les parcours orientés client.",
+		"experience-description": "Expérience professionnelle dans le développement de produits full-stack, l'intégration d'APIs REST et la livraison de systèmes pour les opérations internes et les parcours orientés client.",
 		"formation-description": "Une base académique et technique qui soutient la réflexion produit, l'architecture logicielle et les fondements des applications web.",
 		"contact-kicker": "Contact",
 		"contact-title": "Construisons la prochaine interface ?",
-		"contact-description": "Si vous souhaitez discuter produit, architecture front-end, intégration d'API ou nouveau projet, je suis à un message de distance.",
+		"contact-description": "Si vous souhaitez discuter produit, architecture full-stack, intégration d'API ou nouveau projet, je suis à un message de distance.",
 		"send-email": "Envoyer un e-mail"
 	},
 	"TabExperience": {
 		"macedo-soft-house": {
 			"title": "Macedo Soft House",
-			"subtitle": "Développeur Front-End",
+			"subtitle": "Développeur Full-Stack",
 			"date": "Janvier 2023 - Janvier 2025",
 			"responsibilities": {
 				"1": "Développement d'applications web avec React.js",
@@ -40,7 +40,7 @@
 		},
 		"greendot": {
 			"title": "Greendot",
-			"subtitle": "Développeur Front-End",
+			"subtitle": "Développeur Full-Stack",
 			"date": "Mai 2020 - Décembre 2022",
 			"responsibilities": {
 				"1": "J'ai développé un système pour planifier, organiser et visualiser les réunions internes de l'entreprise",
@@ -86,6 +86,10 @@
 		"project-chrono-study": {
 			"title": "Chrono Study",
 			"description": "Aide à chronométrer et organiser les études. Il est possible d'ajouter des matières et de consulter des statistiques d'étude via des graphiques et des tableaux."
+		},
+		"project-jogo-da-velha-02": {
+			"title": "Morpion 2.0",
+			"description": "Un morpion beaucoup plus stratégique. Il y a 9 plateaux de morpion à l'intérieur d'un plateau plus grand."
 		},
 		"project-transfer-case": {
 			"title": "Transfer Case",
@@ -151,7 +155,7 @@
 		"formation": "Formation",
 		"contact": "Contact",
 		"projects": "Projets",
-		"brand-tag": "Front-end",
+		"brand-tag": "Full-stack",
 		"toggle-menu": "Basculer le menu de navigation"
 	},
 	"ErrorPage": {

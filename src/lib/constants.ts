@@ -2,6 +2,7 @@ import chronoStudy from "../assets/images/projects/chrono-study.png";
 import dispatchSystem from "../assets/images/projects/dispatch-system.png";
 import dlav from "../assets/images/projects/dlav.png";
 import gestaoClinica from "../assets/images/projects/gestao-clinica.png";
+import jogoDaVelha02 from "../assets/images/projects/jogo-da-velha-02.png";
 import oscManager from "../assets/images/projects/osc-manager.png";
 import pesquisaSatisfacao from "../assets/images/projects/pesquisa-satisfacao.png";
 import reunioes from "../assets/images/projects/reunioes.png";
@@ -169,6 +170,13 @@ export const PROJECT_TECHONOLOGIES = [
 		],
 		git: "https://github.com/levigleik/chrono-study",
 		url: "https://chrono-study.vercel.app",
+	},
+	{
+		name: "jogo-da-velha-02",
+		photo: jogoDaVelha02.src,
+		techonologies: ["NextJS", "Framer Motion", "TailwindCSS", "Lottie"],
+		git: null,
+		url: "https://jogo-da-velha-02.vercel.app",
 	},
 	{
 		name: "dispatch-system",

@@ -1,6 +1,6 @@
 {
 	"HomePage": {
-		"front-end-developer": "Front-end Developer",
+		"full-stack-developer": "Full-Stack Developer",
 		"about": "About me",
 		"experience": "Experience",
 		"formation": "Education",
@@ -8,7 +8,7 @@
 		"resume": "Resume",
 		"hero-label": "Portfolio // Levi Gleik",
 		"hero-title": "Building <highlight>interfaces, systems and digital products</highlight> with a focus on clarity and performance.",
-		"hero-description": "Front-end developer with experience in React.js, Next.js, TypeScript and REST API integration, bringing together real projects, internal tools and interfaces for different businesses.",
+		"hero-description": "Full-stack developer with experience in React.js, Next.js, TypeScript, Node.js, Nest.js and REST API integration, bringing together real projects, internal tools and interfaces for different businesses.",
 		"explore-projects": "Explore projects",
 		"contact-me": "Contact me",
 		"snapshot-label": "Quick snapshot",
@@ -19,19 +19,19 @@
 		"linkedin": "LinkedIn",
 		"email": "Email",
 		"about-title": "Hands-on experience across the JavaScript/TypeScript ecosystem",
-		"about-text": "Software developer with over 5 years of experience in the JavaScript/TypeScript ecosystem, with strong expertise in React.js on the front end and Node.js/Nest.js on the back end, including API integration and Prisma ORM. I have been responsible for developing and implementing end-to-end web solutions, building systems to optimize service pricing, corporate meeting management, and other operational workflows.",
+		"about-text": "Software developer with over 5 years of experience in the JavaScript/TypeScript ecosystem, with strong expertise in React.js, Node.js/Nest.js, API integration and Prisma ORM. I have been responsible for developing and implementing end-to-end web solutions, building systems to optimize service pricing, corporate meeting management, and other operational workflows.",
 		"about-stack-label": "Core stack",
-		"experience-description": "Professional experience building front-end products, integrating REST APIs and delivering systems for internal operations and client-facing workflows.",
+		"experience-description": "Professional experience building full-stack products, integrating REST APIs and delivering systems for internal operations and client-facing workflows.",
 		"formation-description": "Academic and technical education that supports product thinking, software architecture and the foundations behind web applications.",
 		"contact-kicker": "Contact",
 		"contact-title": "Let's shape the next interface?",
-		"contact-description": "If you want to talk about product, front-end architecture, API integration or a new project, I'm one message away.",
+		"contact-description": "If you want to talk about product, full-stack architecture, API integration or a new project, I'm one message away.",
 		"send-email": "Send email"
 	},
 	"TabExperience": {
 		"macedo-soft-house": {
 			"title": "Macedo Soft House",
-			"subtitle": "Front-End Developer",
+			"subtitle": "Full-Stack Developer",
 			"date": "January 2023 - January 2025",
 			"responsibilities": {
 				"1": "Development of web applications using React.js",
@@ -40,7 +40,7 @@
 		},
 		"greendot": {
 			"title": "Greendot",
-			"subtitle": "Front-End Developer",
+			"subtitle": "Full-Stack Developer",
 			"date": "May 2020 - December 2022",
 			"responsibilities": {
 				"1": "Developed a system to schedule, organize, and visualize internal company meetings",
@@ -86,6 +86,10 @@
 		"project-chrono-study": {
 			"title": "Chrono Study",
 			"description": "Helps time and organize your studies. You can add subjects and view study statistics through charts and tables."
+		},
+		"project-jogo-da-velha-02": {
+			"title": "Tic Tac Toe 2.0",
+			"description": "Tic Tac Toe made much more strategic. There are 9 tic-tac-toe boards inside a larger board."
 		},
 		"project-transfer-case": {
 			"title": "Transfer Case",
@@ -151,7 +155,7 @@
 		"formation": "Education",
 		"contact": "Contact",
 		"projects": "Projects",
-		"brand-tag": "Front-end",
+		"brand-tag": "Full-stack",
 		"toggle-menu": "Toggle navigation menu"
 	},
 	"ErrorPage": {

@@ -1,6 +1,6 @@
 {
 	"HomePage": {
-		"front-end-developer": "Desarrollador Front-end",
+		"full-stack-developer": "Desarrollador Full-Stack",
 		"about": "Sobre mí",
 		"experience": "Experiencia",
 		"formation": "Formación",
@@ -8,7 +8,7 @@
 		"resume": "Currículum",
 		"hero-label": "Portafolio // Levi Gleik",
 		"hero-title": "Construyendo <highlight>interfaces, sistemas y productos digitales</highlight> con foco en claridad y rendimiento.",
-		"hero-description": "Desarrollador front-end con experiencia en React.js, Next.js, TypeScript e integración con APIs REST, reuniendo proyectos reales, herramientas internas e interfaces para distintos negocios.",
+		"hero-description": "Desarrollador Full-Stack con experiencia en React.js, Next.js, TypeScript, Node.js, Nest.js e integración con APIs REST, reuniendo proyectos reales, herramientas internas e interfaces para distintos negocios.",
 		"explore-projects": "Explorar proyectos",
 		"contact-me": "Contactarme",
 		"snapshot-label": "Resumen rápido",
@@ -19,19 +19,19 @@
 		"linkedin": "LinkedIn",
 		"email": "Correo",
 		"about-title": "Experiencia práctica en el ecosistema JavaScript/TypeScript",
-		"about-text": "Desarrollador de software con más de 5 años de experiencia en el ecosistema JavaScript/TypeScript, con dominio de React.js en el front-end y Node.js/Nest.js en el back-end, incluyendo integración con APIs y Prisma ORM. A lo largo de mi trayectoria, he sido responsable de desarrollar e implementar soluciones web de extremo a extremo, creando sistemas para optimizar la fijación de precios de servicios, la gestión de reuniones corporativas y otros flujos operativos.",
+		"about-text": "Desarrollador de software con más de 5 años de experiencia en el ecosistema JavaScript/TypeScript, con dominio de React.js, Node.js/Nest.js, integración con APIs y Prisma ORM. A lo largo de mi trayectoria, he sido responsable de desarrollar e implementar soluciones web de extremo a extremo, creando sistemas para optimizar la fijación de precios de servicios, la gestión de reuniones corporativas y otros flujos operativos.",
 		"about-stack-label": "Stack principal",
-		"experience-description": "Experiencia profesional desarrollando productos front-end, integrando APIs REST y entregando sistemas para operaciones internas y flujos orientados al cliente.",
+		"experience-description": "Experiencia profesional desarrollando productos full-stack, integrando APIs REST y entregando sistemas para operaciones internas y flujos orientados al cliente.",
 		"formation-description": "Base académica y técnica que sostiene el pensamiento de producto, la arquitectura de software y los fundamentos detrás de las aplicaciones web.",
 		"contact-kicker": "Contacto",
 		"contact-title": "¿Construimos la próxima interfaz?",
-		"contact-description": "Si quieres hablar sobre producto, arquitectura front-end, integración con APIs o un nuevo proyecto, estoy a un mensaje de distancia.",
+		"contact-description": "Si quieres hablar sobre producto, arquitectura full-stack, integración con APIs o un nuevo proyecto, estoy a un mensaje de distancia.",
 		"send-email": "Enviar correo"
 	},
 	"TabExperience": {
 		"macedo-soft-house": {
 			"title": "Macedo Soft House",
-			"subtitle": "Desarrollador Front-End",
+			"subtitle": "Desarrollador Full-Stack",
 			"date": "Enero de 2023 - Enero de 2025",
 			"responsibilities": {
 				"1": "Desarrollo de aplicaciones web utilizando React.js",
@@ -40,7 +40,7 @@
 		},
 		"greendot": {
 			"title": "Greendot",
-			"subtitle": "Desarrollador Front-End",
+			"subtitle": "Desarrollador Full-Stack",
 			"date": "Mayo de 2020 - Diciembre de 2022",
 			"responsibilities": {
 				"1": "Desarrollé un sistema para agendar, organizar y visualizar reuniones internas de la empresa",
@@ -86,6 +86,10 @@
 		"project-chrono-study": {
 			"title": "Chrono Study",
 			"description": "Ayuda a cronometrar y organizar los estudios. Permite agregar materias y visualizar estadísticas de estudio mediante gráficos y tablas."
+		},
+		"project-jogo-da-velha-02": {
+			"title": "Tres en Raya 2.0",
+			"description": "Un tres en raya mucho más estratégico. Hay 9 tableros de tres en raya dentro de un tablero mayor."
 		},
 		"project-transfer-case": {
 			"title": "Transfer Case",
@@ -151,7 +155,7 @@
 		"formation": "Formación",
 		"contact": "Contacto",
 		"projects": "Proyectos",
-		"brand-tag": "Front-end",
+		"brand-tag": "Full-stack",
 		"toggle-menu": "Alternar menú de navegación"
 	},
 	"ErrorPage": {
