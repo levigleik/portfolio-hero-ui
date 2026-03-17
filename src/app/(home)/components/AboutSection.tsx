@@ -28,6 +28,9 @@ export default function AboutSection() {
 		"pt-BR": "/resume-pt-BR.pdf",
 		en: "/resume-en.pdf",
 		es: "/resume-en.pdf",
+		fr: "/resume-en.pdf",
+		it: "/resume-en.pdf",
+		zh: "/resume-en.pdf",
 	};
 
 	return (

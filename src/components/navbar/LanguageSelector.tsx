@@ -26,6 +26,9 @@ export default function LanguageSelector({
 		"pt-BR": "fi fi-br",
 		en: "fi fi-us",
 		es: "fi fi-es",
+		fr: "fi fi-fr",
+		it: "fi fi-it",
+		zh: "fi fi-cn",
 	};
 
 	return (
@@ -66,6 +69,18 @@ export default function LanguageSelector({
 				<DropdownItem key="es" classNames={{ title: "gap-2 flex" }}>
 					<span className="fi fi-es" />
 					{t("spanish")}
+				</DropdownItem>
+				<DropdownItem key="fr" classNames={{ title: "gap-2 flex" }}>
+					<span className="fi fi-fr" />
+					{t("french")}
+				</DropdownItem>
+				<DropdownItem key="it" classNames={{ title: "gap-2 flex" }}>
+					<span className="fi fi-it" />
+					{t("italian")}
+				</DropdownItem>
+				<DropdownItem key="zh" classNames={{ title: "gap-2 flex" }}>
+					<span className="fi fi-cn" />
+					{t("mandarin")}
 				</DropdownItem>
 			</DropdownMenu>
 		</Dropdown>

@@ -173,6 +173,9 @@
 		"select-language": "Seleccionar idioma",
 		"english": "Inglés",
 		"portuguese": "Portugués",
-		"spanish": "Español"
+		"spanish": "Español",
+		"french": "Francés",
+		"italian": "Italiano",
+		"mandarin": "Mandarín"
 	}
 }
