@@ -16,21 +16,20 @@ import viuGanhou from "../assets/images/projects/viu-ganhou.png";
 
 export const PROJECT_TECHONOLOGIES = [
 	{
-		name: "dlav",
-		photo: dlav.src,
-		techonologies: [
-			"NextJS",
-			"TailwindCSS",
-			"NextUI",
-			"NestJS",
-			"Prisma",
-			"NodeMailer",
-			"Service Worker",
-			"Redis",
-		],
-		git: "https://github.com/levigleik/front-dlav-public",
-		url: "https://dlav.vercel.app",
+		name: "gestao-clinica",
+		photo: gestaoClinica.src,
+		techonologies: ["React", "Vite", "Bootstrap", "AdonisJS", "Lucid ORM"],
+		git: null,
+		url: "https://novogestaoclinica.netlify.app",
 	},
+	{
+		name: "saulo-imoveis",
+		photo: sauloImoveis.src,
+		techonologies: ["WordPress", "HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+		git: null,
+		url: "https://sauloimoveisce.com.br",
+	},
+
 	{
 		name: "reunioes",
 		photo: reunioes.src,
@@ -46,13 +45,38 @@ export const PROJECT_TECHONOLOGIES = [
 		git: null,
 		url: "https://atasreunioes.com",
 	},
+
 	{
-		name: "gestao-clinica",
-		photo: gestaoClinica.src,
-		techonologies: ["React", "Vite", "Bootstrap", "AdonisJS", "Lucid ORM"],
+		name: "pesquisa-satisfacao",
+		photo: pesquisaSatisfacao.src,
+		techonologies: [
+			"React",
+			"Material UI",
+			"NestJS",
+			"Prisma",
+			"Redis",
+			"React Chart.js",
+		],
 		git: null,
-		url: "https://novogestaoclinica.netlify.app",
+		url: "https://pesquisasatisfacao.netlify.app",
 	},
+	{
+		name: "dlav",
+		photo: dlav.src,
+		techonologies: [
+			"NextJS",
+			"TailwindCSS",
+			"NextUI",
+			"NestJS",
+			"Prisma",
+			"NodeMailer",
+			"Service Worker",
+			"Redis",
+		],
+		git: "https://github.com/levigleik/front-dlav-public",
+		url: "https://dlav.vercel.app",
+	},
+
 	{
 		name: "viu-ganhou",
 		photo: viuGanhou.src,
@@ -132,20 +156,6 @@ export const PROJECT_TECHONOLOGIES = [
 		url: "https://tizen-iptv-open.vercel.app",
 	},
 	{
-		name: "pesquisa-satisfacao",
-		photo: pesquisaSatisfacao.src,
-		techonologies: [
-			"React",
-			"Material UI",
-			"NestJS",
-			"Prisma",
-			"Redis",
-			"React Chart.js",
-		],
-		git: null,
-		url: "https://pesquisasatisfacao.netlify.app",
-	},
-	{
 		name: "chrono-study",
 		photo: chronoStudy.src,
 		techonologies: [
@@ -181,13 +191,7 @@ export const PROJECT_TECHONOLOGIES = [
 		git: "https://github.com/levigleik/osc-manager",
 		url: "https://osc-manager.vercel.app",
 	},
-	{
-		name: "saulo-imoveis",
-		photo: sauloImoveis.src,
-		techonologies: ["WordPress", "HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-		git: null,
-		url: "https://sauloimoveisce.com.br",
-	},
+
 	{
 		name: "servrent",
 		photo: servrent.src,

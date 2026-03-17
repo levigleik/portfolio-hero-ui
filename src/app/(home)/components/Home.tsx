@@ -32,10 +32,22 @@ function SectionIntro({
 
 export default function HomeComp() {
 	const t = useTranslations("HomePage");
+	const aboutStack = [
+		"JavaScript",
+		"TypeScript",
+		"React.js",
+		"Node.js",
+		"Nest.js",
+		"Prisma ORM",
+	];
 
 	return (
 		<>
 			<AboutSection />
+
+			<section id="projects" className="scroll-mt-32 pt-24">
+				<ProjectSection />
+			</section>
 
 			<section id="experience" className="section-shell scroll-mt-32 pt-24">
 				<SectionIntro
@@ -55,8 +67,39 @@ export default function HomeComp() {
 				<TabFormation />
 			</section>
 
-			<section id="projects" className="scroll-mt-32 pt-24">
-				<ProjectSection />
+			<section id="about" className="section-shell scroll-mt-32 pt-24">
+				<motion.div
+					initial={{ opacity: 0, y: 24 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true, amount: 0.3 }}
+					transition={{ duration: 0.6, ease: "easeOut" }}
+					className="glass-panel rounded-[32px] p-8 sm:p-10 lg:p-12"
+				>
+					<div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_300px] lg:items-start">
+						<div>
+							<span className="section-kicker">{t("about")}</span>
+							<h2 className="mt-6 max-w-3xl text-4xl font-black uppercase tracking-[-0.06em] text-[var(--page-text)] sm:text-5xl">
+								{t("about-title")}
+							</h2>
+							<p className="mt-6 max-w-3xl text-base leading-8 text-[var(--page-muted)] sm:text-lg">
+								{t("about-text")}
+							</p>
+						</div>
+
+						<div className="rounded-[28px] border border-[var(--page-border)] bg-[var(--page-panel-strong)] p-6">
+							<p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--page-muted)]">
+								{t("about-stack-label")}
+							</p>
+							<div className="mt-4 flex flex-wrap gap-2">
+								{aboutStack.map((item) => (
+									<span key={item} className="project-chip">
+										{item}
+									</span>
+								))}
+							</div>
+						</div>
+					</div>
+				</motion.div>
 			</section>
 
 			<section
