@@ -39,7 +39,7 @@ export default function AboutSection() {
 				<motion.div {...fadeUp}>
 					<span className="section-kicker">{t("hero-label")}</span>
 
-					<h1 className="mt-6 max-w-4xl text-5xl font-black uppercase  tracking-[-0.01em] text-[var(--page-text)] sm:text-6xl lg:text-7xl xl:text-[5.4rem]">
+					<h1 className="mt-6 max-w-4xl text-3xl font-black uppercase tracking-[-0.01em] text-[var(--page-text)] sm:text-6xl lg:text-5xl xl:text-[4.4rem]">
 						{t.rich("hero-title", {
 							highlight: (chunks) => (
 								<span className="text-glow text-[var(--brand)]">{chunks}</span>
