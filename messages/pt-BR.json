@@ -1,6 +1,7 @@
 {
 	"HomePage": {
 		"front-end-developer": "Desenvolvedor Front-end",
+		"about": "Sobre mim",
 		"experience": "Experiência",
 		"formation": "Formação",
 		"projects": "Projetos",
@@ -17,6 +18,9 @@
 		"github": "GitHub",
 		"linkedin": "LinkedIn",
 		"email": "E-mail",
+		"about-title": "Experiência prática no ecossistema JavaScript/TypeScript",
+		"about-text": "Desenvolvedor de software com mais de 5 anos de experiência no ecossistema JavaScript/TypeScript, com domínio de React.js no front-end e de Node.js/Nest.js no back-end, incluindo integrações com APIs e Prisma ORM. Ao longo da trajetória, fui responsável por desenvolver e implementar soluções web ponta a ponta, criando sistemas para otimizar a precificação de serviços, a gestão de reuniões corporativas e outros fluxos operacionais.",
+		"about-stack-label": "Stack principal",
 		"experience-description": "Experiência profissional no desenvolvimento de produtos front-end, integração com APIs REST e entrega de sistemas para operação interna e fluxos voltados ao cliente.",
 		"formation-description": "Base acadêmica e técnica que sustenta pensamento de produto, arquitetura de software e os fundamentos por trás das aplicações web.",
 		"contact-kicker": "Contato",
@@ -142,6 +146,7 @@
 	},
 	"Navbar": {
 		"home": "Início",
+		"about": "Sobre mim",
 		"experience": "Experiência",
 		"formation": "Formação",
 		"contact": "Contato",

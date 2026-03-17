@@ -1,6 +1,7 @@
 {
 	"HomePage": {
 		"front-end-developer": "Front-end Developer",
+		"about": "About me",
 		"experience": "Experience",
 		"formation": "Education",
 		"projects": "Projects",
@@ -17,6 +18,9 @@
 		"github": "GitHub",
 		"linkedin": "LinkedIn",
 		"email": "Email",
+		"about-title": "Hands-on experience across the JavaScript/TypeScript ecosystem",
+		"about-text": "Software developer with over 5 years of experience in the JavaScript/TypeScript ecosystem, with strong expertise in React.js on the front end and Node.js/Nest.js on the back end, including API integration and Prisma ORM. I have been responsible for developing and implementing end-to-end web solutions, building systems to optimize service pricing, corporate meeting management, and other operational workflows.",
+		"about-stack-label": "Core stack",
 		"experience-description": "Professional experience building front-end products, integrating REST APIs and delivering systems for internal operations and client-facing workflows.",
 		"formation-description": "Academic and technical education that supports product thinking, software architecture and the foundations behind web applications.",
 		"contact-kicker": "Contact",
@@ -142,6 +146,7 @@
 	},
 	"Navbar": {
 		"home": "Home",
+		"about": "About me",
 		"experience": "Experience",
 		"formation": "Education",
 		"contact": "Contact",

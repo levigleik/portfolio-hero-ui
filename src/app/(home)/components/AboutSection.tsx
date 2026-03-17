@@ -49,6 +49,9 @@ export default function AboutSection() {
 						<a href="#contact" className="action-secondary">
 							{t("contact-me")}
 						</a>
+						<a href="#about" className="action-secondary">
+							{t("about")}
+						</a>
 					</div>
 
 					<div className="mt-8 flex flex-wrap gap-3">

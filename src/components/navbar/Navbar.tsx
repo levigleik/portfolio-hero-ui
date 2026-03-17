@@ -9,7 +9,13 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import LanguageSelector from "./LanguageSelector";
 import ThemeSelector from "./ThemeSelector";
 
-const sectionIds = ["hero", "experience", "formation", "projects"] as const;
+const sectionIds = [
+	"hero",
+	"projects",
+	"experience",
+	"formation",
+	"about",
+] as const;
 type SectionId = (typeof sectionIds)[number];
 
 interface NavigationItem {
@@ -80,6 +86,12 @@ export default function NavbarComp() {
 			label: t("home"),
 			sectionId: "hero",
 		},
+
+		{
+			href: isProjectsPage ? "/projects" : "#projects",
+			label: t("projects"),
+			sectionId: "projects",
+		},
 		{
 			href: isProjectsPage ? "/#experience" : "#experience",
 			label: t("experience"),
@@ -91,9 +103,9 @@ export default function NavbarComp() {
 			sectionId: "formation",
 		},
 		{
-			href: isProjectsPage ? "/projects" : "#projects",
-			label: t("projects"),
-			sectionId: "projects",
+			href: isProjectsPage ? "/#about" : "#about",
+			label: t("about"),
+			sectionId: "about",
 		},
 	];
 
@@ -126,7 +138,7 @@ export default function NavbarComp() {
 					<nav className="hidden items-center gap-2 md:flex">
 						{navigation.map((item) => (
 							<Link
-								key={item.label}
+								key={`${item.sectionId}-${item.label}`}
 								href={item.href}
 								onClick={() => setActiveSection(item.sectionId)}
 								className={clsx(
@@ -168,7 +180,7 @@ export default function NavbarComp() {
 					<nav className="flex flex-col gap-2">
 						{navigation.map((item) => (
 							<Link
-								key={item.label}
+								key={`${item.sectionId}-${item.label}`}
 								href={item.href}
 								className={clsx(
 									"rounded-2xl px-4 py-3 text-sm font-semibold uppercase tracking-[0.2em] transition-colors",
