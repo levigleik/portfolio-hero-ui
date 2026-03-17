@@ -1,0 +1,181 @@
+{
+	"HomePage": {
+		"front-end-developer": "Desarrollador Front-end",
+		"about": "Sobre mí",
+		"experience": "Experiencia",
+		"formation": "Formación",
+		"projects": "Proyectos",
+		"resume": "Currículum",
+		"hero-label": "Portafolio // Levi Gleik",
+		"hero-title": "Construyendo <highlight>interfaces, sistemas y productos digitales</highlight> con foco en claridad y rendimiento.",
+		"hero-description": "Desarrollador front-end con experiencia en React.js, Next.js, TypeScript e integración con APIs REST, reuniendo proyectos reales, herramientas internas e interfaces para distintos negocios.",
+		"explore-projects": "Explorar proyectos",
+		"contact-me": "Contactarme",
+		"snapshot-label": "Resumen rápido",
+		"role-label": "Rol",
+		"stack-label": "Stack recurrente",
+		"contact-label": "Contacto",
+		"github": "GitHub",
+		"linkedin": "LinkedIn",
+		"email": "Correo",
+		"about-title": "Experiencia práctica en el ecosistema JavaScript/TypeScript",
+		"about-text": "Desarrollador de software con más de 5 años de experiencia en el ecosistema JavaScript/TypeScript, con dominio de React.js en el front-end y Node.js/Nest.js en el back-end, incluyendo integración con APIs y Prisma ORM. A lo largo de mi trayectoria, he sido responsable de desarrollar e implementar soluciones web de extremo a extremo, creando sistemas para optimizar la fijación de precios de servicios, la gestión de reuniones corporativas y otros flujos operativos.",
+		"about-stack-label": "Stack principal",
+		"experience-description": "Experiencia profesional desarrollando productos front-end, integrando APIs REST y entregando sistemas para operaciones internas y flujos orientados al cliente.",
+		"formation-description": "Base académica y técnica que sostiene el pensamiento de producto, la arquitectura de software y los fundamentos detrás de las aplicaciones web.",
+		"contact-kicker": "Contacto",
+		"contact-title": "¿Construimos la próxima interfaz?",
+		"contact-description": "Si quieres hablar sobre producto, arquitectura front-end, integración con APIs o un nuevo proyecto, estoy a un mensaje de distancia.",
+		"send-email": "Enviar correo"
+	},
+	"TabExperience": {
+		"macedo-soft-house": {
+			"title": "Macedo Soft House",
+			"subtitle": "Desarrollador Front-End",
+			"date": "Enero de 2023 - Enero de 2025",
+			"responsibilities": {
+				"1": "Desarrollo de aplicaciones web utilizando React.js",
+				"2": "Integración con APIs RESTful en Node.js"
+			}
+		},
+		"greendot": {
+			"title": "Greendot",
+			"subtitle": "Desarrollador Front-End",
+			"date": "Mayo de 2020 - Diciembre de 2022",
+			"responsibilities": {
+				"1": "Desarrollé un sistema para agendar, organizar y visualizar reuniones internas de la empresa",
+				"2": "Creé aplicaciones para mejorar la precisión de los servicios prestados",
+				"3": "Realicé despliegues en AWS con S3, EC2, Elastic Beanstalk, entre otros"
+			}
+		}
+	},
+	"TabFormation": {
+		"farias-brito": {
+			"title": "Centro Universitário Farias Brito",
+			"subtitle": "Licenciatura en Ciencias de la Computación",
+			"date": "Finalizado en 2024",
+			"responsibilities": {
+				"1": "Ciencia de datos",
+				"2": "Paradigmas de programación",
+				"3": "Cálculo"
+			}
+		},
+		"icaro": {
+			"title": "Ícaro de Sousa Moreira",
+			"subtitle": "Redes de computadoras",
+			"date": "Finalizado en 2016",
+			"responsibilities": {
+				"1": "Redes de computadoras",
+				"2": "Seguridad de la información",
+				"3": "Programación orientada a objetos"
+			}
+		}
+	},
+	"Projects": {
+		"projects": "Proyectos",
+		"view-more": "ver más",
+		"featured-tag": "Proyectos destacados",
+		"featured-description": "Una selección del portafolio actual con productos publicados, sistemas internos y experimentos.",
+		"view-all-projects": "Ver archivo completo",
+		"archive-badge": "Archivo completo",
+		"archive-title": "Todos los proyectos",
+		"archive-description": "Una colección más amplia con aplicaciones web, APIs, sistemas administrativos y experimentos de producto construidos a lo largo de la trayectoria.",
+		"repository": "Repositorio",
+		"live-site": "Sitio",
+		"back-home": "Volver al inicio",
+		"project-chrono-study": {
+			"title": "Chrono Study",
+			"description": "Ayuda a cronometrar y organizar los estudios. Permite agregar materias y visualizar estadísticas de estudio mediante gráficos y tablas."
+		},
+		"project-transfer-case": {
+			"title": "Transfer Case",
+			"description": "Aplicación web para gestionar flotas, conductores, incidencias y abastecimientos, con carga de documentos y tablas con filtros avanzados."
+		},
+		"project-transfer-back": {
+			"title": "Transfer Back (Express)",
+			"description": "API RESTful para la gestión de flotas con vehículos, conductores, incidencias, abastecimientos y documentos, construida con Express, Prisma, Redis y Swagger."
+		},
+		"project-transfer-nestjs": {
+			"title": "Transfer Back (NestJS)",
+			"description": "Versión en NestJS de la API de gestión de flotas de Transfer Back, manteniendo módulos de vehículos, conductores, incidencias, abastecimientos y documentación."
+		},
+		"project-tizen-iptv-open": {
+			"title": "Tizen IPTV Open",
+			"description": "Frontend IPTV optimizado para Samsung Tizen, con navegación por control remoto y flujo inicial para canales, series y películas."
+		},
+		"project-dispatch-system": {
+			"title": "Dispatch System",
+			"description": "Importa contactos desde Excel y les envía mensajes por WhatsApp."
+		},
+		"project-dlav": {
+			"title": "D'Lav",
+			"description": "Organiza todo el proceso de lavado. Se generan códigos QR para controlar todas las etapas del lavado."
+		},
+		"project-gestao-clinica": {
+			"title": "Gestión Clínica",
+			"description": "Sistema robusto para la gestión de clínicas con programación, registro, administración y pago."
+		},
+		"project-osc-manager": {
+			"title": "OSC Manager",
+			"description": "Gestión de proyectos para OSC. Visualiza, analiza y acompaña los proyectos."
+		},
+		"project-pesquisa-satisfacao": {
+			"title": "Encuesta de Satisfacción",
+			"description": "Proyecto que administra encuestas y genera gráficos con resúmenes de los resultados."
+		},
+		"project-reunioes": {
+			"title": "Sistema de reuniones",
+			"description": "Sistema completo de reuniones. Gestiona y crea reuniones. Genera actas, agendas y acciones para cada usuario."
+		},
+		"project-saulo-imoveis": {
+			"title": "Saulo Inmuebles",
+			"description": "Desarrollado para divulgar las mejores propiedades de lujo de Fortaleza."
+		},
+		"project-servrent": {
+			"title": "ServRent",
+			"description": "Permite la compra y el alquiler de autos."
+		},
+		"project-vacation-plan": {
+			"title": "Vacation Plan",
+			"description": "Mira las vacaciones de tus amigos y organízalas en el calendario."
+		},
+		"project-viu-ganhou": {
+			"title": "Viu Ganhou",
+			"description": "Mira anuncios y completa tareas para ganar dinero y retirar en criptomonedas."
+		}
+	},
+	"Navbar": {
+		"home": "Inicio",
+		"about": "Sobre mí",
+		"experience": "Experiencia",
+		"formation": "Formación",
+		"contact": "Contacto",
+		"projects": "Proyectos",
+		"brand-tag": "Front-end",
+		"toggle-menu": "Alternar menú de navegación"
+	},
+	"ErrorPage": {
+		"error": "error",
+		"something-went-wrong": "Algo salió mal",
+		"refresh": "Actualizar"
+	},
+	"NotFoundPage": {
+		"error-404": "Error 404",
+		"page-not-found": "Página no encontrada",
+		"go-back": "Volver al inicio"
+	},
+	"ThemeSelector": {
+		"change-theme": "Cambiar tema",
+		"dark-theme": "Tema oscuro",
+		"light-theme": "Tema claro"
+	},
+	"LanguageSelector": {
+		"select-language": "Seleccionar idioma",
+		"english": "Inglés",
+		"portuguese": "Portugués",
+		"spanish": "Español",
+		"french": "Francés",
+		"italian": "Italiano",
+		"mandarin": "Mandarín"
+	}
+}

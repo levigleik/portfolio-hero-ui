@@ -1,0 +1,181 @@
+{
+	"HomePage": {
+		"front-end-developer": "前端开发者",
+		"about": "关于我",
+		"experience": "经验",
+		"formation": "教育背景",
+		"projects": "项目",
+		"resume": "简历",
+		"hero-label": "作品集 // Levi Gleik",
+		"hero-title": "专注于清晰度与性能，打造<highlight>界面、系统与数字产品</highlight>。",
+		"hero-description": "前端开发者，拥有 React.js、Next.js、TypeScript 与 REST API 集成经验，参与过真实项目、内部工具以及面向不同业务的界面开发。",
+		"explore-projects": "查看项目",
+		"contact-me": "联系我",
+		"snapshot-label": "快速概览",
+		"role-label": "角色",
+		"stack-label": "常用技术栈",
+		"contact-label": "联系方式",
+		"github": "GitHub",
+		"linkedin": "LinkedIn",
+		"email": "邮箱",
+		"about-title": "在 JavaScript/TypeScript 生态中的实战经验",
+		"about-text": "软件开发者，在 JavaScript/TypeScript 生态中拥有超过 5 年经验，熟练使用 React.js 进行前端开发，并使用 Node.js/Nest.js 构建后端，同时具备 API 集成与 Prisma ORM 经验。在职业经历中，我负责过端到端 Web 解决方案的设计与实现，开发了用于优化服务定价、企业会议管理以及其他运营流程的系统。",
+		"about-stack-label": "核心技术栈",
+		"experience-description": "拥有开发前端产品、集成 REST API 以及交付面向内部运营和客户流程系统的专业经验。",
+		"formation-description": "学术与技术基础支撑了产品思维、软件架构能力以及 Web 应用背后的核心原理。",
+		"contact-kicker": "联系",
+		"contact-title": "一起打造下一个界面？",
+		"contact-description": "如果你想聊产品、前端架构、API 集成或新项目，我随时可以沟通。",
+		"send-email": "发送邮件"
+	},
+	"TabExperience": {
+		"macedo-soft-house": {
+			"title": "Macedo Soft House",
+			"subtitle": "前端开发者",
+			"date": "2023年1月 - 2025年1月",
+			"responsibilities": {
+				"1": "使用 React.js 开发 Web 应用",
+				"2": "在 Node.js 中集成 RESTful API"
+			}
+		},
+		"greendot": {
+			"title": "Greendot",
+			"subtitle": "前端开发者",
+			"date": "2020年5月 - 2022年12月",
+			"responsibilities": {
+				"1": "开发了一个用于安排、组织和可视化公司内部会议的系统",
+				"2": "创建应用以提升所提供服务的准确性",
+				"3": "在 AWS 上完成部署，包括 S3、EC2、Elastic Beanstalk 等"
+			}
+		}
+	},
+	"TabFormation": {
+		"farias-brito": {
+			"title": "Centro Universitário Farias Brito",
+			"subtitle": "计算机科学学士",
+			"date": "2024年毕业",
+			"responsibilities": {
+				"1": "数据科学",
+				"2": "编程范式",
+				"3": "微积分"
+			}
+		},
+		"icaro": {
+			"title": "Ícaro de Sousa Moreira",
+			"subtitle": "计算机网络",
+			"date": "2016年毕业",
+			"responsibilities": {
+				"1": "计算机网络",
+				"2": "信息安全",
+				"3": "面向对象编程"
+			}
+		}
+	},
+	"Projects": {
+		"projects": "项目",
+		"view-more": "查看更多",
+		"featured-tag": "精选项目",
+		"featured-description": "当前作品集中的一部分精选内容，包括已发布产品、内部系统和实验性项目。",
+		"view-all-projects": "查看完整归档",
+		"archive-badge": "完整归档",
+		"archive-title": "所有项目",
+		"archive-description": "更完整的项目集合，涵盖 Web 应用、API、管理系统以及产品实验。",
+		"repository": "代码仓库",
+		"live-site": "在线站点",
+		"back-home": "返回首页",
+		"project-chrono-study": {
+			"title": "Chrono Study",
+			"description": "帮助计时并组织学习。你可以添加学科，并通过图表和表格查看学习统计。"
+		},
+		"project-transfer-case": {
+			"title": "Transfer Case",
+			"description": "用于管理车队、司机、事件和加油的 Web 应用，支持文档上传和高级筛选表格。"
+		},
+		"project-transfer-back": {
+			"title": "Transfer Back (Express)",
+			"description": "用于车队管理的 RESTful API，涵盖车辆、司机、事件、加油和文档，基于 Express、Prisma、Redis 和 Swagger 构建。"
+		},
+		"project-transfer-nestjs": {
+			"title": "Transfer Back (NestJS)",
+			"description": "Transfer Back 车队管理 API 的 NestJS 版本，保留了车辆、司机、事件、加油和文档等模块。"
+		},
+		"project-tizen-iptv-open": {
+			"title": "Tizen IPTV Open",
+			"description": "为三星 Tizen 优化的 IPTV 前端，支持遥控器导航以及频道、剧集和电影的初始流程。"
+		},
+		"project-dispatch-system": {
+			"title": "Dispatch System",
+			"description": "从 Excel 导入联系人，并通过 WhatsApp 向他们发送消息。"
+		},
+		"project-dlav": {
+			"title": "D'Lav",
+			"description": "组织整个洗车流程。系统会生成二维码来跟踪洗车的所有阶段。"
+		},
+		"project-gestao-clinica": {
+			"title": "诊所管理",
+			"description": "用于诊所管理的强大系统，包含排程、登记、管理和支付功能。"
+		},
+		"project-osc-manager": {
+			"title": "OSC Manager",
+			"description": "面向 OSC 的项目管理。可视化、分析并跟踪项目。"
+		},
+		"project-pesquisa-satisfacao": {
+			"title": "满意度调查",
+			"description": "管理调查并生成结果汇总图表的项目。"
+		},
+		"project-reunioes": {
+			"title": "会议系统",
+			"description": "完整的会议系统。可管理和创建会议，并为每位用户生成纪要、议程和行动项。"
+		},
+		"project-saulo-imoveis": {
+			"title": "Saulo 房产",
+			"description": "为展示福塔雷萨顶级豪华房产而开发。"
+		},
+		"project-servrent": {
+			"title": "ServRent",
+			"description": "支持汽车购买与租赁。"
+		},
+		"project-vacation-plan": {
+			"title": "Vacation Plan",
+			"description": "查看朋友的假期并在日历中进行安排。"
+		},
+		"project-viu-ganhou": {
+			"title": "Viu Ganhou",
+			"description": "观看广告并完成任务来赚钱，并以加密货币提现吗。"
+		}
+	},
+	"Navbar": {
+		"home": "首页",
+		"about": "关于我",
+		"experience": "经验",
+		"formation": "教育背景",
+		"contact": "联系",
+		"projects": "项目",
+		"brand-tag": "前端",
+		"toggle-menu": "切换导航菜单"
+	},
+	"ErrorPage": {
+		"error": "错误",
+		"something-went-wrong": "出现了一些问题",
+		"refresh": "刷新"
+	},
+	"NotFoundPage": {
+		"error-404": "404 错误",
+		"page-not-found": "页面未找到",
+		"go-back": "返回首页"
+	},
+	"ThemeSelector": {
+		"change-theme": "切换主题",
+		"dark-theme": "深色主题",
+		"light-theme": "浅色主题"
+	},
+	"LanguageSelector": {
+		"select-language": "选择语言",
+		"english": "英语",
+		"portuguese": "葡萄牙语",
+		"spanish": "西班牙语",
+		"french": "法语",
+		"italian": "意大利语",
+		"mandarin": "中文"
+	}
+}
