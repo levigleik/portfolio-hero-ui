@@ -1,43 +1,52 @@
 "use client";
-import { Card, CardBody } from "@heroui/card";
+
+import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
+
+const formationItems = ["farias-brito", "icaro"] as const;
 
 export default function TabFormation() {
 	const t = useTranslations("TabFormation");
+
 	return (
-		<div className="flex flex-col gap-4 p-4">
-			<Card className="gap-0 p-4 bg-primary-50/20" shadow="sm">
-				<CardBody>
-					<span className="text-muted-foreground text-sm">
-						{t("farias-brito.date")}
-					</span>
-					<h3 className="font-bold text-2xl">{t("farias-brito.title")}</h3>
-					<span className="mb-2 text-muted-foreground text-sm italic">
-						{t("farias-brito.subtitle")}
-					</span>
-					<ul className="mt-2 list-inside list-disc text-muted-foreground text-sm">
-						<li>{t("farias-brito.responsibilities.1")}</li>
-						<li>{t("farias-brito.responsibilities.2")}</li>
-						<li>{t("farias-brito.responsibilities.3")}</li>
-					</ul>
-				</CardBody>
-			</Card>
-			<Card className="gap-0 p-4 bg-primary-50/20" shadow="sm">
-				<CardBody>
-					<span className="text-muted-foreground text-sm">
-						{t("icaro.date")}
-					</span>
-					<h3 className="font-bold text-2xl">{t("icaro.title")}</h3>
-					<span className="mb-2 text-muted-foreground text-sm italic">
-						{t("icaro.subtitle")}
-					</span>
-					<ul className="mt-2 list-inside list-disc text-muted-foreground text-sm">
-						<li>{t("icaro.responsibilities.1")}</li>
-						<li>{t("icaro.responsibilities.2")}</li>
-						<li>{t("icaro.responsibilities.3")}</li>
-					</ul>
-				</CardBody>
-			</Card>
+		<div className="grid gap-6 lg:grid-cols-2">
+			{formationItems.map((item, index) => {
+				const responsibilities = t.raw(`${item}.responsibilities`) as Record<
+					string,
+					string
+				>;
+
+				return (
+					<motion.article
+						key={item}
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true, amount: 0.2 }}
+						transition={{ duration: 0.5, delay: index * 0.08, ease: "easeOut" }}
+						className="glass-panel rounded-[30px] p-6 sm:p-8"
+					>
+						<span className="font-mono text-xs font-semibold uppercase tracking-[0.32em] text-[var(--brand)]">
+							{t(`${item}.date`)}
+						</span>
+
+						<h3 className="mt-5 text-2xl font-semibold tracking-tight text-[var(--page-text)]">
+							{t(`${item}.title`)}
+						</h3>
+						<p className="mt-2 text-sm font-medium uppercase tracking-[0.24em] text-[var(--page-muted)]">
+							{t(`${item}.subtitle`)}
+						</p>
+
+						<ul className="mt-6 space-y-3 text-sm leading-7 text-[var(--page-muted)]">
+							{Object.values(responsibilities).map((responsibility) => (
+								<li key={responsibility} className="flex items-start gap-3">
+									<span className="mt-2 h-2 w-2 rounded-full bg-[var(--brand)]" />
+									<span>{responsibility}</span>
+								</li>
+							))}
+						</ul>
+					</motion.article>
+				);
+			})}
 		</div>
 	);
 }

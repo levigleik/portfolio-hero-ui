@@ -2,9 +2,27 @@
 	"HomePage": {
 		"front-end-developer": "Front-end Developer",
 		"experience": "Experience",
-		"formation": "Formation",
+		"formation": "Education",
 		"projects": "Projects",
-		"resume": "Resume"
+		"resume": "Resume",
+		"hero-label": "Portfolio // Levi Gleik",
+		"hero-title": "Building <highlight>interfaces, systems and digital products</highlight> with a focus on clarity and performance.",
+		"hero-description": "Front-end developer with experience in React.js, Next.js, TypeScript and REST API integration, bringing together real projects, internal tools and interfaces for different businesses.",
+		"explore-projects": "Explore projects",
+		"contact-me": "Contact me",
+		"snapshot-label": "Quick snapshot",
+		"role-label": "Role",
+		"stack-label": "Recurring stack",
+		"contact-label": "Contact",
+		"github": "GitHub",
+		"linkedin": "LinkedIn",
+		"email": "Email",
+		"experience-description": "Professional experience building front-end products, integrating REST APIs and delivering systems for internal operations and client-facing workflows.",
+		"formation-description": "Academic and technical education that supports product thinking, software architecture and the foundations behind web applications.",
+		"contact-kicker": "Contact",
+		"contact-title": "Let's shape the next interface?",
+		"contact-description": "If you want to talk about product, front-end architecture, API integration or a new project, I'm one message away.",
+		"send-email": "Send email"
 	},
 	"TabExperience": {
 		"macedo-soft-house": {
@@ -52,9 +70,34 @@
 	"Projects": {
 		"projects": "Projects",
 		"view-more": "view more",
+		"featured-tag": "Selected work",
+		"featured-description": "A curated slice of the current portfolio with published products, internal systems and experiments.",
+		"view-all-projects": "View full archive",
+		"archive-badge": "Complete archive",
+		"archive-title": "All projects",
+		"archive-description": "A broader collection of web applications, APIs, admin systems and product experiments built across the journey.",
+		"repository": "Repository",
+		"live-site": "Live site",
+		"back-home": "Back to home",
 		"project-chrono-study": {
 			"title": "Chrono Study",
 			"description": "Helps time and organize your studies. You can add subjects and view study statistics through charts and tables."
+		},
+		"project-transfer-case": {
+			"title": "Transfer Case",
+			"description": "Web application for managing fleets, drivers, incidents, and refueling, with document uploads and tables with advanced filters."
+		},
+		"project-transfer-back": {
+			"title": "Transfer Back (Express)",
+			"description": "REST API for fleet management with vehicles, drivers, incidents, refueling, and documents, built with Express, Prisma, Redis, and Swagger."
+		},
+		"project-transfer-nestjs": {
+			"title": "Transfer Back (NestJS)",
+			"description": "NestJS version of the Transfer Back fleet management API, keeping modules for vehicles, drivers, incidents, refueling, and documentation."
+		},
+		"project-tizen-iptv-open": {
+			"title": "Tizen IPTV Open",
+			"description": "IPTV frontend optimized for Samsung Tizen, with remote-control navigation and a startup flow for channels, series, and movies."
 		},
 		"project-dispatch-system": {
 			"title": "Dispatch System",
@@ -99,8 +142,12 @@
 	},
 	"Navbar": {
 		"home": "Home",
+		"experience": "Experience",
+		"formation": "Education",
 		"contact": "Contact",
-		"projects": "Projects"
+		"projects": "Projects",
+		"brand-tag": "Front-end",
+		"toggle-menu": "Toggle navigation menu"
 	},
 	"ErrorPage": {
 		"error": "error",

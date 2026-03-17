@@ -26,11 +26,7 @@ export default function ProjectCarousel() {
 			<CarouselContent>
 				{PROJECT_TECHONOLOGIES.map((project) => (
 					<CarouselItem key={project.name} className="md:basis-1/3">
-						<ProjectCard
-							title={`project-${project.name}.title`}
-							description={`project-${project.name}.description`}
-							{...project}
-						/>
+						<ProjectCard {...project} />
 					</CarouselItem>
 				))}
 			</CarouselContent>

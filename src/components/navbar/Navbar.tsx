@@ -1,224 +1,197 @@
 "use client";
-import { Link } from "@heroui/link";
-import {
-	NavbarBrand,
-	NavbarContent,
-	Navbar as NavbarHeroUI,
-	NavbarItem,
-	NavbarMenuToggle,
-} from "@heroui/navbar";
 
-import {
-	Drawer,
-	DrawerBody,
-	DrawerContent,
-	DrawerHeader,
-} from "@heroui/drawer";
-import { Image } from "@heroui/image";
-import { useTransitionRouter } from "next-view-transitions";
+import clsx from "clsx";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { type ReactNode, useState } from "react";
-import { FaBars } from "react-icons/fa";
+import { useTranslations } from "next-intl";
+import { useEffect, useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 import LanguageSelector from "./LanguageSelector";
 import ThemeSelector from "./ThemeSelector";
 
-interface MenuItem {
-	title: string;
-	url: string;
-	description?: string;
-	icon?: ReactNode;
+const sectionIds = ["hero", "experience", "formation", "projects"] as const;
+type SectionId = (typeof sectionIds)[number];
+
+interface NavigationItem {
+	href: string;
+	label: string;
+	sectionId: SectionId;
 }
 
-interface NavbarProps {
-	logo: {
-		url: string;
-		src: string;
-		alt: string;
-	};
-	menu: MenuItem[];
-}
-
-export default function NavbarComp({ logo, menu }: NavbarProps) {
+export default function NavbarComp() {
+	const t = useTranslations("Navbar");
+	const pathname = usePathname();
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
-	const path = usePathname();
+	const [activeSection, setActiveSection] = useState<SectionId>("hero");
 
-	const router = useTransitionRouter();
+	const isProjectsPage = pathname === "/projects";
 
-	function slideLeftToRight() {
-		document.documentElement.animate(
-			[
-				{
-					opacity: 1,
-					transform: "translateX(0)",
-				},
-				{
-					opacity: 0.05,
-					transform: "translateX(55%)",
-				},
-			],
-			{
-				duration: 600,
-				easing: "ease-in-out",
-				fill: "forwards",
-				pseudoElement: "::view-transition-old(root)",
-			},
-		);
-		document.documentElement.animate(
-			[
-				{
-					opacity: 0.05,
-					transform: "translateX(-55%)",
-				},
-				{
-					opacity: 1,
-					transform: "translateX(0)",
-				},
-			],
-			{
-				duration: 600,
-				easing: "ease-in-out",
-				fill: "forwards",
-				pseudoElement: "::view-transition-new(root)",
-			},
-		);
-	}
+	useEffect(() => {
+		setIsMenuOpen(false);
+	}, [pathname]);
 
-	function slideRightToLeft() {
-		document.documentElement.animate(
-			[
-				{
-					opacity: 1,
-					transform: "translateX(0)",
-				},
-				{
-					opacity: 0.05,
-					transform: "translateX(-55%)",
-				},
-			],
-			{
-				duration: 600,
-				easing: "ease-in-out",
-				fill: "forwards",
-				pseudoElement: "::view-transition-old(root)",
-			},
-		);
-		document.documentElement.animate(
-			[
-				{
-					opacity: 0.05,
-					transform: "translateX(55%)",
-				},
-				{
-					opacity: 1,
-					transform: "translateX(0)",
-				},
-			],
-			{
-				duration: 600,
-				easing: "ease-in-out",
-				fill: "forwards",
-				pseudoElement: "::view-transition-new(root)",
-			},
-		);
-	}
+	useEffect(() => {
+		if (isProjectsPage) {
+			setActiveSection("projects");
+			return;
+		}
+
+		const updateActiveSection = () => {
+			const scrollPosition = window.scrollY + 180;
+			let currentSection: SectionId = "hero";
+
+			for (const sectionId of sectionIds) {
+				const section = document.getElementById(sectionId);
+
+				if (!section) {
+					continue;
+				}
+
+				const sectionTop = section.offsetTop;
+				const sectionBottom = sectionTop + section.offsetHeight;
+
+				if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+					currentSection = sectionId;
+					break;
+				}
+
+				if (scrollPosition >= sectionTop) {
+					currentSection = sectionId;
+				}
+			}
+
+			setActiveSection(currentSection);
+		};
+
+		updateActiveSection();
+
+		window.addEventListener("scroll", updateActiveSection, { passive: true });
+		window.addEventListener("resize", updateActiveSection);
+
+		return () => {
+			window.removeEventListener("scroll", updateActiveSection);
+			window.removeEventListener("resize", updateActiveSection);
+		};
+	}, [isProjectsPage]);
+
+	const navigation: NavigationItem[] = [
+		{
+			href: isProjectsPage ? "/" : "#hero",
+			label: t("home"),
+			sectionId: "hero",
+		},
+		{
+			href: isProjectsPage ? "/#experience" : "#experience",
+			label: t("experience"),
+			sectionId: "experience",
+		},
+		{
+			href: isProjectsPage ? "/#formation" : "#formation",
+			label: t("formation"),
+			sectionId: "formation",
+		},
+		{
+			href: isProjectsPage ? "/projects" : "#projects",
+			label: t("projects"),
+			sectionId: "projects",
+		},
+	];
 
 	return (
-		<NavbarHeroUI
-			onMenuOpenChange={setIsMenuOpen}
-			isMenuOpen={false}
-			classNames={{
-				wrapper: "bg-background",
-			}}
-		>
-			<NavbarContent className="hidden sm:flex gap-4">
-				<NavbarBrand>
-					<Image src={logo.src} alt={logo.alt} width={90} height={90} />
-				</NavbarBrand>
-			</NavbarContent>
+		<header className="fixed inset-x-0 top-0 z-50 px-4 py-4 sm:px-6 lg:px-10">
+			<div className="mx-auto max-w-7xl">
+				<div className="glass-panel flex items-center justify-between rounded-[28px] px-4 py-3 sm:px-6">
+					<Link
+						href="/"
+						className="flex items-center gap-3"
+						onClick={() => {
+							setIsMenuOpen(false);
+							setActiveSection("hero");
+						}}
+					>
+						<span className="flex size-11 items-center justify-center rounded-xl border border-[var(--page-border-strong)] bg-[linear-gradient(135deg,rgba(255,255,255,0.18),rgba(255,255,255,0.04))] font-mono text-sm font-bold uppercase tracking-[0.35em] text-[var(--page-text)]">
+							LG
+						</span>
 
-			<NavbarContent className="hidden sm:flex gap-4" justify="center">
-				{menu.map((item, index) => (
-					<NavbarItem key={`${item.title}-${index}`}>
-						<Link
-							className="w-full"
-							color={path === item.url ? "primary" : "foreground"}
-							href={item.url}
-							size="lg"
-							onClick={(e) => {
-								e.preventDefault();
-								router.push(item.url, {
-									onTransitionReady:
-										path !== "/" ? slideLeftToRight : slideRightToLeft,
-								});
-							}}
-						>
-							{item.title}
-						</Link>
-					</NavbarItem>
-				))}
-			</NavbarContent>
-			<NavbarContent justify="end" className="sm:hidden">
-				<NavbarMenuToggle
-					icon={<FaBars />}
-					className="w-10 h-10 rounded-full p-0 min-w-min border-medium border-default"
-					// as={Button}
-					// variant="bordered"
-				/>
-			</NavbarContent>
-			<NavbarContent justify="end" className="gap-2 hidden lg:flex">
-				<NavbarItem>
-					<LanguageSelector />
-				</NavbarItem>
-				<NavbarItem>
-					<ThemeSelector />
-				</NavbarItem>
-			</NavbarContent>
+						<span className="hidden sm:block">
+							<span className="block text-[0.65rem] font-semibold uppercase tracking-[0.38em] text-[var(--page-muted)]">
+								{t("brand-tag")}
+							</span>
+							<span className="text-lg font-semibold tracking-tight text-[var(--page-text)]">
+								Levi <span className="text-[var(--brand)]">Gleik</span>
+							</span>
+						</span>
+					</Link>
 
-			<Drawer
-				hideCloseButton
-				// closeButton={
-				// 	<Button isIconOnly variant="bordered">
-				// 		<FaTimes size={16} />
-				// 	</Button>
-				// }
-				classNames={{
-					closeButton: "top-6 right-6",
-				}}
-				isOpen={isMenuOpen}
-				onOpenChange={setIsMenuOpen}
-				size="xs"
-			>
-				<DrawerContent className="p-6 bg-background">
-					{(onClose) => (
-						<>
-							<DrawerHeader className="flex flex-col gap-1">
-								<NavbarItem className="text-4xl font-calistoga tracking-wide">
-									Levi Gleik
-								</NavbarItem>
-							</DrawerHeader>
-							<DrawerBody>
-								{menu.map((item, index) => (
-									<NavbarItem key={`${item.title}-${index}`}>
-										<Link
-											className="w-full"
-											color={path === item.url ? "primary" : "foreground"}
-											href={item.url}
-											size="lg"
-											onPress={onClose}
-										>
-											{item.title}
-										</Link>
-									</NavbarItem>
-								))}
-								<NavbarItem className="flex gap-2 items-center">
-									<LanguageSelector />
-									<ThemeSelector />
-								</NavbarItem>
-							</DrawerBody>
-						</>
+					<nav className="hidden items-center gap-2 md:flex">
+						{navigation.map((item) => (
+							<Link
+								key={item.label}
+								href={item.href}
+								onClick={() => setActiveSection(item.sectionId)}
+								className={clsx(
+									"rounded-full px-4 py-2 text-sm font-semibold uppercase tracking-[0.22em] transition-colors",
+									activeSection === item.sectionId
+										? "bg-[var(--page-panel-strong)] text-[var(--brand)]"
+										: "text-[var(--page-muted)] hover:text-[var(--page-text)]",
+								)}
+							>
+								{item.label}
+							</Link>
+						))}
+					</nav>
+
+					<div className="hidden items-center gap-3 md:flex">
+						<LanguageSelector className="border-[var(--page-border)] bg-[var(--page-panel-strong)]" />
+						<ThemeSelector className="border-[var(--page-border)] bg-[var(--page-panel-strong)]" />
+					</div>
+
+					<button
+						type="button"
+						className="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--page-border)] bg-[var(--page-panel-strong)] text-[var(--page-text)] transition-colors hover:border-[var(--page-border-strong)] md:hidden"
+						aria-expanded={isMenuOpen}
+						aria-label={t("toggle-menu")}
+						onClick={() => setIsMenuOpen((current) => !current)}
+					>
+						{isMenuOpen ? <FaTimes size={16} /> : <FaBars size={16} />}
+					</button>
+				</div>
+
+				<div
+					className={clsx(
+						"glass-panel mt-3 overflow-hidden rounded-[28px] px-4 transition-all duration-300 md:hidden",
+						isMenuOpen
+							? "max-h-96 py-4 opacity-100"
+							: "pointer-events-none max-h-0 py-0 opacity-0",
 					)}
-				</DrawerContent>
-			</Drawer>
-		</NavbarHeroUI>
+				>
+					<nav className="flex flex-col gap-2">
+						{navigation.map((item) => (
+							<Link
+								key={item.label}
+								href={item.href}
+								className={clsx(
+									"rounded-2xl px-4 py-3 text-sm font-semibold uppercase tracking-[0.2em] transition-colors",
+									activeSection === item.sectionId
+										? "bg-[var(--page-panel-strong)] text-[var(--brand)]"
+										: "text-[var(--page-muted)] hover:bg-[var(--page-panel-strong)] hover:text-[var(--page-text)]",
+								)}
+								onClick={() => {
+									setIsMenuOpen(false);
+									setActiveSection(item.sectionId);
+								}}
+							>
+								{item.label}
+							</Link>
+						))}
+					</nav>
+
+					<div className="mt-4 flex items-center gap-3 border-t border-[var(--page-border)] pt-4">
+						<LanguageSelector className="border-[var(--page-border)] bg-[var(--page-panel-strong)]" />
+						<ThemeSelector className="border-[var(--page-border)] bg-[var(--page-panel-strong)]" />
+					</div>
+				</div>
+			</div>
+		</header>
 	);
 }

@@ -4,7 +4,25 @@
 		"experience": "Experiência",
 		"formation": "Formação",
 		"projects": "Projetos",
-		"resume": "Currículo"
+		"resume": "Currículo",
+		"hero-label": "Portfólio // Levi Gleik",
+		"hero-title": "Construindo <highlight>interfaces, sistemas e produtos digitais</highlight> com foco em clareza e performance.",
+		"hero-description": "Desenvolvedor Front-end com experiência em React.js, Next.js, TypeScript e integração com APIs REST, reunindo projetos reais, ferramentas internas e interfaces para diferentes negócios.",
+		"explore-projects": "Explorar projetos",
+		"contact-me": "Entrar em contato",
+		"snapshot-label": "Resumo rápido",
+		"role-label": "Atuação",
+		"stack-label": "Stack recorrente",
+		"contact-label": "Contato",
+		"github": "GitHub",
+		"linkedin": "LinkedIn",
+		"email": "E-mail",
+		"experience-description": "Experiência profissional no desenvolvimento de produtos front-end, integração com APIs REST e entrega de sistemas para operação interna e fluxos voltados ao cliente.",
+		"formation-description": "Base acadêmica e técnica que sustenta pensamento de produto, arquitetura de software e os fundamentos por trás das aplicações web.",
+		"contact-kicker": "Contato",
+		"contact-title": "Vamos desenhar a próxima interface?",
+		"contact-description": "Se quiser conversar sobre produto, arquitetura front-end, integração com APIs ou um novo projeto, estou a uma mensagem de distância.",
+		"send-email": "Enviar e-mail"
 	},
 	"TabExperience": {
 		"macedo-soft-house": {
@@ -52,9 +70,34 @@
 	"Projects": {
 		"projects": "Projetos",
 		"view-more": "ver mais",
+		"featured-tag": "Projetos em destaque",
+		"featured-description": "Um recorte do portfólio atual com produtos publicados, sistemas internos e experimentos.",
+		"view-all-projects": "Ver arquivo completo",
+		"archive-badge": "Arquivo completo",
+		"archive-title": "Todos os projetos",
+		"archive-description": "Uma coleção mais ampla com aplicações web, APIs, sistemas administrativos e experimentos de produto construídos ao longo da trajetória.",
+		"repository": "Repositório",
+		"live-site": "Site",
+		"back-home": "Voltar para a home",
 		"project-chrono-study": {
 			"title": "Chrono Study",
 			"description": "Ajuda a cronometrar e organizar os estudos. Pode adicionar disciplinas e verificar estatísticas de estudos por gráficos e tabelas."
+		},
+		"project-transfer-case": {
+			"title": "Transfer Case",
+			"description": "Aplicação web para gerenciamento de frotas, motoristas, ocorrências e abastecimentos, com upload de documentos e tabelas com filtros avançados."
+		},
+		"project-transfer-back": {
+			"title": "Transfer Back (Express)",
+			"description": "API RESTful para gerenciamento de frotas com veículos, motoristas, ocorrências, abastecimentos e documentos, construída com Express, Prisma, Redis e Swagger."
+		},
+		"project-transfer-nestjs": {
+			"title": "Transfer Back (NestJS)",
+			"description": "Versão em NestJS da API de gerenciamento de frotas do Transfer Back, mantendo módulos de veículos, motoristas, ocorrências, abastecimentos e documentação."
+		},
+		"project-tizen-iptv-open": {
+			"title": "Tizen IPTV Open",
+			"description": "Frontend IPTV otimizado para Samsung Tizen, com navegação por controle remoto e fluxo inicial para canais, séries e filmes."
 		},
 		"project-dispatch-system": {
 			"title": "Dispatch System",
@@ -99,8 +142,12 @@
 	},
 	"Navbar": {
 		"home": "Início",
+		"experience": "Experiência",
+		"formation": "Formação",
 		"contact": "Contato",
-		"projects": "Projetos"
+		"projects": "Projetos",
+		"brand-tag": "Front-end",
+		"toggle-menu": "Alternar menu de navegação"
 	},
 	"ErrorPage": {
 		"error": "erro",

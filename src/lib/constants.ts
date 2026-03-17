@@ -7,6 +7,10 @@ import pesquisaSatisfacao from "../assets/images/projects/pesquisa-satisfacao.pn
 import reunioes from "../assets/images/projects/reunioes.png";
 import sauloImoveis from "../assets/images/projects/saulo-imoveis.png";
 import servrent from "../assets/images/projects/servrent.png";
+import tizenIptvOpen from "../assets/images/projects/tizen-iptv-open.png";
+import transferBack from "../assets/images/projects/transfer-back.png";
+import transferCase from "../assets/images/projects/transfer-case.png";
+import transferNestjs from "../assets/images/projects/transfer-nestjs.png";
 import vacationPlan from "../assets/images/projects/vacation-plan.png";
 import viuGanhou from "../assets/images/projects/viu-ganhou.png";
 
@@ -62,6 +66,70 @@ export const PROJECT_TECHONOLOGIES = [
 		],
 		git: null,
 		url: null,
+	},
+	{
+		name: "transfer-case",
+		photo: transferCase.src,
+		techonologies: [
+			"NextJS",
+			"TypeScript",
+			"TailwindCSS",
+			"shadcn/ui",
+			"TanStack Query",
+			"TanStack Table",
+			"React Hook Form",
+			"Zod",
+		],
+		git: "https://github.com/levigleik/transfer-case",
+		url: "https://transfer-case-five.vercel.app",
+	},
+	{
+		name: "transfer-back",
+		photo: transferBack.src,
+		techonologies: [
+			"NodeJS",
+			"TypeScript",
+			"ExpressJS",
+			"PostgreSQL",
+			"Prisma",
+			"Redis",
+			"Docker",
+			"Swagger",
+		],
+		git: "https://github.com/levigleik/transfer-back",
+		url: null,
+	},
+	{
+		name: "transfer-nestjs",
+		photo: transferNestjs.src,
+		techonologies: [
+			"NestJS",
+			"TypeScript",
+			"PostgreSQL",
+			"Prisma",
+			"Redis",
+			"Swagger",
+			"Zod",
+			"Bun",
+		],
+		git: "https://github.com/levigleik/transfer-nestjs",
+		url: null,
+	},
+	{
+		name: "tizen-iptv-open",
+		photo: tizenIptvOpen.src,
+		techonologies: [
+			"NextJS",
+			"TypeScript",
+			"TailwindCSS",
+			"shadcn/ui",
+			"TanStack Query",
+			"HLS.js",
+			"Tizen",
+			"Zustand",
+		],
+		git: "https://github.com/levigleik/tizen-iptv-open",
+		url: "https://tizen-iptv-open.vercel.app",
 	},
 	{
 		name: "pesquisa-satisfacao",

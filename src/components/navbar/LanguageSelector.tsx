@@ -7,13 +7,14 @@ import {
 	DropdownMenu,
 	DropdownTrigger,
 } from "@heroui/dropdown";
+import { cn } from "@heroui/theme";
 import { useLocale, useTranslations } from "next-intl";
-
 import { useRouter } from "next/navigation";
 
-export default function LanguageSelector() {
+export default function LanguageSelector({
+	className,
+}: { className?: string }) {
 	const router = useRouter();
-
 	const t = useTranslations("LanguageSelector");
 	const locale = useLocale();
 
@@ -25,6 +26,10 @@ export default function LanguageSelector() {
 					aria-label={t("select-language")}
 					isIconOnly
 					radius="full"
+					className={cn(
+						"border-[var(--page-border)] bg-[var(--page-panel-strong)] text-[var(--page-text)] shadow-none transition-colors hover:border-[var(--page-border-strong)] hover:bg-[var(--page-panel)]",
+						className,
+					)}
 				>
 					{locale === "pt-BR" ? (
 						<span className="fi fi-br" />
@@ -35,7 +40,7 @@ export default function LanguageSelector() {
 			</DropdownTrigger>
 			<DropdownMenu
 				disallowEmptySelection
-				aria-label="Single selection example"
+				aria-label={t("select-language")}
 				selectionMode="single"
 				variant="flat"
 				onSelectionChange={(value) => {
@@ -46,41 +51,13 @@ export default function LanguageSelector() {
 			>
 				<DropdownItem key="pt-BR" classNames={{ title: "gap-2 flex" }}>
 					<span className="fi fi-br" />
-					Português
+					{t("portuguese")}
 				</DropdownItem>
 				<DropdownItem key="en" classNames={{ title: "gap-2 flex" }}>
 					<span className="fi fi-us" />
-					English
+					{t("english")}
 				</DropdownItem>
 			</DropdownMenu>
 		</Dropdown>
-		// <DropdownMenu>
-		// 	<DropdownMenuTrigger asChild>
-		// 	</DropdownMenuTrigger>
-		// 	<DropdownMenuContent className="w-56" align="end">
-		// 		<DropdownMenuGroup>
-		// 			<DropdownMenuCheckboxItem
-		// 				checked={locale === "pt-BR"}
-		// 				onCheckedChange={() => {
-		// 					setLocale("pt-BR");
-		// 					router.refresh();
-		// 				}}
-		// 			>
-		// 				<span className="fi fi-br" />
-		// 				Português
-		// 			</DropdownMenuCheckboxItem>
-		// 			<DropdownMenuCheckboxItem
-		// 				checked={locale === "en"}
-		// 				onCheckedChange={() => {
-		// 					setLocale("en");
-		// 					router.refresh();
-		// 				}}
-		// 			>
-		// 				<span className="fi fi-us" />
-		// 				English
-		// 			</DropdownMenuCheckboxItem>
-		// 		</DropdownMenuGroup>
-		// 	</DropdownMenuContent>
-		// </DropdownMenu>
 	);
 }
