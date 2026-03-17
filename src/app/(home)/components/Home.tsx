@@ -20,10 +20,10 @@ function SectionIntro({
 	return (
 		<div className="mx-auto mb-14 max-w-3xl text-center">
 			<span className="section-kicker">{badge}</span>
-			<h2 className="mt-6 text-4xl font-black uppercase tracking-[-0.01em] text-[var(--page-text)] sm:text-5xl">
+			<h2 className="mt-6 text-4xl font-black uppercase tracking-[-0.01em] text-(--page-text) sm:text-5xl">
 				{title}
 			</h2>
-			<p className="mt-5 text-base leading-8 text-[var(--page-muted)] sm:text-lg">
+			<p className="mt-5 text-base leading-8 text-(--page-muted) sm:text-lg">
 				{description}
 			</p>
 		</div>
@@ -73,28 +73,28 @@ export default function HomeComp() {
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true, amount: 0.3 }}
 					transition={{ duration: 0.6, ease: "easeOut" }}
-					className="glass-panel rounded-[32px] p-8 sm:p-10 lg:p-12"
+					className="glass-panel rounded-4xl p-8 sm:p-10 lg:p-12"
 				>
 					<div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_300px] lg:items-start">
-						<div>
+						<div className="min-w-0">
 							<span className="section-kicker">{t("about")}</span>
-							<h2 className="mt-6 max-w-3xl text-4xl font-black uppercase tracking-[-0.01em] text-[var(--page-text)] sm:text-5xl">
+							<h2 className="mt-6 max-w-3xl text-4xl font-black uppercase tracking-[-0.01em] text-(--page-text) sm:text-5xl">
 								{t("about-title")}
 							</h2>
-							<p className="mt-6 max-w-3xl text-base leading-8 text-[var(--page-muted)] sm:text-lg">
+							<p className="mt-6 max-w-3xl text-base leading-8 text-(--page-muted) sm:text-lg">
 								{t("about-text")}
 							</p>
 						</div>
 
-						<div className="rounded-[28px] border border-[var(--page-border)] bg-[var(--page-panel-strong)] p-6">
-							<p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--page-muted)]">
+						<div className="min-w-0 rounded-[28px] border border-(--page-border) bg-(--page-panel-strong) p-6">
+							<p className="text-xs font-semibold uppercase tracking-[0.28em] text-(--page-muted)">
 								{t("about-stack-label")}
 							</p>
 							<div className="mt-4 flex flex-wrap gap-2">
 								{aboutStack.map((item) => (
-									<span key={item} className="project-chip">
-										{item}
-									</span>
+									<span key={item} className="project-chip max-w-full wrap-break-word">
+          {item}
+        </span>
 								))}
 							</div>
 						</div>
@@ -111,15 +111,15 @@ export default function HomeComp() {
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true, amount: 0.3 }}
 					transition={{ duration: 0.6, ease: "easeOut" }}
-					className="glass-panel rounded-[32px] p-8 sm:p-10 lg:p-12"
+					className="glass-panel rounded-4xl p-8 sm:p-10 lg:p-12"
 				>
 					<div className="grid gap-8 lg:grid-cols-[minmax(0,1.1fr)_360px] lg:items-end">
 						<div>
 							<span className="section-kicker">{t("contact-kicker")}</span>
-							<h2 className="mt-6 max-w-2xl text-4xl font-black uppercase tracking-[-0.01em] text-[var(--page-text)] sm:text-5xl">
+							<h2 className="mt-6 max-w-2xl text-4xl font-black uppercase tracking-[-0.01em] text-(--page-text) sm:text-5xl">
 								{t("contact-title")}
 							</h2>
-							<p className="mt-5 max-w-2xl text-base leading-8 text-[var(--page-muted)] sm:text-lg">
+							<p className="mt-5 max-w-2xl text-base leading-8 text-(--page-muted) sm:text-lg">
 								{t("contact-description")}
 							</p>
 						</div>
