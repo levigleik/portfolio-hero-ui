@@ -1,16 +1,21 @@
+"use client";
+
 import { Button } from "@heroui/button";
-import {
-	Image as HeroUIImage,
-	ImageProps as HeroUIImageProps,
-} from "@heroui/image";
 import { Modal, ModalContent, ModalFooter } from "@heroui/modal";
-import { useCallback, useEffect, useRef, useState } from "react";
-import { FaTimes } from "react-icons/fa";
-import {} from "react-icons/fa6";
+import { cn } from "@heroui/theme";
+import {
+	type ImgHTMLAttributes,
+	useCallback,
+	useEffect,
+	useRef,
+	useState,
+} from "react";
 import { FiZoomIn, FiZoomOut } from "react-icons/fi";
 
-interface ImageProps extends HeroUIImageProps {
-	// link: string | null;
+import NextImage from "next/image";
+
+interface ImageProps extends ImgHTMLAttributes<HTMLImageElement> {
+	src: string;
 }
 
 const MAX_ZOOM = 3;
@@ -19,7 +24,14 @@ const ZOOM_STEP_WHEEL = 0.1;
 const ZOOM_STEP_BUTTON = 0.2;
 // const ROTATION_STEP = 90;
 
-export default function Image({ src, alt, ...props }: ImageProps) {
+export function Image({
+	src,
+	alt,
+	className,
+	onClick,
+	style,
+	...props
+}: ImageProps) {
 	const [isOpen, setIsOpen] = useState(false);
 
 	// Estados de Transformação
@@ -46,24 +58,27 @@ export default function Image({ src, alt, ...props }: ImageProps) {
 	// 	setRotation((prev) => prev + ROTATION_STEP);
 	// };
 
-	const applyZoom = (newScale: number, mouseX?: number, mouseY?: number) => {
-		const imgElement = imageRef.current;
-		let centerX = 0;
-		let centerY = 0;
+	const applyZoom = useCallback(
+		(newScale: number, mouseX?: number, mouseY?: number) => {
+			const imgElement = imageRef.current;
+			let centerX = 0;
+			let centerY = 0;
 
-		if (imgElement) {
-			centerX = mouseX ?? imgElement.offsetWidth / 2;
-			centerY = mouseY ?? imgElement.offsetHeight / 2;
-		}
+			if (imgElement) {
+				centerX = mouseX ?? imgElement.offsetWidth / 2;
+				centerY = mouseY ?? imgElement.offsetHeight / 2;
+			}
 
-		const newTranslateX =
-			centerX - ((centerX - translate.x) / scale) * newScale;
-		const newTranslateY =
-			centerY - ((centerY - translate.y) / scale) * newScale;
+			const newTranslateX =
+				centerX - ((centerX - translate.x) / scale) * newScale;
+			const newTranslateY =
+				centerY - ((centerY - translate.y) / scale) * newScale;
 
-		setScale(newScale);
-		setTranslate({ x: newTranslateX, y: newTranslateY });
-	};
+			setScale(newScale);
+			setTranslate({ x: newTranslateX, y: newTranslateY });
+		},
+		[scale, translate.x, translate.y],
+	);
 
 	const handleZoomOut = () => {
 		const potentialScale = scale - ZOOM_STEP_BUTTON;
@@ -152,12 +167,23 @@ export default function Image({ src, alt, ...props }: ImageProps) {
 
 	return (
 		<>
-			<HeroUIImage
+			<NextImage
 				{...props}
 				src={src}
-				alt={alt}
-				className="cursor-pointer"
-				onClick={() => setIsOpen(true)}
+				alt={alt ?? ""}
+				draggable={false}
+				style={style}
+        width={480}
+        height={360}
+        loading="lazy"
+				className={cn("cursor-pointer", className)}
+				onClick={(event) => {
+					onClick?.(event);
+
+					if (!event.defaultPrevented) {
+						setIsOpen(true);
+					}
+				}}
 			/>
 
 			<Modal
@@ -171,12 +197,13 @@ export default function Image({ src, alt, ...props }: ImageProps) {
 				}}
 				scrollBehavior="inside"
 			>
-				<ModalContent className="bg-transparent p-0 ">
-					<HeroUIImage
+				<ModalContent className="bg-transparent p-0">
+					<img
 						src={src}
-						alt={alt}
+						alt={alt ?? ""}
 						ref={imageRef}
 						width={1500}
+						draggable={false}
 						style={{
 							transform: transformStyle,
 							transformOrigin: "top left",
@@ -186,7 +213,7 @@ export default function Image({ src, alt, ...props }: ImageProps) {
 							transition: "transform 0.15s ease-out",
 							willChange: "transform",
 						}}
-						className="object-cover w-full"
+						className="w-full object-cover"
 					/>
 					<ModalFooter className="rounded-full w-fit justify-center mx-auto mt-4 z-50">
 						{/* <Button
@@ -225,7 +252,7 @@ export default function Image({ src, alt, ...props }: ImageProps) {
 							variant="bordered"
 							radius="full"
 							isIconOnly
-							isDisabled={scale === 1 || translate.x === 0 || translate.y == 0}
+							isDisabled={scale === 1 || translate.x === 0 || translate.y === 0}
 							onPress={handleZoomOut}
 						>
 							<FiZoomOut size={20} />

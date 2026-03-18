@@ -5,7 +5,7 @@ import clsx from "clsx";
 import { useTranslations } from "next-intl";
 import { FaGithub } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
-import Image from "../ui/image";
+import {Image} from "../ui/image";
 import { cn } from "@heroui/theme";
 
 type ProjectCardProps = (typeof PROJECT_TECHONOLOGIES)[number] & {
