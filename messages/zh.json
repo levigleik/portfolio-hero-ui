@@ -181,5 +181,32 @@
 		"french": "法语",
 		"italian": "意大利语",
 		"mandarin": "中文"
+	},
+	"Narrative": {
+		"hero-line-1": "从创意到界面。",
+		"hero-line-2": "从代码到真实生活。",
+		"hero-subtitle": "打造连接人与产品的数字体验，探索更多可能。",
+		"hero-caption": "界面。API。产品。",
+		"scroll": "继续探索",
+		"project-preview": "Levi Gleik 的项目界面",
+		"statement": "让生活变得简单，才是技术的意义。",
+		"projects-title": "真实项目。更多可能。",
+		"project-category-0": "医疗与管理",
+		"project-category-1": "效率与协作",
+		"project-category-2": "学习与规划",
+		"real-project": "真实项目界面",
+		"stack-title-1": "用心打磨每个像素。",
+		"stack-title-2": "清晰编写每行代码。",
+		"stack-description": "从屏幕界面到服务器逻辑，以完整视角构建协同运行的产品。",
+		"stack-footnote": "前端 → 后端 → 产品",
+		"experience-title-1": "打造产品。",
+		"experience-title-2": "积累经验。",
+		"formation-title": "扎实基础，走得更远。",
+		"contact-title-1": "你的下一个创意，",
+		"contact-title-2": "从一句你好开始。",
+		"footer": "用心创造。由 Levi Gleik 开发。",
+		"skip-content": "跳转到内容",
+		"navigation": "主导航",
+		"chapters": "浏览页面章节"
 	}
 }

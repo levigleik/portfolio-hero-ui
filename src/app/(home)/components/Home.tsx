@@ -1,147 +1,118 @@
 "use client";
 
-import ProjectSection from "@/components/project/ProjectSection";
-import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
-import { FaEnvelope, FaLinkedin } from "react-icons/fa";
+import { Reveal } from "@/components/motion/ScrollScene";
+import { MotionConfig } from "framer-motion";
+import { ArrowUpRight, Github, Linkedin, MoveUpRight } from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
 import AboutSection from "./AboutSection";
+import Manifesto from "./Manifesto";
+import ProjectShowcase from "./ProjectShowcase";
+import StackSection from "./StackSection";
 import TabExperience from "./TabExperience";
 import TabFormation from "./TabFormation";
 
-function SectionIntro({
-	badge,
-	title,
-	description,
-}: {
-	badge: string;
-	title: string;
-	description: string;
-}) {
-	return (
-		<div className="mx-auto mb-14 max-w-3xl text-center">
-			<span className="section-kicker">{badge}</span>
-			<h2 className="mt-6 text-4xl font-black uppercase tracking-[-0.01em] text-(--page-text) sm:text-5xl">
-				{title}
-			</h2>
-			<p className="mt-5 text-base leading-8 text-(--page-muted) sm:text-lg">
-				{description}
-			</p>
-		</div>
-	);
-}
-
 export default function HomeComp() {
 	const t = useTranslations("HomePage");
-	const aboutStack = [
-		"JavaScript",
-		"TypeScript",
-		"React.js",
-		"Node.js",
-		"Nest.js",
-		"Prisma ORM",
-	];
-
+	const n = useTranslations("Narrative");
+	const locale = useLocale();
 	return (
-		<>
+		<MotionConfig reducedMotion="user">
 			<AboutSection />
-
-			<section id="projects" className="scroll-mt-32 pt-24">
-				<ProjectSection />
-			</section>
-
-			<section id="experience" className="section-shell scroll-mt-32 pt-24">
-				<SectionIntro
-					badge={t("experience")}
-					title={t("experience")}
-					description={t("experience-description")}
-				/>
+			<Manifesto />
+			<ProjectShowcase />
+			<StackSection />
+			<section id="experience" className="career-section section-shell">
+				<Reveal className="career-heading">
+					<p className="eyebrow">
+						<span className="chapter-number">03 /</span>
+						{t("experience")}
+					</p>
+					<h2 className="section-title">
+						{n("experience-title-1")}
+						<br />
+						<span className="muted-heading">{n("experience-title-2")}</span>
+					</h2>
+					<p className="section-description">{t("experience-description")}</p>
+				</Reveal>
 				<TabExperience />
 			</section>
-
-			<section id="formation" className="section-shell scroll-mt-32 pt-24">
-				<SectionIntro
-					badge={t("formation")}
-					title={t("formation")}
-					description={t("formation-description")}
-				/>
-				<TabFormation />
+			<section id="formation" className="education-section">
+				<div className="section-shell">
+					<Reveal>
+						<p className="eyebrow">
+							<span className="chapter-number">04 /</span>
+							{t("formation")}
+						</p>
+						<h2 className="section-title">{n("formation-title")}</h2>
+					</Reveal>
+					<TabFormation />
+				</div>
 			</section>
-
-			<section id="about" className="section-shell scroll-mt-32 pt-24">
-				<motion.div
-					initial={{ opacity: 0, y: 24 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					viewport={{ once: true, amount: 0.3 }}
-					transition={{ duration: 0.6, ease: "easeOut" }}
-					className="glass-panel rounded-4xl p-8 sm:p-10 lg:p-12"
-				>
-					<div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_300px] lg:items-start">
-						<div className="min-w-0">
-							<span className="section-kicker">{t("about")}</span>
-							<h2 className="mt-6 max-w-3xl text-4xl font-black uppercase tracking-[-0.01em] text-(--page-text) sm:text-5xl">
-								{t("about-title")}
+			<section id="contact" className="contact-section">
+				<div className="section-shell">
+					<Reveal>
+						<p className="eyebrow">
+							<span className="chapter-number">05 /</span>
+							{t("contact-kicker")}
+						</p>
+						<div className="contact-main">
+							<h2>
+								{n("contact-title-1")}
+								<br />
+								{n("contact-title-2")}
 							</h2>
-							<p className="mt-6 max-w-3xl text-base leading-8 text-(--page-muted) sm:text-lg">
-								{t("about-text")}
-							</p>
+							<a
+								className="contact-arrow"
+								href="mailto:levigleik@gmail.com"
+								aria-label={t("send-email")}
+							>
+								<MoveUpRight strokeWidth={1.2} />
+							</a>
 						</div>
-
-						<div className="min-w-0 rounded-[28px] border border-(--page-border) bg-(--page-panel-strong) p-6">
-							<p className="text-xs font-semibold uppercase tracking-[0.28em] text-(--page-muted)">
-								{t("about-stack-label")}
-							</p>
-							<div className="mt-4 flex flex-wrap gap-2">
-								{aboutStack.map((item) => (
-									<span key={item} className="project-chip max-w-full wrap-break-word">
-          {item}
-        </span>
-								))}
-							</div>
+						<div className="contact-details">
+							<a href="mailto:levigleik@gmail.com" className="contact-email">
+								levigleik@gmail.com
+								<ArrowUpRight size={24} />
+							</a>
+							<p>{t("contact-description")}</p>
 						</div>
-					</div>
-				</motion.div>
-			</section>
-
-			<section
-				id="contact"
-				className="section-shell scroll-mt-32 pb-10 pt-24 sm:pb-16"
-			>
-				<motion.div
-					initial={{ opacity: 0, y: 24 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					viewport={{ once: true, amount: 0.3 }}
-					transition={{ duration: 0.6, ease: "easeOut" }}
-					className="glass-panel rounded-4xl p-8 sm:p-10 lg:p-12"
-				>
-					<div className="grid gap-8 lg:grid-cols-[minmax(0,1.1fr)_360px] lg:items-end">
+					</Reveal>
+					<footer className="site-footer">
+						<a className="footer-brand" href="#hero">
+							levi<span>gleik.</span>
+						</a>
+						<span>{n("footer")}</span>
 						<div>
-							<span className="section-kicker">{t("contact-kicker")}</span>
-							<h2 className="mt-6 max-w-2xl text-4xl font-black uppercase tracking-[-0.01em] text-(--page-text) sm:text-5xl">
-								{t("contact-title")}
-							</h2>
-							<p className="mt-5 max-w-2xl text-base leading-8 text-(--page-muted) sm:text-lg">
-								{t("contact-description")}
-							</p>
-						</div>
-
-						<div className="flex flex-col gap-3">
-							<a href="mailto:levigleik@gmail.com" className="action-primary">
-								<FaEnvelope size={16} />
-								{t("send-email")}
+							<a
+								href="https://github.com/levigleik"
+								target="_blank"
+								rel="noreferrer"
+							>
+								<Github size={17} />
+								GitHub
 							</a>
 							<a
 								href="https://linkedin.com/in/levi-gleik"
 								target="_blank"
 								rel="noreferrer"
-								className="action-secondary"
 							>
-								<FaLinkedin size={16} />
-								{t("linkedin")}
+								<Linkedin size={17} />
+								LinkedIn
+							</a>
+							<a
+								href={
+									locale === "pt-BR" ? "/resume-pt-BR.pdf" : "/resume-en.pdf"
+								}
+								target="_blank"
+								rel="noreferrer"
+							>
+								{t("resume")}
+								<ArrowUpRight size={16} />
 							</a>
 						</div>
-					</div>
-				</motion.div>
+					</footer>
+				</div>
 			</section>
-		</>
+		</MotionConfig>
 	);
 }

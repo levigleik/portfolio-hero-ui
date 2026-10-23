@@ -181,5 +181,32 @@
 		"french": "French",
 		"italian": "Italian",
 		"mandarin": "Mandarin"
+	},
+	"Narrative": {
+		"hero-line-1": "From idea to interface.",
+		"hero-line-2": "From code to real life.",
+		"hero-subtitle": "I build digital experiences that connect people, products and possibilities.",
+		"hero-caption": "Interfaces. APIs. Products.",
+		"scroll": "Keep exploring",
+		"project-preview": "Project interfaces by Levi Gleik",
+		"statement": "Technology makes sense when it makes someone’s life simpler.",
+		"projects-title": "Real projects. New possibilities.",
+		"project-category-0": "Healthcare & management",
+		"project-category-1": "Productivity & collaboration",
+		"project-category-2": "Study & organization",
+		"real-project": "Actual project interface",
+		"stack-title-1": "Care in every pixel.",
+		"stack-title-2": "Clarity in every line.",
+		"stack-description": "From what you see on screen to what happens on the server. A complete perspective to build products that work together.",
+		"stack-footnote": "Front-end → Back-end → Product",
+		"experience-title-1": "Building products.",
+		"experience-title-2": "Collecting lessons.",
+		"formation-title": "A foundation to go further.",
+		"contact-title-1": "Your next idea",
+		"contact-title-2": "starts with a hello.",
+		"footer": "Made with intention. Developed by Levi Gleik.",
+		"skip-content": "Skip to content",
+		"navigation": "Main navigation",
+		"chapters": "Explore the sections"
 	}
 }

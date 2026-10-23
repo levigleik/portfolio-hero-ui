@@ -1,170 +1,105 @@
 "use client";
 
-import { type AppLocale } from "@/i18n/config";
-import { motion } from "framer-motion";
-import { useLocale, useTranslations } from "next-intl";
-import { FaEnvelope, FaFilePdf, FaGithub, FaLinkedin } from "react-icons/fa";
-
-const fadeUp = {
-	initial: { opacity: 0, y: 24 },
-	whileInView: { opacity: 1, y: 0 },
-	viewport: { once: true, amount: 0.35 },
-	transition: { duration: 0.6, ease: "easeOut" as const },
-};
-
-const stack = [
-	"React",
-	"Next.js",
-	"TypeScript",
-	"Node.js",
-	"Nest.js",
-	"REST APIs",
-];
+import { usePinnedScene } from "@/components/motion/ScrollScene";
+import { PROJECT_TECHONOLOGIES } from "@/lib/constants";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { ArrowDown, ArrowUpRight, Braces } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { useRef } from "react";
+import ProjectScreen from "./ProjectScreen";
 
 export default function AboutSection() {
-	const t = useTranslations("HomePage");
-	const locale = useLocale() as AppLocale;
-	const resumePathByLocale: Record<AppLocale, string> = {
-		"pt-BR": "/resume-pt-BR.pdf",
-		en: "/resume-en.pdf",
-		es: "/resume-en.pdf",
-		fr: "/resume-en.pdf",
-		it: "/resume-en.pdf",
-		zh: "/resume-en.pdf",
-	};
+	const t = useTranslations("Narrative");
+	const home = useTranslations("HomePage");
+	const section = useRef<HTMLElement>(null);
+	const pinned = usePinnedScene();
+	const { scrollYProgress } = useScroll({
+		target: section,
+		offset: ["start start", "end end"],
+	});
+	const titleY = useTransform(scrollYProgress, [0, 1], [0, -90]);
+	const titleOpacity = useTransform(scrollYProgress, [0, 0.75, 1], [1, 0.4, 0]);
+	const screenY = useTransform(scrollYProgress, [0, 1], [0, -100]);
+	const screenScale = useTransform(scrollYProgress, [0, 1], [1, 1.13]);
+	const rotate = useTransform(scrollYProgress, [0, 1], [-7, 0]);
+	const satelliteY = useTransform(scrollYProgress, [0, 1], [0, -180]);
+	const clinic = PROJECT_TECHONOLOGIES[0];
+	const meetings = PROJECT_TECHONOLOGIES[2];
 
 	return (
-		<section id="hero" className="section-shell scroll-mt-32 pt-32 sm:pt-36">
-			<div className="grid gap-8 lg:grid-cols-[minmax(0,1.4fr)_360px] lg:items-center">
-				<motion.div {...fadeUp}>
-					<span className="section-kicker">{t("hero-label")}</span>
-
-					<h1 className="mt-6 max-w-4xl text-3xl font-black uppercase tracking-[-0.01em] text-[var(--page-text)] sm:text-6xl lg:text-5xl xl:text-[4.4rem]">
-						{t.rich("hero-title", {
-							highlight: (chunks) => (
-								<span className="text-glow text-[var(--brand)]">{chunks}</span>
-							),
-						})}
-					</h1>
-
-					<p className="mt-6 max-w-2xl text-base leading-8 text-[var(--page-muted)] sm:text-lg">
-						{t("hero-description")}
-					</p>
-
-					<div className="mt-8 flex flex-col gap-4 sm:flex-row">
-						<a href="#projects" className="action-primary">
-							{t("explore-projects")}
+		<section
+			id="hero"
+			ref={section}
+			className={`hero-story ${pinned ? "is-pinned" : ""}`}
+		>
+			<div className="hero-sticky">
+				<div className="hero-stage">
+					<motion.div
+						className="hero-copy"
+						style={pinned ? { y: titleY, opacity: titleOpacity } : undefined}
+					>
+						<p className="eyebrow hero-eyebrow">
+							<span className="status-dot" />
+							Levi Gleik <span className="eyebrow-divider">/</span>{" "}
+							{home("full-stack-developer")}
+						</p>
+						<h1>
+							{t("hero-line-1")}
+							<br />
+							<span>{t("hero-line-2")}</span>
+						</h1>
+						<p className="hero-subtitle">{t("hero-subtitle")}</p>
+						<a href="#projects" className="button-blue">
+							{home("explore-projects")}
+							<ArrowUpRight size={18} />
 						</a>
-						<a href="#contact" className="action-secondary">
-							{t("contact-me")}
-						</a>
-						<a href="#about" className="action-secondary">
-							{t("about")}
-						</a>
-					</div>
+					</motion.div>
 
-					<div className="mt-8 flex flex-wrap gap-3">
-						<a
-							href="https://github.com/levigleik"
-							target="_blank"
-							rel="noreferrer"
-							className="action-secondary"
+					<div className="hero-visual" aria-label={t("project-preview")}>
+						<div className="hero-orbit orbit-one" />
+						<div className="hero-orbit orbit-two" />
+						<motion.div
+							className="hero-main-screen"
+							style={
+								pinned
+									? { y: screenY, scale: screenScale, rotateX: rotate }
+									: undefined
+							}
 						>
-							<FaGithub size={16} />
-							{t("github")}
-						</a>
-
-						<a
-							href="https://linkedin.com/in/levi-gleik"
-							target="_blank"
-							rel="noreferrer"
-							className="action-secondary"
+							<ProjectScreen
+								src={clinic.photo}
+								title="Gestão Clínica"
+								address="novogestaoclinica.netlify.app"
+								priority
+							/>
+						</motion.div>
+						<motion.div
+							className="hero-satellite"
+							style={pinned ? { y: satelliteY } : undefined}
 						>
-							<FaLinkedin size={16} />
-							{t("linkedin")}
-						</a>
-
-						<a href="mailto:levigleik@gmail.com" className="action-secondary">
-							<FaEnvelope size={16} />
-							{t("email")}
-						</a>
-
-						<a
-							href={resumePathByLocale[locale]}
-							target="_blank"
-							rel="noreferrer"
-							className="action-secondary"
-						>
-							<FaFilePdf size={16} />
-							{t("resume")}
-						</a>
-					</div>
-				</motion.div>
-
-				<motion.aside
-					{...fadeUp}
-					transition={{ duration: 0.6, delay: 0.12, ease: "easeOut" }}
-					className="glass-panel rounded-[32px] p-6 sm:p-8"
-				>
-					<span className="section-kicker">{t("snapshot-label")}</span>
-
-					<div className="mt-7 space-y-7">
-						<div>
-							<p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--page-muted)]">
-								{t("role-label")}
-							</p>
-							<p className="mt-3 text-3xl font-semibold tracking-tight text-[var(--page-text)]">
-								{t("full-stack-developer")}
-							</p>
+							<ProjectScreen
+								src={meetings.photo}
+								title="Sistema de reuniões"
+								address="atasreunioes.com"
+								priority
+							/>
+						</motion.div>
+						<div className="code-token" aria-hidden="true">
+							<Braces strokeWidth={1.5} />
 						</div>
-
-						<div>
-							<p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--page-muted)]">
-								{t("stack-label")}
-							</p>
-							<div className="mt-4 flex flex-wrap gap-2">
-								{stack.map((item) => (
-									<span key={item} className="project-chip">
-										{item}
-									</span>
-								))}
-							</div>
-						</div>
-
-						<div>
-							<p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--page-muted)]">
-								{t("contact-label")}
-							</p>
-							<div className="mt-4 grid gap-3">
-								<a
-									href="mailto:levigleik@gmail.com"
-									className="rounded-[24px] border border-[var(--page-border)] bg-[var(--page-panel-strong)] px-4 py-3 transition-colors hover:border-[var(--page-border-strong)]"
-								>
-									<span className="block text-xs font-semibold uppercase tracking-[0.26em] text-[var(--page-muted)]">
-										{t("email")}
-									</span>
-									<span className="mt-2 block text-sm font-medium text-[var(--page-text)]">
-										levigleik@gmail.com
-									</span>
-								</a>
-
-								<a
-									href="https://linkedin.com/in/levi-gleik"
-									target="_blank"
-									rel="noreferrer"
-									className="rounded-[24px] border border-[var(--page-border)] bg-[var(--page-panel-strong)] px-4 py-3 transition-colors hover:border-[var(--page-border-strong)]"
-								>
-									<span className="block text-xs font-semibold uppercase tracking-[0.26em] text-[var(--page-muted)]">
-										LinkedIn
-									</span>
-									<span className="mt-2 block text-sm font-medium text-[var(--page-text)]">
-										linkedin.com/in/levi-gleik
-									</span>
-								</a>
-							</div>
+						<div className="hero-tech-label" aria-hidden="true">
+							<span className="status-dot" />
+							React · Next.js · Node.js
 						</div>
 					</div>
-				</motion.aside>
+					<div className="hero-caption">
+						<span>{t("hero-caption")}</span>
+						<a href="#about">
+							{t("scroll")}
+							<ArrowDown size={16} />
+						</a>
+					</div>
+				</div>
 			</div>
 		</section>
 	);

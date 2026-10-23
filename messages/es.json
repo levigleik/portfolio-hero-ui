@@ -181,5 +181,32 @@
 		"french": "Francés",
 		"italian": "Italiano",
 		"mandarin": "Mandarín"
+	},
+	"Narrative": {
+		"hero-line-1": "De la idea a la interfaz.",
+		"hero-line-2": "Del código a la vida real.",
+		"hero-subtitle": "Desarrollo experiencias digitales que conectan personas, productos y posibilidades.",
+		"hero-caption": "Interfaces. APIs. Productos.",
+		"scroll": "Sigue explorando",
+		"project-preview": "Interfaces de proyectos de Levi Gleik",
+		"statement": "La tecnología tiene sentido cuando simplifica la vida de alguien.",
+		"projects-title": "Proyectos reales. Nuevas posibilidades.",
+		"project-category-0": "Salud y gestión",
+		"project-category-1": "Productividad y colaboración",
+		"project-category-2": "Estudio y organización",
+		"real-project": "Interfaz real del proyecto",
+		"stack-title-1": "Cuidado en cada píxel.",
+		"stack-title-2": "Claridad en cada línea.",
+		"stack-description": "De lo que ves en pantalla a lo que sucede en el servidor. Una visión completa para construir productos que funcionan juntos.",
+		"stack-footnote": "Front-end → Back-end → Producto",
+		"experience-title-1": "Construyendo productos.",
+		"experience-title-2": "Acumulando aprendizajes.",
+		"formation-title": "Una base para ir más allá.",
+		"contact-title-1": "Tu próxima idea",
+		"contact-title-2": "empieza con un hola.",
+		"footer": "Hecho con intención. Desarrollado por Levi Gleik.",
+		"skip-content": "Saltar al contenido",
+		"navigation": "Navegación principal",
+		"chapters": "Explorar las secciones"
 	}
 }

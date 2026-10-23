@@ -1,208 +1,183 @@
 "use client";
 
 import clsx from "clsx";
-import { useTranslations } from "next-intl";
-import Link from "next/link";
+import { motion, useScroll } from "framer-motion";
+import { ArrowUpRight, Menu, X } from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
 import LanguageSelector from "./LanguageSelector";
 import ThemeSelector from "./ThemeSelector";
 
-const sectionIds = [
+const sections = [
 	"hero",
 	"about",
 	"projects",
 	"experience",
 	"formation",
+	"contact",
 ] as const;
-type SectionId = (typeof sectionIds)[number];
-
-interface NavigationItem {
-	href: string;
-	label: string;
-	sectionId: SectionId;
-}
+type Section = (typeof sections)[number];
 
 export default function NavbarComp() {
 	const t = useTranslations("Navbar");
+	const home = useTranslations("HomePage");
+	const n = useTranslations("Narrative");
 	const pathname = usePathname();
-	const [isMenuOpen, setIsMenuOpen] = useState(false);
-	const [activeSection, setActiveSection] = useState<SectionId>("hero");
-
-	const isProjectsPage = pathname === "/projects";
-
-	useEffect(() => {
-		setIsMenuOpen(false);
-	}, [pathname]);
+	const locale = useLocale();
+	const [open, setOpen] = useState(false);
+	const [active, setActive] = useState<Section>("hero");
+	const { scrollYProgress } = useScroll();
+	const isArchive = pathname === "/projects";
 
 	useEffect(() => {
-		if (isProjectsPage) {
-			setActiveSection("projects");
+		setOpen(false);
+		if (isArchive) {
+			setActive("projects");
 			return;
 		}
-
-		const updateActiveSection = () => {
-			const scrollPosition = window.scrollY + 180;
-			let currentSection: SectionId = "hero";
-
-			for (const sectionId of sectionIds) {
-				const section = document.getElementById(sectionId);
-
-				if (!section) {
-					continue;
-				}
-
-				const sectionTop = section.offsetTop;
-				const sectionBottom = sectionTop + section.offsetHeight;
-
-				if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-					currentSection = sectionId;
-					break;
-				}
-
-				if (scrollPosition >= sectionTop) {
-					currentSection = sectionId;
-				}
+		let frame = 0;
+		const update = () => {
+			let current: Section = "hero";
+			for (const id of sections) {
+				const element = document.getElementById(id);
+				if (
+					element &&
+					element.getBoundingClientRect().top <= window.innerHeight * 0.4
+				)
+					current = id;
 			}
-
-			setActiveSection(currentSection);
+			setActive(current);
 		};
-
-		updateActiveSection();
-
-		window.addEventListener("scroll", updateActiveSection, { passive: true });
-		window.addEventListener("resize", updateActiveSection);
-
+		const onScroll = () => {
+			cancelAnimationFrame(frame);
+			frame = requestAnimationFrame(update);
+		};
+		update();
+		window.addEventListener("scroll", onScroll, { passive: true });
+		window.addEventListener("resize", onScroll);
 		return () => {
-			window.removeEventListener("scroll", updateActiveSection);
-			window.removeEventListener("resize", updateActiveSection);
+			cancelAnimationFrame(frame);
+			window.removeEventListener("scroll", onScroll);
+			window.removeEventListener("resize", onScroll);
 		};
-	}, [isProjectsPage]);
+	}, [isArchive]);
 
-	const navigation: NavigationItem[] = [
-		{
-			href: isProjectsPage ? "/" : "#hero",
-			label: t("home"),
-			sectionId: "hero",
-		},
-		{
-			href: isProjectsPage ? "/#about" : "#about",
-			label: t("about"),
-			sectionId: "about",
-		},
-		{
-			href: isProjectsPage ? "/projects" : "#projects",
-			label: t("projects"),
-			sectionId: "projects",
-		},
-		{
-			href: isProjectsPage ? "/#experience" : "#experience",
-			label: t("experience"),
-			sectionId: "experience",
-		},
-		{
-			href: isProjectsPage ? "/#formation" : "#formation",
-			label: t("formation"),
-			sectionId: "formation",
-		},
-	];
+	useEffect(() => {
+		const escape = (event: KeyboardEvent) => {
+			if (event.key === "Escape") setOpen(false);
+		};
+		window.addEventListener("keydown", escape);
+		return () => window.removeEventListener("keydown", escape);
+	}, []);
+
+	const label = (id: Section) => t(id === "hero" ? "home" : id);
+	const href = (id: Section) => `${isArchive ? "/" : ""}#${id}`;
 
 	return (
-		<header className="fixed inset-x-0 top-0 z-50 px-4 py-4 sm:px-6 lg:px-10">
-			<div className="mx-auto max-w-7xl">
-				<div className="glass-panel flex items-center justify-between rounded-[28px] px-4 py-3 sm:px-6">
-					<Link
-						href="/"
-						className="flex items-center gap-3"
-						onClick={() => {
-							setIsMenuOpen(false);
-							setActiveSection("hero");
-						}}
+		<>
+			<a className="skip-link" href="#main-content">
+				{n("skip-content")}
+			</a>
+			<header className="site-header">
+				<div className="navbar-inner">
+					<a
+						href="/#hero"
+						className="wordmark"
+						aria-label="Levi Gleik"
+						onClick={() => setOpen(false)}
 					>
-						<span className="flex size-11 items-center justify-center rounded-xl border border-[var(--page-border-strong)] bg-[linear-gradient(135deg,rgba(255,255,255,0.18),rgba(255,255,255,0.04))] font-mono text-sm font-bold uppercase tracking-[0.35em] text-[var(--page-text)]">
-							LG
+						<span className="brand-symbol" aria-hidden="true">
+							<i />
+							<i />
 						</span>
-
-						<span className="hidden sm:block">
-							<span className="block text-[0.65rem] font-semibold uppercase tracking-[0.38em] text-[var(--page-muted)]">
-								{t("brand-tag")}
-							</span>
-							<span className="text-lg font-semibold tracking-tight text-[var(--page-text)]">
-								Levi <span className="text-[var(--brand)]">Gleik</span>
-							</span>
-						</span>
-					</Link>
-
-					<nav className="hidden items-center gap-2 md:flex">
-						{navigation.map((item) => (
-							<Link
-								key={`${item.sectionId}-${item.label}`}
-								href={item.href}
-								onClick={() => setActiveSection(item.sectionId)}
-								className={clsx(
-									"rounded-full px-4 py-2 text-sm font-semibold uppercase tracking-[0.22em] transition-colors",
-									activeSection === item.sectionId
-										? "bg-[var(--page-panel-strong)] text-[var(--brand)]"
-										: "text-[var(--page-muted)] hover:text-[var(--page-text)]",
-								)}
+						levi<span>gleik.</span>
+					</a>
+					<nav className="desktop-navigation" aria-label={n("navigation")}>
+						{(["about", "projects", "experience"] as Section[]).map((id) => (
+							<a
+								key={id}
+								href={href(id)}
+								aria-current={active === id ? "location" : undefined}
+								className={clsx(active === id && "is-active")}
 							>
-								{item.label}
-							</Link>
+								{label(id)}
+							</a>
 						))}
 					</nav>
-
-					<div className="hidden items-center gap-3 md:flex">
-						<LanguageSelector className="p-2" />
-						<ThemeSelector className="p-2" />
+					<div className="navbar-actions">
+						<span className="desktop-preferences">
+							<LanguageSelector />
+							<ThemeSelector />
+						</span>
+						<a className="nav-contact" href={href("contact")}>
+							{t("contact")}
+							<ArrowUpRight size={16} />
+						</a>
+						<button
+							type="button"
+							className="menu-toggle"
+							aria-controls="mobile-navigation"
+							aria-expanded={open}
+							aria-label={t("toggle-menu")}
+							onClick={() => setOpen(!open)}
+						>
+							{open ? <X size={22} /> : <Menu size={22} />}
+						</button>
 					</div>
-
-					<button
-						type="button"
-						className="flex h-11 w-11 items-center justify-center rounded-full border text-[var(--page-text)] transition-colors hover:border-[var(--page-border-strong)] md:hidden"
-						aria-expanded={isMenuOpen}
-						aria-label={t("toggle-menu")}
-						onClick={() => setIsMenuOpen((current) => !current)}
-					>
-						{isMenuOpen ? <FaTimes size={16} /> : <FaBars size={16} />}
-					</button>
 				</div>
-
 				<div
-					className={clsx(
-						"glass-panel mt-3 overflow-hidden rounded-[28px] px-4 transition-all duration-300 md:hidden",
-						isMenuOpen
-							? "max-h-96 py-4 opacity-100"
-							: "pointer-events-none max-h-0 py-0 opacity-0",
-					)}
+					className="mobile-navigation"
+					id="mobile-navigation"
+					hidden={!open}
 				>
-					<nav className="flex flex-col gap-2">
-						{navigation.map((item) => (
-							<Link
-								key={`${item.sectionId}-${item.label}`}
-								href={item.href}
-								className={clsx(
-									"rounded-2xl px-4 py-3 text-sm font-semibold uppercase tracking-[0.2em] transition-colors",
-									activeSection === item.sectionId
-										? "bg-[var(--page-panel-strong)] text-[var(--brand)]"
-										: "text-[var(--page-muted)] hover:bg-[var(--page-panel-strong)] hover:text-[var(--page-text)]",
-								)}
-								onClick={() => {
-									setIsMenuOpen(false);
-									setActiveSection(item.sectionId);
-								}}
+					<nav aria-label={n("navigation")}>
+						{sections.map((id) => (
+							<a
+								key={id}
+								href={href(id)}
+								aria-current={active === id ? "location" : undefined}
+								onClick={() => setOpen(false)}
 							>
-								{item.label}
-							</Link>
+								{label(id)}
+								<ArrowUpRight size={18} />
+							</a>
 						))}
 					</nav>
-
-					<div className="mt-4 flex items-center gap-3 border-t border-[var(--page-border)] pt-4">
-						<LanguageSelector className="p-2" />
-						<ThemeSelector className="p-2" />
+					<div className="mobile-preferences">
+						<LanguageSelector />
+						<ThemeSelector />
+						<a
+							href={locale === "pt-BR" ? "/resume-pt-BR.pdf" : "/resume-en.pdf"}
+							target="_blank"
+							rel="noreferrer"
+						>
+							{home("resume")}
+							<ArrowUpRight size={16} />
+						</a>
 					</div>
 				</div>
-			</div>
-		</header>
+				<motion.div
+					className="page-progress"
+					style={{ scaleX: scrollYProgress }}
+				/>
+			</header>
+			{!isArchive && (
+				<nav className="section-rail" aria-label={n("chapters")}>
+					{sections.map((id) => (
+						<a
+							key={id}
+							href={`#${id}`}
+							className={active === id ? "is-active" : ""}
+							aria-label={label(id)}
+							aria-current={active === id ? "location" : undefined}
+						>
+							<span>{label(id)}</span>
+							<i />
+						</a>
+					))}
+				</nav>
+			)}
+		</>
 	);
 }
