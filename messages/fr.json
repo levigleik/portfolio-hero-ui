@@ -1,0 +1,251 @@
+{
+	"HomePage": {
+		"full-stack-developer": "Développeur Full-Stack",
+		"about": "À propos de moi",
+		"experience": "Expérience",
+		"formation": "Formation",
+		"projects": "Projets",
+		"resume": "CV",
+		"hero-label": "Portfolio // Levi Gleik",
+		"hero-title": "Concevoir <highlight>des interfaces, des systèmes et des produits numériques</highlight> avec un souci de clarté et de performance.",
+		"hero-description": "Développeur Full-Stack expérimenté avec React.js, Next.js, TypeScript, Node.js, Nest.js et l'intégration d'APIs REST, réunissant des projets réels, des outils internes et des interfaces pour différents secteurs.",
+		"explore-projects": "Explorer les projets",
+		"contact-me": "Me contacter",
+		"snapshot-label": "Aperçu rapide",
+		"role-label": "Rôle",
+		"stack-label": "Stack récurrente",
+		"contact-label": "Contact",
+		"github": "GitHub",
+		"linkedin": "LinkedIn",
+		"email": "E-mail",
+		"about-title": "Une expérience concrète dans l'écosystème TypeScript",
+		"about-text": "Développeur logiciel avec plus de 5 ans d'expérience dans l'écosystème TypeScript, avec une solide maîtrise de React.js, Node.js/Nest.js, de l'intégration d'APIs et de Prisma ORM. Au fil de mon parcours, j'ai été responsable du développement et de la mise en œuvre de solutions web de bout en bout, en créant des systèmes pour optimiser la tarification des services, la gestion des réunions d'entreprise et d'autres flux opérationnels.",
+		"about-stack-label": "Stack principale",
+		"formation-description": "Une base académique et technique qui soutient la réflexion produit, l'architecture logicielle et les fondements des applications web.",
+		"contact-kicker": "Contact",
+		"send-email": "Envoyer un e-mail",
+		"view-resume": "Voir le CV"
+	},
+	"TabExperience": {
+		"infarma": {
+			"title": "Infarma Sistemas",
+			"subtitle": "Développeur Full Stack",
+			"date": "Juillet 2026 - Présent",
+			"responsibilities": {
+				"1": "Déploiement et configuration de VPS, notamment DNS, Nginx, Caddy et SSL.",
+				"2": "Expérience avec Node.js, React, NestJS, Tauri, Go et d’autres langages de programmation, frameworks et outils de développement modernes."
+			}
+		},
+		"macedo-soft-house": {
+			"title": "Macedo Soft House",
+			"subtitle": "Développeur Full-Stack",
+			"date": "Janvier 2023 - Janvier 2025",
+			"responsibilities": {
+				"1": "Développement d'applications web avec React.js",
+				"2": "Intégration d'APIs RESTful en Node.js"
+			}
+		},
+		"greendot": {
+			"title": "Greendot",
+			"subtitle": "Développeur Full-Stack",
+			"date": "Mai 2020 - Décembre 2022",
+			"responsibilities": {
+				"1": "J'ai développé un système pour planifier, organiser et visualiser les réunions internes de l'entreprise",
+				"2": "J'ai créé des applications pour améliorer la précision des services fournis",
+				"3": "J'ai réalisé des déploiements sur AWS avec S3, EC2, Elastic Beanstalk, entre autres"
+			}
+		}
+	},
+	"TabFormation": {
+		"farias-brito": {
+			"title": "Centro Universitário Farias Brito",
+			"subtitle": "Licence en informatique",
+			"date": "Diplômé en 2024",
+			"responsibilities": {
+				"1": "Science des données",
+				"2": "Paradigmes de programmation",
+				"3": "Calcul"
+			}
+		},
+		"icaro": {
+			"title": "Ícaro de Sousa Moreira",
+			"subtitle": "Réseaux informatiques",
+			"date": "Diplômé en 2016",
+			"responsibilities": {
+				"1": "Réseaux informatiques",
+				"2": "Sécurité de l'information",
+				"3": "Programmation orientée objet"
+			}
+		}
+	},
+	"Projects": {
+		"projects": "Projets",
+		"view-more": "voir plus",
+		"featured-tag": "Projets en vedette",
+		"featured-description": "Une sélection du portfolio actuel avec des produits publiés, des systèmes internes et des expérimentations.",
+		"view-all-projects": "Voir l'archive complète",
+		"archive-badge": "Archive complète",
+		"archive-title": "Tous les projets",
+		"repository": "Dépôt",
+		"live-site": "Site",
+		"back-home": "Retour à l'accueil",
+		"project-chrono-study": {
+			"title": "Chrono Study",
+			"description": "Aide à chronométrer et organiser les études. Il est possible d'ajouter des matières et de consulter des statistiques d'étude via des graphiques et des tableaux."
+		},
+		"project-jogo-da-velha-02": {
+			"title": "Morpion 2.0",
+			"description": "Un morpion beaucoup plus stratégique. Il y a 9 plateaux de morpion à l'intérieur d'un plateau plus grand."
+		},
+		"project-transfer-case": {
+			"title": "Transfer Case",
+			"description": "Application web pour la gestion de flottes, chauffeurs, incidents et ravitaillements, avec envoi de documents et tableaux avec filtres avancés."
+		},
+		"project-transfer-back": {
+			"title": "Transfer Back (Express)",
+			"description": "API RESTful pour la gestion de flottes avec véhicules, chauffeurs, incidents, ravitaillements et documents, construite avec Express, Prisma, Redis et Swagger."
+		},
+		"project-transfer-nestjs": {
+			"title": "Transfer Back (NestJS)",
+			"description": "Version NestJS de l'API de gestion de flottes Transfer Back, conservant les modules véhicules, chauffeurs, incidents, ravitaillements et documentation."
+		},
+		"project-tizen-iptv-open": {
+			"title": "Tizen IPTV Open",
+			"description": "Frontend IPTV optimisé pour Samsung Tizen, avec navigation à la télécommande et flux initial pour chaînes, séries et films."
+		},
+		"project-dispatch-system": {
+			"title": "Dispatch System",
+			"description": "Importez des contacts depuis Excel et envoyez-leur des messages via WhatsApp."
+		},
+		"project-dlav": {
+			"title": "D'Lav",
+			"description": "Organise tout le processus de lavage. Des QR codes sont générés pour contrôler toutes les étapes du lavage."
+		},
+		"project-gestao-clinica": {
+			"title": "Gestion Clinique",
+			"description": "Système robuste pour la gestion de cliniques avec planification, enregistrement, gestion et paiement."
+		},
+		"project-osc-manager": {
+			"title": "OSC Manager",
+			"description": "Gestion de projets pour les OSC. Visualisez, analysez et suivez les projets."
+		},
+		"project-pesquisa-satisfacao": {
+			"title": "Enquête de Satisfaction",
+			"description": "Projet qui gère des enquêtes et génère des graphiques avec des résumés des résultats."
+		},
+		"project-reunioes": {
+			"title": "Système de réunions",
+			"description": "Système complet de réunions. Gérez et créez des réunions. Générez des comptes rendus, ordres du jour et actions pour chaque utilisateur."
+		},
+		"project-saulo-imoveis": {
+			"title": "Saulo Immobilier",
+			"description": "Développé pour promouvoir les meilleures propriétés de luxe de Fortaleza."
+		},
+		"project-servrent": {
+			"title": "ServRent",
+			"description": "Permet l'achat et la location de voitures."
+		},
+		"project-vacation-plan": {
+			"title": "Vacation Plan",
+			"description": "Consultez les vacances de vos amis et organisez-les sur le calendrier."
+		},
+		"project-viu-ganhou": {
+			"title": "Viu Ganhou",
+			"description": "Regardez des publicités et accomplissez des tâches pour gagner de l'argent et retirer en cryptomonnaies."
+		},
+		"project-ecommerce": {
+			"title": "Ecommerce",
+			"description": "Plateforme ecommerce pour pharmacies avec catalogue, recherche et filtres, panier, commande et suivi des achats. Vitrines personnalisées par entreprise et point de vente, avec espace de gestion."
+		}
+	},
+	"Navbar": {
+		"home": "Accueil",
+		"about": "À propos",
+		"experience": "Expérience",
+		"formation": "Formation",
+		"contact": "Contact",
+		"projects": "Projets",
+		"brand-tag": "Full-stack",
+		"toggle-menu": "Basculer le menu de navigation"
+	},
+	"ErrorPage": {
+		"error": "erreur",
+		"something-went-wrong": "Une erreur s'est produite",
+		"refresh": "Actualiser"
+	},
+	"NotFoundPage": {
+		"error-404": "Erreur 404",
+		"page-not-found": "Page non trouvée",
+		"go-back": "Retour à l'accueil"
+	},
+	"ThemeSelector": {
+		"change-theme": "Changer le thème",
+		"dark-theme": "Thème sombre",
+		"light-theme": "Thème clair"
+	},
+	"LanguageSelector": {
+		"select-language": "Choisir la langue",
+		"english": "Anglais",
+		"portuguese": "Portugais",
+		"spanish": "Espagnol",
+		"french": "Français",
+		"italian": "Italien",
+		"mandarin": "Mandarin"
+	},
+	"Narrative": {
+		"scroll": "Continuer à explorer",
+		"project-preview": "Interfaces des projets de Levi Gleik",
+		"statement": "La technologie prend son sens quand elle simplifie la vie de quelqu’un.",
+		"projects-title": "Projets",
+		"project-category-0": "Commerce & expérience d’achat",
+		"project-category-1": "Récompenses et activités",
+		"project-category-2": "Productivité et collaboration",
+		"formation-title": "Formation",
+		"footer": "Créé avec intention. Développé par Levi Gleik.",
+		"skip-content": "Aller au contenu",
+		"navigation": "Navigation principale",
+		"chapters": "Explorer les sections",
+		"project-category-3": "Opérations et traçabilité",
+		"project-mobile-preview": "Version mobile de {title}",
+		"stack-title": "Technologies",
+		"experience-title": "Expérience"
+	},
+	"ContactForm": {
+		"title": "Envoyez un message",
+		"name": "Nom",
+		"name-placeholder": "Comment vous appelez-vous ?",
+		"email": "Email",
+		"email-placeholder": "vous@entreprise.fr",
+		"phone": "Téléphone (facultatif)",
+		"phone-placeholder": "+33 6 12 34 56 78",
+		"message": "Message",
+		"message-placeholder": "Parlez-moi de votre idée, projet ou opportunité…",
+		"send": "Envoyer le message",
+		"sending": "Envoi…",
+		"privacy": "Vos coordonnées serviront uniquement à répondre à votre message.",
+		"success-title": "Message envoyé !",
+		"success-description": "Merci pour votre message. Je le lirai et répondrai à l’adresse email indiquée.",
+		"send-another": "Envoyer un autre message",
+		"invalid-name": "Saisissez un nom de 2 à 100 caractères.",
+		"invalid-email": "Saisissez une adresse email valide. Les adresses temporaires ne sont pas acceptées.",
+		"invalid-phone": "Saisissez un numéro valide avec l’indicatif du pays ou de la région.",
+		"invalid-message": "Rédigez un message de 10 à 5 000 caractères.",
+		"unavailable": "Envoi impossible pour le moment. Réessayez plus tard ou écrivez à contato@gleiksoft.dev.",
+		"blocked": "La validation a échoué. Réessayez ou contactez-moi par email.",
+		"invalid": "Vérifiez les champs indiqués et réessayez.",
+		"session": "Votre session a expiré. Réessayez d’envoyer le message.",
+		"too-fast": "Patientez quelques secondes avant d’envoyer.",
+		"rate-limit": "Vous avez atteint la limite d’envoi. Patientez avant de réessayer.",
+		"setup-required": "Le formulaire n’est pas encore configuré. Définissez RESEND_API_KEY et ARCJET_KEY, puis redémarrez le serveur."
+	},
+	"ImageViewer": {
+		"zoom-out": "Dézoomer",
+		"zoom-in": "Zoomer",
+		"fullscreen": "Plein écran",
+		"exit-fullscreen": "Quitter le plein écran",
+		"open-new-tab": "Ouvrir dans un nouvel onglet",
+		"download": "Télécharger l’image",
+		"close": "Fermer",
+		"back": "Retour"
+	}
+}

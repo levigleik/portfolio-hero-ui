@@ -1,33 +1,58 @@
 {
 	"HomePage": {
-		"front-end-developer": "Desenvolvedor Front-end",
-		"full-stack-developer": "Desenvolvedor Full-stack",
+		"full-stack-developer": "Desenvolvedor Full-Stack",
+		"about": "Sobre mim",
 		"experience": "Experiência",
 		"formation": "Formação",
 		"projects": "Projetos",
-		"resume": "Currículo"
+		"resume": "Currículo",
+		"hero-label": "Portfólio // Levi Gleik",
+		"hero-title": "Construindo <highlight>interfaces, sistemas e produtos digitais</highlight> com foco em clareza e performance.",
+		"hero-description": "Desenvolvedor Full-Stack com experiência em React.js, Next.js, TypeScript, Node.js, Nest.js e integração com APIs REST, reunindo projetos reais, ferramentas internas e interfaces para diferentes negócios.",
+		"explore-projects": "Explorar projetos",
+		"contact-me": "Entrar em contato",
+		"snapshot-label": "Resumo rápido",
+		"role-label": "Atuação",
+		"stack-label": "Stack recorrente",
+		"contact-label": "Contato",
+		"github": "GitHub",
+		"linkedin": "LinkedIn",
+		"email": "E-mail",
+		"about-title": "Experiência prática no ecossistema TypeScript",
+		"about-text": "Desenvolvedor de software com mais de 5 anos de experiência no ecossistema TypeScript, com domínio de React.js, Node.js/Nest.js, integrações com APIs e Prisma ORM. Ao longo da trajetória, fui responsável por desenvolver e implementar soluções web ponta a ponta, criando sistemas para otimizar a precificação de serviços, a gestão de reuniões corporativas e outros fluxos operacionais.",
+		"about-stack-label": "Stack principal",
+		"formation-description": "Base acadêmica e técnica que sustenta pensamento de produto, arquitetura de software e os fundamentos por trás das aplicações web.",
+		"contact-kicker": "Contato",
+		"send-email": "Enviar e-mail",
+		"view-resume": "Ver currículo"
 	},
 	"TabExperience": {
+		"infarma": {
+			"title": "Infarma Sistemas",
+			"subtitle": "Desenvolvedor Full Stack",
+			"date": "Julho 2026 - Presente",
+			"responsibilities": {
+				"1": "Implantação e configuração de VPS, incluindo DNS, Nginx, Caddy e SSL.",
+				"2": "Experiência com Node.js, React, NestJS, Tauri, Go e outras linguagens de programação, frameworks e ferramentas de desenvolvimento modernas."
+			}
+		},
 		"macedo-soft-house": {
 			"title": "Macedo Soft House",
-			"subtitle": "Desenvolvedor Front-End (NextJS)",
+			"subtitle": "Desenvolvedor Full-Stack",
 			"date": "Janeiro 2023 - Janeiro 2025",
 			"responsibilities": {
-				"1": "Liderei o desenvolvimento de soluções de software ponta a ponta (Web e PWA) para clientes de múltiplos setores, gerenciando o ciclo de vida completo do projeto, da concepção à implantação",
-				"2": "Gerenciei e executei processos de deploy em infraestruturas de nuvem como AWS (S3, EC2, ElasticBeanstalk) e DigitalOcean, assegurando a configuração, disponibilidade e escalabilidade das aplicações",
-				"3": "As tecnologias utilizadas foram React, TailwindCSS, shadcnUI, MaterialUI, NestJS, GraphQL, Prisma ORM, Redis e PostgreSQL"
+				"1": "Desenvolvimento de aplicações web utilizando React.js",
+				"2": "Integração com APIs RESTful em NodeJS"
 			}
 		},
 		"greendot": {
 			"title": "Greendot",
-			"subtitle": "Desenvolvedor Front-End (React)",
+			"subtitle": "Desenvolvedor Full-Stack",
 			"date": "Maio 2020 - Dezembro 2022",
 			"responsibilities": {
-				"1": "Implementei uma solução de software completa para o gerenciamento de reuniões, simplificando os processos de agendamento, organização e visualização para os colaboradores",
-				"2": "Desenvolvi uma aplicação para automatizar o processo de precificação de serviços, garantindo maior precisão nos valores e agilidade na elaboração de propostas comerciais",
-				"3": "Dei manutenção em aplicativos, adicionei sistema de pagamento com cartão de crédito",
-				"4": "Organizei e fiz deploy na AWS com S3, EC2, ElasticBeanstalk, entre outros",
-				"5": "As tecnologias utilizadas foram React, TailwindCSS, Styled-Components, MaterialUI, NestJS, NodeJS, TypeORM, Prisma ORM, Redis, SQL Server e PostgreSQL"
+				"1": "Desenvolvi sistema para marcar, organizar e visualizar reuniões internas da empresa",
+				"2": "Criação de aplicações para facilitar a precisão dos serviços prestados",
+				"3": "Deploy na AWS com S3, EC2, Elastic Beanstalk, entre outros"
 			}
 		}
 	},
@@ -56,9 +81,37 @@
 	"Projects": {
 		"projects": "Projetos",
 		"view-more": "ver mais",
+		"featured-tag": "Projetos em destaque",
+		"featured-description": "Um recorte do portfólio atual com produtos publicados, sistemas internos e experimentos.",
+		"view-all-projects": "Ver arquivo completo",
+		"archive-badge": "Arquivo completo",
+		"archive-title": "Todos os projetos",
+		"repository": "Repositório",
+		"live-site": "Site",
+		"back-home": "Voltar para a home",
 		"project-chrono-study": {
 			"title": "Chrono Study",
 			"description": "Ajuda a cronometrar e organizar os estudos. Pode adicionar disciplinas e verificar estatísticas de estudos por gráficos e tabelas."
+		},
+		"project-jogo-da-velha-02": {
+			"title": "Jogo da Velha 2.0",
+			"description": "Um jogo da velha muito mais estratégico. Existem 9 tabuleiros de jogo da velha dentro de um tabuleiro maior."
+		},
+		"project-transfer-case": {
+			"title": "Transfer Case",
+			"description": "Aplicação web para gerenciamento de frotas, motoristas, ocorrências e abastecimentos, com upload de documentos e tabelas com filtros avançados."
+		},
+		"project-transfer-back": {
+			"title": "Transfer Back (Express)",
+			"description": "API RESTful para gerenciamento de frotas com veículos, motoristas, ocorrências, abastecimentos e documentos, construída com Express, Prisma, Redis e Swagger."
+		},
+		"project-transfer-nestjs": {
+			"title": "Transfer Back (NestJS)",
+			"description": "Versão em NestJS da API de gerenciamento de frotas do Transfer Back, mantendo módulos de veículos, motoristas, ocorrências, abastecimentos e documentação."
+		},
+		"project-tizen-iptv-open": {
+			"title": "Tizen IPTV Open",
+			"description": "Frontend IPTV otimizado para Samsung Tizen, com navegação por controle remoto e fluxo inicial para canais, séries e filmes."
 		},
 		"project-dispatch-system": {
 			"title": "Dispatch System",
@@ -67,10 +120,6 @@
 		"project-dlav": {
 			"title": "D'Lav",
 			"description": "Organize todo o processo de lavagem. É gerado QR Codes onde podemos controlar todas as etapas da lavagem."
-		},
-		"project-jogo-da-velha-02": {
-			"title": "Jogo da Velha 2.0",
-			"description": "Jogo da velha bem mais estratégico. \nSão 9 tabuleiros de jogo da velha dentro de um tabuleiro maior."
 		},
 		"project-gestao-clinica": {
 			"title": "Gestão Clínica",
@@ -103,12 +152,21 @@
 		"project-viu-ganhou": {
 			"title": "Viu Ganhou",
 			"description": "Veja anúncios e complete tarefas para ganhar dinheiro e sacar em criptomoedas."
+		},
+		"project-ecommerce": {
+			"title": "Ecommerce",
+			"description": "Plataforma de ecommerce para farmácias com catálogo, busca e filtros, sacola, checkout e acompanhamento de pedidos. Vitrines personalizadas por empresa e unidade, com painel de gestão."
 		}
 	},
 	"Navbar": {
 		"home": "Início",
+		"about": "Sobre mim",
+		"experience": "Experiência",
+		"formation": "Formação",
 		"contact": "Contato",
-		"projects": "Projetos"
+		"projects": "Projetos",
+		"brand-tag": "Full-stack",
+		"toggle-menu": "Alternar menu de navegação"
 	},
 	"ErrorPage": {
 		"error": "erro",
@@ -128,6 +186,66 @@
 	"LanguageSelector": {
 		"select-language": "Selecionar idioma",
 		"english": "Inglês",
-		"portuguese": "Português"
+		"portuguese": "Português",
+		"spanish": "Espanhol",
+		"french": "Francês",
+		"italian": "Italiano",
+		"mandarin": "Mandarim"
+	},
+	"Narrative": {
+		"scroll": "Continue explorando",
+		"project-preview": "Interfaces dos projetos de Levi Gleik",
+		"statement": "Tecnologia faz sentido quando simplifica a vida de alguém.",
+		"projects-title": "Projetos",
+		"project-category-0": "Comércio & experiência de compra",
+		"project-category-1": "Recompensas & atividades",
+		"project-category-2": "Produtividade & colaboração",
+		"formation-title": "Formação",
+		"footer": "Desenvolvido por Levi Gleik.",
+		"skip-content": "Pular para o conteúdo",
+		"navigation": "Navegação principal",
+		"chapters": "Navegar pelas seções",
+		"project-category-3": "Operação & rastreabilidade",
+		"project-mobile-preview": "Versão móvel de {title}",
+		"stack-title": "Tecnologias",
+		"experience-title": "Experiência"
+	},
+	"ContactForm": {
+		"title": "Envie uma mensagem",
+		"name": "Nome",
+		"name-placeholder": "Como você se chama?",
+		"email": "Email",
+		"email-placeholder": "voce@empresa.com",
+		"phone": "Telefone (opcional)",
+		"phone-placeholder": "+55 (85) 99999-9999",
+		"message": "Mensagem",
+		"message-placeholder": "Conte um pouco sobre sua ideia, projeto ou oportunidade…",
+		"send": "Enviar mensagem",
+		"sending": "Enviando…",
+		"privacy": "Seus dados serão usados apenas para responder ao seu contato.",
+		"success-title": "Mensagem enviada!",
+		"success-description": "Obrigado pelo contato. Vou ler sua mensagem e responder pelo email informado.",
+		"send-another": "Enviar outra mensagem",
+		"invalid-name": "Informe um nome entre 2 e 100 caracteres.",
+		"invalid-email": "Informe um email válido. Endereços temporários não são aceitos.",
+		"invalid-phone": "Informe um telefone válido, com código do país ou DDD.",
+		"invalid-message": "Escreva uma mensagem entre 10 e 5.000 caracteres.",
+		"unavailable": "Não foi possível enviar agora. Tente mais tarde ou escreva para contato@gleiksoft.dev.",
+		"blocked": "Não foi possível validar o envio. Tente novamente ou entre em contato por email.",
+		"invalid": "Confira os campos indicados e tente novamente.",
+		"session": "Sua sessão expirou. Tente enviar novamente.",
+		"too-fast": "Aguarde alguns segundos antes de enviar.",
+		"rate-limit": "Você atingiu o limite de envios. Aguarde antes de tentar novamente.",
+		"setup-required": "Formulário ainda não configurado neste ambiente. Defina RESEND_API_KEY e ARCJET_KEY e reinicie o servidor."
+	},
+	"ImageViewer": {
+		"zoom-out": "Diminuir zoom",
+		"zoom-in": "Aumentar zoom",
+		"fullscreen": "Tela cheia",
+		"exit-fullscreen": "Sair da tela cheia",
+		"open-new-tab": "Abrir em nova aba",
+		"download": "Baixar imagem",
+		"close": "Fechar",
+		"back": "Voltar"
 	}
 }

@@ -1,8 +1,9 @@
-import { Metadata } from "next";
-import { ReactNode } from "react";
+import type { Metadata } from "next";
+import type { ReactNode } from "react";
+import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-	title: "Home",
+	title: { absolute: siteConfig.name },
 };
 
 export default function Layout({ children }: { children: ReactNode }) {

@@ -1,33 +1,58 @@
 {
 	"HomePage": {
-		"front-end-developer": "Front-end Developer",
-		"full-stack-developer": "Full-stack Developer",
+		"full-stack-developer": "Full-Stack Developer",
+		"about": "About me",
 		"experience": "Experience",
-		"formation": "Formation",
+		"formation": "Education",
 		"projects": "Projects",
-		"resume": "Resume"
+		"resume": "Resume",
+		"hero-label": "Portfolio // Levi Gleik",
+		"hero-title": "Building <highlight>interfaces, systems and digital products</highlight> with a focus on clarity and performance.",
+		"hero-description": "Full-stack developer with experience in React.js, Next.js, TypeScript, Node.js, Nest.js and REST API integration, bringing together real projects, internal tools and interfaces for different businesses.",
+		"explore-projects": "Explore projects",
+		"contact-me": "Contact me",
+		"snapshot-label": "Quick snapshot",
+		"role-label": "Role",
+		"stack-label": "Recurring stack",
+		"contact-label": "Contact",
+		"github": "GitHub",
+		"linkedin": "LinkedIn",
+		"email": "Email",
+		"about-title": "Hands-on experience across the TypeScript ecosystem",
+		"about-text": "Software developer with over 5 years of experience in the TypeScript ecosystem, with strong expertise in React.js, Node.js/Nest.js, API integration and Prisma ORM. I have been responsible for developing and implementing end-to-end web solutions, building systems to optimize service pricing, corporate meeting management, and other operational workflows.",
+		"about-stack-label": "Core stack",
+		"formation-description": "Academic and technical education that supports product thinking, software architecture and the foundations behind web applications.",
+		"contact-kicker": "Contact",
+		"send-email": "Send email",
+		"view-resume": "View résumé"
 	},
 	"TabExperience": {
+		"infarma": {
+			"title": "Infarma Sistemas",
+			"subtitle": "Full Stack Developer",
+			"date": "July 2026 - Present",
+			"responsibilities": {
+				"1": "VPS deployment and configuration, including DNS, Nginx, Caddy and SSL.",
+				"2": "Experience with Node.js, React, NestJS, Tauri, Go and other programming languages, frameworks and modern development tools."
+			}
+		},
 		"macedo-soft-house": {
 			"title": "Macedo Soft House",
-			"subtitle": "Front-End Developer (NextJS)",
+			"subtitle": "Full-Stack Developer",
 			"date": "January 2023 - January 2025",
 			"responsibilities": {
-				"1": "I have led the development of end-to-end software solutions (Web and PWA) for clients in multiple sectors, managing the entire project lifecycle, from conception to deployment",
-				"2": "I have managed and executed deployment processes in cloud infrastructures such as AWS (S3, EC2, ElasticBeanstalk) and DigitalOcean, ensuring the configuration, availability and scalability of applications",
-				"3": "Stacks used was React, TailwindCSS, shadcnUI, MaterialUI, NestJS, GraphQL, Prisma ORM, Redis and PostgreSQL"
+				"1": "Development of web applications using React.js",
+				"2": "Integration with RESTful APIs in NodeJS"
 			}
 		},
 		"greendot": {
 			"title": "Greendot",
-			"subtitle": "Front-End Developer (React)",
+			"subtitle": "Full-Stack Developer",
 			"date": "May 2020 - December 2022",
 			"responsibilities": {
-				"1": "Implemented a complete software solution for meeting management, simplifying the scheduling, organization and visualization processes for employees",
-				"2": "Developed an application to automate the process of pricing services, ensuring greater accuracy in values and agility in the preparation of commercial proposals",
-				"3": "Maintained mobile applications, added a credit card payment system",
-				"4": "Organized and deployed on AWS with S3, EC2, ElasticBeanstalk, among others",
-				"5": "Stacks used was React, TailwindCSS, Styled-Components, MaterialUI, NestJS, NodeJS, TypeORM, Prisma ORM, Redis, SQL Server and PostgreSQL"
+				"1": "Developed a system to schedule, organize, and visualize internal company meetings",
+				"2": "Created applications to improve the accuracy of services provided",
+				"3": "Deployed on AWS using S3, EC2, Elastic Beanstalk, among others"
 			}
 		}
 	},
@@ -56,9 +81,37 @@
 	"Projects": {
 		"projects": "Projects",
 		"view-more": "view more",
+		"featured-tag": "Selected work",
+		"featured-description": "A curated slice of the current portfolio with published products, internal systems and experiments.",
+		"view-all-projects": "View full archive",
+		"archive-badge": "Complete archive",
+		"archive-title": "All projects",
+		"repository": "Repository",
+		"live-site": "Live site",
+		"back-home": "Back to home",
 		"project-chrono-study": {
 			"title": "Chrono Study",
 			"description": "Helps time and organize your studies. You can add subjects and view study statistics through charts and tables."
+		},
+		"project-jogo-da-velha-02": {
+			"title": "Tic Tac Toe 2.0",
+			"description": "Tic Tac Toe made much more strategic. There are 9 tic-tac-toe boards inside a larger board."
+		},
+		"project-transfer-case": {
+			"title": "Transfer Case",
+			"description": "Web application for managing fleets, drivers, incidents, and refueling, with document uploads and tables with advanced filters."
+		},
+		"project-transfer-back": {
+			"title": "Transfer Back (Express)",
+			"description": "REST API for fleet management with vehicles, drivers, incidents, refueling, and documents, built with Express, Prisma, Redis, and Swagger."
+		},
+		"project-transfer-nestjs": {
+			"title": "Transfer Back (NestJS)",
+			"description": "NestJS version of the Transfer Back fleet management API, keeping modules for vehicles, drivers, incidents, refueling, and documentation."
+		},
+		"project-tizen-iptv-open": {
+			"title": "Tizen IPTV Open",
+			"description": "IPTV frontend optimized for Samsung Tizen, with remote-control navigation and a startup flow for channels, series, and movies."
 		},
 		"project-dispatch-system": {
 			"title": "Dispatch System",
@@ -67,10 +120,6 @@
 		"project-dlav": {
 			"title": "D'Lav",
 			"description": "Organize the entire washing process. QR Codes are generated to track all stages of the wash."
-		},
-		"project-jogo-da-velha-02": {
-			"title": "Tic Tac Toe 2.0",
-			"description": "Tic Tac Toe a huge more strategic. There are 9 tic-tac-toe boards inside a larger board."
 		},
 		"project-gestao-clinica": {
 			"title": "Clinic Management",
@@ -103,12 +152,21 @@
 		"project-viu-ganhou": {
 			"title": "Watch and Earn",
 			"description": "Watch ads and complete tasks to earn money and withdraw in cryptocurrencies."
+		},
+		"project-ecommerce": {
+			"title": "Ecommerce",
+			"description": "Ecommerce platform for pharmacies with a product catalog, search and filters, shopping bag, checkout and order tracking. Custom storefronts for each company and branch, with an admin panel."
 		}
 	},
 	"Navbar": {
 		"home": "Home",
+		"about": "About me",
+		"experience": "Experience",
+		"formation": "Education",
 		"contact": "Contact",
-		"projects": "Projects"
+		"projects": "Projects",
+		"brand-tag": "Full-stack",
+		"toggle-menu": "Toggle navigation menu"
 	},
 	"ErrorPage": {
 		"error": "error",
@@ -128,6 +186,66 @@
 	"LanguageSelector": {
 		"select-language": "Select language",
 		"english": "English",
-		"portuguese": "Portuguese"
+		"portuguese": "Portuguese",
+		"spanish": "Spanish",
+		"french": "French",
+		"italian": "Italian",
+		"mandarin": "Mandarin"
+	},
+	"Narrative": {
+		"scroll": "Keep exploring",
+		"project-preview": "Project interfaces by Levi Gleik",
+		"statement": "Technology makes sense when it makes someone’s life simpler.",
+		"projects-title": "Projects",
+		"project-category-0": "Commerce & shopping experience",
+		"project-category-1": "Rewards & activities",
+		"project-category-2": "Productivity & collaboration",
+		"formation-title": "Education",
+		"footer": "Made with intention. Developed by Levi Gleik.",
+		"skip-content": "Skip to content",
+		"navigation": "Main navigation",
+		"chapters": "Explore the sections",
+		"project-category-3": "Operations & traceability",
+		"project-mobile-preview": "Mobile version of {title}",
+		"stack-title": "Technologies",
+		"experience-title": "Experience"
+	},
+	"ContactForm": {
+		"title": "Send a message",
+		"name": "Name",
+		"name-placeholder": "What is your name?",
+		"email": "Email",
+		"email-placeholder": "you@company.com",
+		"phone": "Phone (optional)",
+		"phone-placeholder": "+1 555 123 4567",
+		"message": "Message",
+		"message-placeholder": "Tell me about your idea, project or opportunity…",
+		"send": "Send message",
+		"sending": "Sending…",
+		"privacy": "Your details will only be used to respond to your message.",
+		"success-title": "Message sent!",
+		"success-description": "Thanks for reaching out. I will read your message and reply to the email you provided.",
+		"send-another": "Send another message",
+		"invalid-name": "Enter a name between 2 and 100 characters.",
+		"invalid-email": "Enter a valid email. Temporary addresses are not accepted.",
+		"invalid-phone": "Enter a valid phone number, including the country or area code.",
+		"invalid-message": "Write a message between 10 and 5,000 characters.",
+		"unavailable": "Unable to send right now. Try later or email contato@gleiksoft.dev.",
+		"blocked": "We could not validate this submission. Try again or contact me by email.",
+		"invalid": "Check the highlighted fields and try again.",
+		"session": "Your session expired. Please try sending again.",
+		"too-fast": "Wait a few seconds before sending.",
+		"rate-limit": "You have reached the submission limit. Please wait before trying again.",
+		"setup-required": "The form is not configured in this environment. Set RESEND_API_KEY and ARCJET_KEY, then restart the server."
+	},
+	"ImageViewer": {
+		"zoom-out": "Zoom out",
+		"zoom-in": "Zoom in",
+		"fullscreen": "Fullscreen",
+		"exit-fullscreen": "Exit fullscreen",
+		"open-new-tab": "Open in new tab",
+		"download": "Download image",
+		"close": "Close",
+		"back": "Back"
 	}
 }

@@ -18,8 +18,14 @@ export const metadata: Metadata = {
 		template: `%s - ${siteConfig.name}`,
 	},
 	description: siteConfig.description,
+	manifest: "/site.webmanifest",
 	icons: {
-		icon: "/favicon.ico",
+		icon: [
+			{ url: "/favicon.ico" },
+			{ url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+			{ url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+		],
+		apple: "/apple-touch-icon.png",
 	},
 };
 
@@ -42,7 +48,7 @@ export default async function RootLayout({
 				<head />
 				<body
 					className={clsx(
-						"bg-background font-sans antialiased",
+						"min-h-screen overflow-x-clip font-sans antialiased",
 						fontSans.variable,
 						fontMono.variable,
 						fontCalistoga.variable,
@@ -50,9 +56,9 @@ export default async function RootLayout({
 				>
 					<NextIntlClientProvider>
 						<Providers>
-							<div className="container mx-auto flex max-w-5xl flex-col gap-8 px-2 py-6 sm:px-6 md:px-8 ">
+							<div className="relative min-h-screen">
 								<Navbar />
-								<main className="mt-4 flex flex-col items-center justify-center gap-4 font-sans lg:mt-10">
+								<main id="main-content" className="relative">
 									{children}
 								</main>
 							</div>

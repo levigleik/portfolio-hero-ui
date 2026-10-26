@@ -1,10 +1,11 @@
+import { defaultLocale, isAppLocale } from "@/i18n/config";
 import { getRequestConfig } from "next-intl/server";
 import { cookies } from "next/headers";
 
 export default getRequestConfig(async () => {
-	// Provide a static locale, fetch a user setting,
-	// read from `cookies()`, `headers()`, etc.
-	const locale = (await cookies()).get("NEXT_LOCALE")?.value || "pt-BR";
+	const cookieLocale = (await cookies()).get("NEXT_LOCALE")?.value;
+	const locale =
+		cookieLocale && isAppLocale(cookieLocale) ? cookieLocale : defaultLocale;
 
 	return {
 		locale,
