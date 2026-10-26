@@ -1,10 +1,12 @@
 "use client";
 
 import { Reveal } from "@/components/motion/ScrollScene";
+import ResumeLink from "@/components/ResumeLink";
 import { MotionConfig } from "framer-motion";
-import { ArrowUpRight, Github, Linkedin, MoveUpRight } from "lucide-react";
+import { ArrowUpRight, Github, Linkedin } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import AboutSection from "./AboutSection";
+import ContactForm from "./ContactForm";
 import Manifesto from "./Manifesto";
 import ProjectShowcase from "./ProjectShowcase";
 import StackSection from "./StackSection";
@@ -23,16 +25,14 @@ export default function HomeComp() {
 			<StackSection />
 			<section id="experience" className="career-section section-shell">
 				<Reveal className="career-heading">
-					<p className="eyebrow">
-						<span className="chapter-number">03 /</span>
-						{t("experience")}
-					</p>
-					<h2 className="section-title">
-						{n("experience-title-1")}
-						<br />
-						<span className="muted-heading">{n("experience-title-2")}</span>
-					</h2>
-					<p className="section-description">{t("experience-description")}</p>
+					<div className="career-heading-actions">
+						<p className="eyebrow">
+							<span className="chapter-number">03 /</span>
+							{t("experience")}
+						</p>
+						<ResumeLink />
+					</div>
+					<h2 className="section-title">{n("experience-title")}</h2>
 				</Reveal>
 				<TabExperience />
 			</section>
@@ -48,35 +48,13 @@ export default function HomeComp() {
 					<TabFormation />
 				</div>
 			</section>
-			<section id="contact" className="contact-section">
+			<section id="contact" className="contact-section" aria-label={t("contact-kicker")}>
 				<div className="section-shell">
-					<Reveal>
-						<p className="eyebrow">
-							<span className="chapter-number">05 /</span>
-							{t("contact-kicker")}
-						</p>
-						<div className="contact-main">
-							<h2>
-								{n("contact-title-1")}
-								<br />
-								{n("contact-title-2")}
-							</h2>
-							<a
-								className="contact-arrow"
-								href="mailto:levigleik@gmail.com"
-								aria-label={t("send-email")}
-							>
-								<MoveUpRight strokeWidth={1.2} />
-							</a>
-						</div>
-						<div className="contact-details">
-							<a href="mailto:levigleik@gmail.com" className="contact-email">
-								levigleik@gmail.com
-								<ArrowUpRight size={24} />
-							</a>
-							<p>{t("contact-description")}</p>
-						</div>
-					</Reveal>
+					<div className="contact-layout">
+						<Reveal className="contact-form-reveal">
+							<ContactForm />
+						</Reveal>
+					</div>
 					<footer className="site-footer">
 						<a className="footer-brand" href="#hero">
 							levi<span>gleik.</span>

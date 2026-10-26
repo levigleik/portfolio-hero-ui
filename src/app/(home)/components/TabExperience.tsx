@@ -7,7 +7,7 @@ export default function TabExperience() {
 	const t = useTranslations("TabExperience");
 	return (
 		<div className="career-list">
-			{["macedo-soft-house", "greendot"].map((item, index) => (
+			{["infarma", "macedo-soft-house", "greendot"].map((item, index) => (
 				<Reveal key={item} className="career-row">
 					<span className="career-order">0{index + 1}</span>
 					<div className="career-company">

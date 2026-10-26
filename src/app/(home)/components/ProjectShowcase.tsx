@@ -1,6 +1,7 @@
 "use client";
 
 import { usePinnedScene } from "@/components/motion/ScrollScene";
+import { Image as ZoomableImage } from "@/components/ui/image";
 import { PROJECT_TECHONOLOGIES } from "@/lib/constants";
 import {
 	motion,
@@ -12,10 +13,10 @@ import {
 import { ArrowRight, ArrowUpRight, Github } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useRef, useState, type CSSProperties } from "react";
 import ProjectScreen from "./ProjectScreen";
 
-const featuredNames = ["gestao-clinica", "reunioes", "chrono-study"];
+const featuredNames = ["ecommerce", "viu-ganhou", "reunioes", "dlav"];
 const featured = featuredNames.map(
 	(name) => PROJECT_TECHONOLOGIES.find((project) => project.name === name)!,
 );
@@ -72,11 +73,13 @@ function ProjectSlide({
 	const title = t(`project-${project.name}.title`);
 	const address = project.url
 		? new URL(project.url).hostname
-		: "github.com/levigleik";
+		: project.git
+			? new URL(project.git).hostname
+			: title;
 
 	return (
 		<motion.article
-			className={`project-slide project-tone-${index}`}
+			className={`project-slide project-tone-${index} ${project.mobilePhoto ? "project-with-mobile" : ""}`}
 			aria-hidden={pinned && active !== index ? true : undefined}
 			inert={pinned && active !== index ? true : undefined}
 			style={
@@ -92,7 +95,7 @@ function ProjectSlide({
 			<div className="project-story-copy">
 				<span className="project-index">
 					0{index + 1}
-					<span>/ 03</span>
+					<span>/ {String(featured.length).padStart(2, "0")}</span>
 				</span>
 				<p className="eyebrow project-category">
 					{n(`project-category-${index}`)}
@@ -109,7 +112,7 @@ function ProjectSlide({
 				<div className="project-links">
 					{project.url && (
 						<a
-							className="text-link"
+							className="button-blue project-visit-link"
 							href={project.url}
 							target="_blank"
 							rel="noreferrer"
@@ -132,16 +135,33 @@ function ProjectSlide({
 				</div>
 			</div>
 			<div className="project-story-visual">
-				<div className="project-visual-number" aria-hidden="true">
-					0{index + 1}
+				<div className="project-visual-label" aria-hidden="true">
+					<span className="status-dot" />
+					{n(`project-category-${index}`)}
+					<span className="project-visual-number">0{index + 1}</span>
 				</div>
 				<motion.div
 					className="project-floating-screen"
 					style={pinned ? { rotateZ: rotate } : undefined}
 				>
-					<ProjectScreen src={project.photo} title={title} address={address} />
+					<ProjectScreen
+						src={project.photo}
+						title={title}
+						address={address}
+						zoomable
+					/>
 				</motion.div>
-				<span className="project-visual-caption">{n("real-project")}</span>
+				{project.mobilePhoto && (
+					<div className="project-mobile-screen">
+						<ZoomableImage
+							src={project.mobilePhoto}
+							alt={n("project-mobile-preview", { title })}
+							width={390}
+							height={844}
+							sizes="(max-width: 760px) 25vw, 150px"
+						/>
+					</div>
+				)}
 			</div>
 		</motion.article>
 	);
@@ -154,7 +174,7 @@ function Progress({
 	progress: MotionValue<number>;
 	index: number;
 }) {
-	const scaleX = useTransform(progress, [index / 3, (index + 1) / 3], [0, 1]);
+	const scaleX = useTransform(progress, [index / featured.length, (index + 1) / featured.length], [0, 1]);
 	return <motion.span className="project-tab-progress" style={{ scaleX }} />;
 }
 
@@ -169,7 +189,7 @@ export default function ProjectShowcase() {
 		offset: ["start 76px", "end end"],
 	});
 	useMotionValueEvent(scrollYProgress, "change", (value) =>
-		setActive(Math.min(2, Math.floor(value * 3))),
+		setActive(Math.min(featured.length - 1, Math.floor(value * featured.length))),
 	);
 
 	function goToProject(index: number) {
@@ -178,7 +198,7 @@ export default function ProjectShowcase() {
 			target.current.getBoundingClientRect().top + window.scrollY - 76;
 		const distance = target.current.offsetHeight - window.innerHeight + 76;
 		window.scrollTo({
-			top: top + distance * ((index + 0.4) / 3),
+			top: top + distance * ((index + 0.4) / featured.length),
 			behavior: "smooth",
 		});
 	}
@@ -188,6 +208,7 @@ export default function ProjectShowcase() {
 			id="projects"
 			ref={target}
 			className={`projects-story ${pinned ? "is-pinned" : ""}`}
+			style={{ "--project-count": featured.length } as CSSProperties}
 		>
 			<div className="projects-sticky section-shell">
 				<div className="section-heading-row">

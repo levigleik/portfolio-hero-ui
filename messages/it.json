@@ -21,14 +21,21 @@
 		"about-title": "Esperienza concreta nell'ecosistema TypeScript",
 		"about-text": "Sviluppatore software con oltre 5 anni di esperienza nell'ecosistema TypeScript, con forte padronanza di React.js, Node.js/Nest.js, integrazioni API e Prisma ORM. Nel corso del mio percorso sono stato responsabile dello sviluppo e dell'implementazione di soluzioni web end-to-end, creando sistemi per ottimizzare la determinazione dei prezzi dei servizi, la gestione delle riunioni aziendali e altri flussi operativi.",
 		"about-stack-label": "Stack principale",
-		"experience-description": "Esperienza professionale nello sviluppo di prodotti full-stack, nell'integrazione di API REST e nella consegna di sistemi per operazioni interne e flussi orientati al cliente.",
 		"formation-description": "Una base accademica e tecnica che sostiene il product thinking, l'architettura software e i fondamenti delle applicazioni web.",
 		"contact-kicker": "Contatto",
-		"contact-title": "Costruiamo la prossima interfaccia?",
-		"contact-description": "Se vuoi parlare di prodotto, architettura full-stack, integrazione API o di un nuovo progetto, sono a un messaggio di distanza.",
-		"send-email": "Invia email"
+		"send-email": "Invia email",
+		"view-resume": "Visualizza CV"
 	},
 	"TabExperience": {
+		"infarma": {
+			"title": "Infarma Sistemas",
+			"subtitle": "Sviluppatore Full Stack",
+			"date": "Luglio 2026 - Presente",
+			"responsibilities": {
+				"1": "Distribuzione e configurazione di VPS, inclusi DNS, Nginx, Caddy e SSL.",
+				"2": "Esperienza con Node.js, React, NestJS, Tauri, Go e altri linguaggi di programmazione, framework e strumenti di sviluppo moderni."
+			}
+		},
 		"macedo-soft-house": {
 			"title": "Macedo Soft House",
 			"subtitle": "Sviluppatore Full-Stack",
@@ -79,7 +86,6 @@
 		"view-all-projects": "Vedi archivio completo",
 		"archive-badge": "Archivio completo",
 		"archive-title": "Tutti i progetti",
-		"archive-description": "Una raccolta più ampia di applicazioni web, API, sistemi amministrativi ed esperimenti di prodotto costruiti nel corso del percorso.",
 		"repository": "Repository",
 		"live-site": "Sito",
 		"back-home": "Torna alla home",
@@ -146,6 +152,10 @@
 		"project-viu-ganhou": {
 			"title": "Viu Ganhou",
 			"description": "Guarda annunci e completa attività per guadagnare denaro e prelevare in criptovalute."
+		},
+		"project-ecommerce": {
+			"title": "Ecommerce",
+			"description": "Piattaforma ecommerce per farmacie con catalogo, ricerca e filtri, carrello, checkout e monitoraggio degli ordini. Vetrine personalizzate per azienda e punto vendita, con pannello di gestione."
 		}
 	},
 	"Navbar": {
@@ -183,30 +193,59 @@
 		"mandarin": "Mandarino"
 	},
 	"Narrative": {
-		"hero-line-1": "Dall’idea all’interfaccia.",
-		"hero-line-2": "Dal codice alla vita reale.",
-		"hero-subtitle": "Creo esperienze digitali che collegano persone, prodotti e possibilità.",
-		"hero-caption": "Interfacce. API. Prodotti.",
 		"scroll": "Continua a esplorare",
 		"project-preview": "Interfacce dei progetti di Levi Gleik",
 		"statement": "La tecnologia ha senso quando semplifica la vita di qualcuno.",
-		"projects-title": "Progetti reali. Nuove possibilità.",
-		"project-category-0": "Salute e gestione",
-		"project-category-1": "Produttività e collaborazione",
-		"project-category-2": "Studio e organizzazione",
-		"real-project": "Interfaccia reale del progetto",
-		"stack-title-1": "Cura in ogni pixel.",
-		"stack-title-2": "Chiarezza in ogni riga.",
-		"stack-description": "Da ciò che vedi sullo schermo a ciò che accade sul server. Una visione completa per costruire prodotti che funzionano insieme.",
-		"stack-footnote": "Front-end → Back-end → Prodotto",
-		"experience-title-1": "Costruire prodotti.",
-		"experience-title-2": "Imparare ogni giorno.",
-		"formation-title": "Una base per andare oltre.",
-		"contact-title-1": "La tua prossima idea",
-		"contact-title-2": "inizia con un ciao.",
+		"projects-title": "Progetti",
+		"project-category-0": "Commercio & esperienza di acquisto",
+		"project-category-1": "Ricompense e attività",
+		"project-category-2": "Produttività e collaborazione",
+		"formation-title": "Formazione",
 		"footer": "Creato con intenzione. Sviluppato da Levi Gleik.",
 		"skip-content": "Vai al contenuto",
 		"navigation": "Navigazione principale",
-		"chapters": "Esplora le sezioni"
+		"chapters": "Esplora le sezioni",
+		"project-category-3": "Operazioni e tracciabilità",
+		"project-mobile-preview": "Versione mobile di {title}",
+		"stack-title": "Tecnologie",
+		"experience-title": "Esperienza"
+	},
+	"ContactForm": {
+		"title": "Invia un messaggio",
+		"name": "Nome",
+		"name-placeholder": "Come ti chiami?",
+		"email": "Email",
+		"email-placeholder": "tu@azienda.it",
+		"phone": "Telefono (facoltativo)",
+		"phone-placeholder": "+39 333 123 4567",
+		"message": "Messaggio",
+		"message-placeholder": "Raccontami la tua idea, il tuo progetto o un’opportunità…",
+		"send": "Invia messaggio",
+		"sending": "Invio…",
+		"privacy": "I tuoi dati saranno usati solo per rispondere al messaggio.",
+		"success-title": "Messaggio inviato!",
+		"success-description": "Grazie per avermi contattato. Leggerò il messaggio e risponderò all’email indicata.",
+		"send-another": "Invia un altro messaggio",
+		"invalid-name": "Inserisci un nome tra 2 e 100 caratteri.",
+		"invalid-email": "Inserisci un’email valida. Gli indirizzi temporanei non sono accettati.",
+		"invalid-phone": "Inserisci un telefono valido con prefisso internazionale o locale.",
+		"invalid-message": "Scrivi un messaggio tra 10 e 5.000 caratteri.",
+		"unavailable": "Invio non disponibile. Riprova più tardi o scrivi a contato@gleiksoft.dev.",
+		"blocked": "Impossibile convalidare l’invio. Riprova o contattami via email.",
+		"invalid": "Controlla i campi indicati e riprova.",
+		"session": "La sessione è scaduta. Prova a inviare di nuovo.",
+		"too-fast": "Attendi qualche secondo prima di inviare.",
+		"rate-limit": "Hai raggiunto il limite di invii. Attendi prima di riprovare.",
+		"setup-required": "Il modulo non è ancora configurato. Imposta RESEND_API_KEY e ARCJET_KEY, poi riavvia il server."
+	},
+	"ImageViewer": {
+		"zoom-out": "Riduci zoom",
+		"zoom-in": "Ingrandisci zoom",
+		"fullscreen": "Schermo intero",
+		"exit-fullscreen": "Esci da schermo intero",
+		"open-new-tab": "Apri in una nuova scheda",
+		"download": "Scarica immagine",
+		"close": "Chiudi",
+		"back": "Indietro"
 	}
 }

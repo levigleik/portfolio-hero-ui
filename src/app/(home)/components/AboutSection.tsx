@@ -1,6 +1,7 @@
 "use client";
 
 import { usePinnedScene } from "@/components/motion/ScrollScene";
+import ResumeLink from "@/components/ResumeLink";
 import { PROJECT_TECHONOLOGIES } from "@/lib/constants";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowDown, ArrowUpRight, Braces } from "lucide-react";
@@ -11,6 +12,7 @@ import ProjectScreen from "./ProjectScreen";
 export default function AboutSection() {
 	const t = useTranslations("Narrative");
 	const home = useTranslations("HomePage");
+	const projects = useTranslations("Projects");
 	const section = useRef<HTMLElement>(null);
 	const pinned = usePinnedScene();
 	const { scrollYProgress } = useScroll({
@@ -23,8 +25,8 @@ export default function AboutSection() {
 	const screenScale = useTransform(scrollYProgress, [0, 1], [1, 1.13]);
 	const rotate = useTransform(scrollYProgress, [0, 1], [-7, 0]);
 	const satelliteY = useTransform(scrollYProgress, [0, 1], [0, -180]);
-	const clinic = PROJECT_TECHONOLOGIES[0];
-	const meetings = PROJECT_TECHONOLOGIES[2];
+	const clinic = PROJECT_TECHONOLOGIES.find((project) => project.name === "gestao-clinica")!;
+	const ecommerce = PROJECT_TECHONOLOGIES.find((project) => project.name === "ecommerce")!;
 
 	return (
 		<section
@@ -40,19 +42,16 @@ export default function AboutSection() {
 					>
 						<p className="eyebrow hero-eyebrow">
 							<span className="status-dot" />
-							Levi Gleik <span className="eyebrow-divider">/</span>{" "}
-							{home("full-stack-developer")}
+							Levi Gleik
 						</p>
-						<h1>
-							{t("hero-line-1")}
-							<br />
-							<span>{t("hero-line-2")}</span>
-						</h1>
-						<p className="hero-subtitle">{t("hero-subtitle")}</p>
-						<a href="#projects" className="button-blue">
-							{home("explore-projects")}
-							<ArrowUpRight size={18} />
-						</a>
+						<h1>{home("full-stack-developer")}</h1>
+						<div className="hero-actions mt-4">
+							<a href="#projects" className="button-blue">
+								{home("explore-projects")}
+								<ArrowUpRight size={18} />
+							</a>
+							<ResumeLink />
+						</div>
 					</motion.div>
 
 					<div className="hero-visual" aria-label={t("project-preview")}>
@@ -68,7 +67,7 @@ export default function AboutSection() {
 						>
 							<ProjectScreen
 								src={clinic.photo}
-								title="Gestão Clínica"
+								title={projects("project-gestao-clinica.title")}
 								address="novogestaoclinica.netlify.app"
 								priority
 							/>
@@ -78,9 +77,9 @@ export default function AboutSection() {
 							style={pinned ? { y: satelliteY } : undefined}
 						>
 							<ProjectScreen
-								src={meetings.photo}
-								title="Sistema de reuniões"
-								address="atasreunioes.com"
+								src={ecommerce.photo}
+								title={projects("project-ecommerce.title")}
+								address={projects("project-ecommerce.title")}
 								priority
 							/>
 						</motion.div>
@@ -93,7 +92,6 @@ export default function AboutSection() {
 						</div>
 					</div>
 					<div className="hero-caption">
-						<span>{t("hero-caption")}</span>
 						<a href="#about">
 							{t("scroll")}
 							<ArrowDown size={16} />

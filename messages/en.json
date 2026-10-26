@@ -21,14 +21,21 @@
 		"about-title": "Hands-on experience across the TypeScript ecosystem",
 		"about-text": "Software developer with over 5 years of experience in the TypeScript ecosystem, with strong expertise in React.js, Node.js/Nest.js, API integration and Prisma ORM. I have been responsible for developing and implementing end-to-end web solutions, building systems to optimize service pricing, corporate meeting management, and other operational workflows.",
 		"about-stack-label": "Core stack",
-		"experience-description": "Professional experience building full-stack products, integrating REST APIs and delivering systems for internal operations and client-facing workflows.",
 		"formation-description": "Academic and technical education that supports product thinking, software architecture and the foundations behind web applications.",
 		"contact-kicker": "Contact",
-		"contact-title": "Let's shape the next interface?",
-		"contact-description": "If you want to talk about product, full-stack architecture, API integration or a new project, I'm one message away.",
-		"send-email": "Send email"
+		"send-email": "Send email",
+		"view-resume": "View résumé"
 	},
 	"TabExperience": {
+		"infarma": {
+			"title": "Infarma Sistemas",
+			"subtitle": "Full Stack Developer",
+			"date": "July 2026 - Present",
+			"responsibilities": {
+				"1": "VPS deployment and configuration, including DNS, Nginx, Caddy and SSL.",
+				"2": "Experience with Node.js, React, NestJS, Tauri, Go and other programming languages, frameworks and modern development tools."
+			}
+		},
 		"macedo-soft-house": {
 			"title": "Macedo Soft House",
 			"subtitle": "Full-Stack Developer",
@@ -79,7 +86,6 @@
 		"view-all-projects": "View full archive",
 		"archive-badge": "Complete archive",
 		"archive-title": "All projects",
-		"archive-description": "A broader collection of web applications, APIs, admin systems and product experiments built across the journey.",
 		"repository": "Repository",
 		"live-site": "Live site",
 		"back-home": "Back to home",
@@ -146,6 +152,10 @@
 		"project-viu-ganhou": {
 			"title": "Watch and Earn",
 			"description": "Watch ads and complete tasks to earn money and withdraw in cryptocurrencies."
+		},
+		"project-ecommerce": {
+			"title": "Ecommerce",
+			"description": "Ecommerce platform for pharmacies with a product catalog, search and filters, shopping bag, checkout and order tracking. Custom storefronts for each company and branch, with an admin panel."
 		}
 	},
 	"Navbar": {
@@ -183,30 +193,59 @@
 		"mandarin": "Mandarin"
 	},
 	"Narrative": {
-		"hero-line-1": "From idea to interface.",
-		"hero-line-2": "From code to real life.",
-		"hero-subtitle": "I build digital experiences that connect people, products and possibilities.",
-		"hero-caption": "Interfaces. APIs. Products.",
 		"scroll": "Keep exploring",
 		"project-preview": "Project interfaces by Levi Gleik",
 		"statement": "Technology makes sense when it makes someone’s life simpler.",
-		"projects-title": "Real projects. New possibilities.",
-		"project-category-0": "Healthcare & management",
-		"project-category-1": "Productivity & collaboration",
-		"project-category-2": "Study & organization",
-		"real-project": "Actual project interface",
-		"stack-title-1": "Care in every pixel.",
-		"stack-title-2": "Clarity in every line.",
-		"stack-description": "From what you see on screen to what happens on the server. A complete perspective to build products that work together.",
-		"stack-footnote": "Front-end → Back-end → Product",
-		"experience-title-1": "Building products.",
-		"experience-title-2": "Collecting lessons.",
-		"formation-title": "A foundation to go further.",
-		"contact-title-1": "Your next idea",
-		"contact-title-2": "starts with a hello.",
+		"projects-title": "Projects",
+		"project-category-0": "Commerce & shopping experience",
+		"project-category-1": "Rewards & activities",
+		"project-category-2": "Productivity & collaboration",
+		"formation-title": "Education",
 		"footer": "Made with intention. Developed by Levi Gleik.",
 		"skip-content": "Skip to content",
 		"navigation": "Main navigation",
-		"chapters": "Explore the sections"
+		"chapters": "Explore the sections",
+		"project-category-3": "Operations & traceability",
+		"project-mobile-preview": "Mobile version of {title}",
+		"stack-title": "Technologies",
+		"experience-title": "Experience"
+	},
+	"ContactForm": {
+		"title": "Send a message",
+		"name": "Name",
+		"name-placeholder": "What is your name?",
+		"email": "Email",
+		"email-placeholder": "you@company.com",
+		"phone": "Phone (optional)",
+		"phone-placeholder": "+1 555 123 4567",
+		"message": "Message",
+		"message-placeholder": "Tell me about your idea, project or opportunity…",
+		"send": "Send message",
+		"sending": "Sending…",
+		"privacy": "Your details will only be used to respond to your message.",
+		"success-title": "Message sent!",
+		"success-description": "Thanks for reaching out. I will read your message and reply to the email you provided.",
+		"send-another": "Send another message",
+		"invalid-name": "Enter a name between 2 and 100 characters.",
+		"invalid-email": "Enter a valid email. Temporary addresses are not accepted.",
+		"invalid-phone": "Enter a valid phone number, including the country or area code.",
+		"invalid-message": "Write a message between 10 and 5,000 characters.",
+		"unavailable": "Unable to send right now. Try later or email contato@gleiksoft.dev.",
+		"blocked": "We could not validate this submission. Try again or contact me by email.",
+		"invalid": "Check the highlighted fields and try again.",
+		"session": "Your session expired. Please try sending again.",
+		"too-fast": "Wait a few seconds before sending.",
+		"rate-limit": "You have reached the submission limit. Please wait before trying again.",
+		"setup-required": "The form is not configured in this environment. Set RESEND_API_KEY and ARCJET_KEY, then restart the server."
+	},
+	"ImageViewer": {
+		"zoom-out": "Zoom out",
+		"zoom-in": "Zoom in",
+		"fullscreen": "Fullscreen",
+		"exit-fullscreen": "Exit fullscreen",
+		"open-new-tab": "Open in new tab",
+		"download": "Download image",
+		"close": "Close",
+		"back": "Back"
 	}
 }

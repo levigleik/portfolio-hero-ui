@@ -2,7 +2,7 @@
 
 import { Reveal, usePinnedScene } from "@/components/motion/ScrollScene";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowDownRight, Braces } from "lucide-react";
+import { Braces } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useRef } from "react";
 
@@ -29,11 +29,7 @@ export default function StackSection() {
 						<Braces size={19} />
 						{home("about-stack-label")}
 					</p>
-					<h2 id="stack-title">
-						{t("stack-title-1")}
-						<br />
-						<span>{t("stack-title-2")}</span>
-					</h2>
+					<h2 id="stack-title">{t("stack-title")}</h2>
 				</Reveal>
 				<div
 					className="stack-lines"
@@ -53,11 +49,6 @@ export default function StackSection() {
 						<span>Prisma</span>
 					</motion.div>
 				</div>
-				<Reveal className="stack-bottom">
-					<ArrowDownRight strokeWidth={1} />
-					<p>{t("stack-description")}</p>
-					<span className="stack-footnote">{t("stack-footnote")}</span>
-				</Reveal>
 			</div>
 		</section>
 	);

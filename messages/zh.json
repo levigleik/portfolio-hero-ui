@@ -21,14 +21,21 @@
 		"about-title": "在 TypeScript 生态中的实战经验",
 		"about-text": "软件开发者，在 TypeScript 生态中拥有超过 5 年经验，熟练使用 React.js、Node.js/Nest.js，具备 API 集成与 Prisma ORM 经验。在职业经历中，我负责过端到端 Web 解决方案的设计与实现，开发了用于优化服务定价、企业会议管理以及其他运营流程的系统。",
 		"about-stack-label": "核心技术栈",
-		"experience-description": "拥有开发全栈产品、集成 REST API 以及交付面向内部运营和客户流程系统的专业经验。",
 		"formation-description": "学术与技术基础支撑了产品思维、软件架构能力以及 Web 应用背后的核心原理。",
 		"contact-kicker": "联系",
-		"contact-title": "一起打造下一个界面？",
-		"contact-description": "如果你想聊产品、全栈架构、API 集成或新项目，我随时可以沟通。",
-		"send-email": "发送邮件"
+		"send-email": "发送邮件",
+		"view-resume": "查看简历"
 	},
 	"TabExperience": {
+		"infarma": {
+			"title": "Infarma Sistemas",
+			"subtitle": "全栈开发工程师",
+			"date": "2026年7月 - 至今",
+			"responsibilities": {
+				"1": "部署和配置 VPS，包括 DNS、Nginx、Caddy 和 SSL。",
+				"2": "具备 Node.js、React、NestJS、Tauri、Go 以及其他编程语言、框架和现代开发工具的使用经验。"
+			}
+		},
 		"macedo-soft-house": {
 			"title": "Macedo Soft House",
 			"subtitle": "全栈开发者",
@@ -79,7 +86,6 @@
 		"view-all-projects": "查看完整归档",
 		"archive-badge": "完整归档",
 		"archive-title": "所有项目",
-		"archive-description": "更完整的项目集合，涵盖 Web 应用、API、管理系统以及产品实验。",
 		"repository": "代码仓库",
 		"live-site": "在线站点",
 		"back-home": "返回首页",
@@ -146,6 +152,10 @@
 		"project-viu-ganhou": {
 			"title": "Viu Ganhou",
 			"description": "观看广告并完成任务来赚钱，并以加密货币提现吗。"
+		},
+		"project-ecommerce": {
+			"title": "Ecommerce",
+			"description": "面向药房的电商平台，提供商品目录、搜索与筛选、购物袋、结账和订单跟踪。支持按企业和门店定制店面，并配备管理后台。"
 		}
 	},
 	"Navbar": {
@@ -183,30 +193,59 @@
 		"mandarin": "中文"
 	},
 	"Narrative": {
-		"hero-line-1": "从创意到界面。",
-		"hero-line-2": "从代码到真实生活。",
-		"hero-subtitle": "打造连接人与产品的数字体验，探索更多可能。",
-		"hero-caption": "界面。API。产品。",
 		"scroll": "继续探索",
 		"project-preview": "Levi Gleik 的项目界面",
 		"statement": "让生活变得简单，才是技术的意义。",
-		"projects-title": "真实项目。更多可能。",
-		"project-category-0": "医疗与管理",
-		"project-category-1": "效率与协作",
-		"project-category-2": "学习与规划",
-		"real-project": "真实项目界面",
-		"stack-title-1": "用心打磨每个像素。",
-		"stack-title-2": "清晰编写每行代码。",
-		"stack-description": "从屏幕界面到服务器逻辑，以完整视角构建协同运行的产品。",
-		"stack-footnote": "前端 → 后端 → 产品",
-		"experience-title-1": "打造产品。",
-		"experience-title-2": "积累经验。",
-		"formation-title": "扎实基础，走得更远。",
-		"contact-title-1": "你的下一个创意，",
-		"contact-title-2": "从一句你好开始。",
+		"projects-title": "项目",
+		"project-category-0": "商业与购物体验",
+		"project-category-1": "奖励与活动",
+		"project-category-2": "效率与协作",
+		"formation-title": "教育",
 		"footer": "用心创造。由 Levi Gleik 开发。",
 		"skip-content": "跳转到内容",
 		"navigation": "主导航",
-		"chapters": "浏览页面章节"
+		"chapters": "浏览页面章节",
+		"project-category-3": "运营与追踪",
+		"project-mobile-preview": "{title}的移动版",
+		"stack-title": "技术栈",
+		"experience-title": "经验"
+	},
+	"ContactForm": {
+		"title": "发送消息",
+		"name": "姓名",
+		"name-placeholder": "怎么称呼您？",
+		"email": "电子邮箱",
+		"email-placeholder": "you@company.com",
+		"phone": "电话（选填）",
+		"phone-placeholder": "+86 138 0013 8000",
+		"message": "消息",
+		"message-placeholder": "聊聊您的想法、项目或合作机会…",
+		"send": "发送消息",
+		"sending": "发送中…",
+		"privacy": "您的信息仅用于回复此次联系。",
+		"success-title": "消息已发送！",
+		"success-description": "感谢您的联系。我会阅读您的消息，并通过您填写的邮箱回复。",
+		"send-another": "发送另一条消息",
+		"invalid-name": "请输入 2 至 100 个字符的姓名。",
+		"invalid-email": "请输入有效邮箱，不接受临时邮箱地址。",
+		"invalid-phone": "请输入有效电话号码，包含国家或地区代码。",
+		"invalid-message": "请输入 10 至 5,000 个字符的消息。",
+		"unavailable": "暂时无法发送。请稍后重试，或发邮件至 contato@gleiksoft.dev。",
+		"blocked": "无法验证此次提交。请重试或通过电子邮件联系。",
+		"invalid": "请检查标记的字段后重试。",
+		"session": "会话已过期，请重新发送。",
+		"too-fast": "请稍等几秒后再发送。",
+		"rate-limit": "您已达到发送次数上限，请稍后重试。",
+		"setup-required": "此环境尚未配置表单。请设置 RESEND_API_KEY 和 ARCJET_KEY，然后重启服务器。"
+	},
+	"ImageViewer": {
+		"zoom-out": "缩小",
+		"zoom-in": "放大",
+		"fullscreen": "全屏",
+		"exit-fullscreen": "退出全屏",
+		"open-new-tab": "在新标签页中打开",
+		"download": "下载图片",
+		"close": "关闭",
+		"back": "返回"
 	}
 }

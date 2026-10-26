@@ -70,6 +70,10 @@ Acesse uma versão de demonstração (caso publicada) ou rode localmente seguind
 
 Este projeto pode ser facilmente publicado no Vercel, Netlify ou qualquer serviço compatível com Next.js.
 
+## Formulário de contato
+
+O formulário usa HeroUI, Resend e Arcjet. Configure as variáveis de `.env.example` conforme o [guia de configuração e proteções](docs/contact.md). O recebimento usa `contato@gleiksoft.dev`; o envio exige verificar o subdomínio no Resend e configurar as duas chaves no servidor.
+
 ## Licença
 
 Distribuído sob a licença MIT. Veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
