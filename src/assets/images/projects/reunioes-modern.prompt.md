@@ -1,0 +1,14 @@
+# Sistema de Reuniões — visual concept
+
+Generated with the built-in image generation tool on 2026-10-26. Fictional demonstration data. The original `reunioes.png` was supplied only as a functional-domain reference and is preserved.
+
+## Final prompt
+
+Use case: ui-mockup
+Asset type: high fidelity portfolio project image, desktop meeting management web application.
+Primary request: Redesign the supplied old Sistema de Reuniões screen into an exceptionally modern, elegant collaboration workspace with its own distinct visual identity. Input image 1 is a functional-domain reference only (meetings, actions, participants), not a style to preserve. Create a new polished interface.
+Composition: flat, straight-on, edge-to-edge screenshot at a wide 2:1 aspect ratio. Fill the image with the application itself, no external browser chrome, device, perspective, surroundings, marketing text or decorative 3D objects.
+Design direction: warm ivory canvas, deep aubergine slim sidebar, muted violet highlights, warm charcoal typography, subtle peach and sage status accents. Refined editorial typography, spacious hierarchy, understated rounded edges and hairline separators. Quiet premium feel, carefully aligned high-fidelity UI.
+Layout: a narrow dark plum navigation rail with small simple icons and a restrained wordmark "Reuniões". A warm white secondary panel shows "Seu espaço" with a compact list of upcoming meetings, the selected meeting highlighted in a pale violet rectangle, small dates and times. The large main canvas is a meeting detail document: breadcrumb, elegant large heading "Alinhamento de produto", small metadata row "Hoje · 14:00–15:00" and overlapping participant avatars; small violet "Entrar na reunião" button aligned right. Under the header, subtle tabs "Pauta", "Decisões", "Ações", with Pauta selected. The document has three generous numbered agenda rows with short labels "Resultados da semana", "Prioridades do produto", "Próximos passos", each with a one-line note and tiny duration. Near the bottom an elegant inset panel "Decisões e próximos passos" with two concise tasks, assignee avatar and soft status pill. On the right a slim quiet panel "Participantes" with four fictional names and round profile thumbnails, then a restrained vertical activity timeline below. Show filled realistic demo information rather than empty tables.
+Text: Portuguese, clean and legible, use the exact labels given. Optional small text should stay short.
+Constraints: it must look like meeting planning and collaborative minutes, with agenda and decisions as the visual centerpiece. Keep main heading readable when image is reduced. Distinct from a medical dashboard: avoid blue/cyan palette, KPI metric cards, charts, revenue graphs, patient tables, calendar grids, white vertical admin sidebar or clinic motifs. No MSF logo or unrelated brand logos. No watermark. This is a visual concept with fictional demo data.

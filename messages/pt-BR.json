@@ -21,14 +21,21 @@
 		"about-title": "Experiência prática no ecossistema TypeScript",
 		"about-text": "Desenvolvedor de software com mais de 5 anos de experiência no ecossistema TypeScript, com domínio de React.js, Node.js/Nest.js, integrações com APIs e Prisma ORM. Ao longo da trajetória, fui responsável por desenvolver e implementar soluções web ponta a ponta, criando sistemas para otimizar a precificação de serviços, a gestão de reuniões corporativas e outros fluxos operacionais.",
 		"about-stack-label": "Stack principal",
-		"experience-description": "Experiência profissional no desenvolvimento de produtos full-stack, integração com APIs REST e entrega de sistemas para operação interna e fluxos voltados ao cliente.",
 		"formation-description": "Base acadêmica e técnica que sustenta pensamento de produto, arquitetura de software e os fundamentos por trás das aplicações web.",
 		"contact-kicker": "Contato",
-		"contact-title": "Vamos desenhar a próxima interface?",
-		"contact-description": "Se quiser conversar sobre produto, arquitetura full-stack, integração com APIs ou um novo projeto, estou a uma mensagem de distância.",
-		"send-email": "Enviar e-mail"
+		"send-email": "Enviar e-mail",
+		"view-resume": "Ver currículo"
 	},
 	"TabExperience": {
+		"infarma": {
+			"title": "Infarma Sistemas",
+			"subtitle": "Desenvolvedor Full Stack",
+			"date": "Julho 2026 - Presente",
+			"responsibilities": {
+				"1": "Implantação e configuração de VPS, incluindo DNS, Nginx, Caddy e SSL.",
+				"2": "Experiência com Node.js, React, NestJS, Tauri, Go e outras linguagens de programação, frameworks e ferramentas de desenvolvimento modernas."
+			}
+		},
 		"macedo-soft-house": {
 			"title": "Macedo Soft House",
 			"subtitle": "Desenvolvedor Full-Stack",
@@ -79,7 +86,6 @@
 		"view-all-projects": "Ver arquivo completo",
 		"archive-badge": "Arquivo completo",
 		"archive-title": "Todos os projetos",
-		"archive-description": "Uma coleção mais ampla com aplicações web, APIs, sistemas administrativos e experimentos de produto construídos ao longo da trajetória.",
 		"repository": "Repositório",
 		"live-site": "Site",
 		"back-home": "Voltar para a home",
@@ -146,6 +152,10 @@
 		"project-viu-ganhou": {
 			"title": "Viu Ganhou",
 			"description": "Veja anúncios e complete tarefas para ganhar dinheiro e sacar em criptomoedas."
+		},
+		"project-ecommerce": {
+			"title": "Ecommerce",
+			"description": "Plataforma de ecommerce para farmácias com catálogo, busca e filtros, sacola, checkout e acompanhamento de pedidos. Vitrines personalizadas por empresa e unidade, com painel de gestão."
 		}
 	},
 	"Navbar": {
@@ -181,5 +191,61 @@
 		"french": "Francês",
 		"italian": "Italiano",
 		"mandarin": "Mandarim"
+	},
+	"Narrative": {
+		"scroll": "Continue explorando",
+		"project-preview": "Interfaces dos projetos de Levi Gleik",
+		"statement": "Tecnologia faz sentido quando simplifica a vida de alguém.",
+		"projects-title": "Projetos",
+		"project-category-0": "Comércio & experiência de compra",
+		"project-category-1": "Recompensas & atividades",
+		"project-category-2": "Produtividade & colaboração",
+		"formation-title": "Formação",
+		"footer": "Desenvolvido por Levi Gleik.",
+		"skip-content": "Pular para o conteúdo",
+		"navigation": "Navegação principal",
+		"chapters": "Navegar pelas seções",
+		"project-category-3": "Operação & rastreabilidade",
+		"project-mobile-preview": "Versão móvel de {title}",
+		"stack-title": "Tecnologias",
+		"experience-title": "Experiência"
+	},
+	"ContactForm": {
+		"title": "Envie uma mensagem",
+		"name": "Nome",
+		"name-placeholder": "Como você se chama?",
+		"email": "Email",
+		"email-placeholder": "voce@empresa.com",
+		"phone": "Telefone (opcional)",
+		"phone-placeholder": "+55 (85) 99999-9999",
+		"message": "Mensagem",
+		"message-placeholder": "Conte um pouco sobre sua ideia, projeto ou oportunidade…",
+		"send": "Enviar mensagem",
+		"sending": "Enviando…",
+		"privacy": "Seus dados serão usados apenas para responder ao seu contato.",
+		"success-title": "Mensagem enviada!",
+		"success-description": "Obrigado pelo contato. Vou ler sua mensagem e responder pelo email informado.",
+		"send-another": "Enviar outra mensagem",
+		"invalid-name": "Informe um nome entre 2 e 100 caracteres.",
+		"invalid-email": "Informe um email válido. Endereços temporários não são aceitos.",
+		"invalid-phone": "Informe um telefone válido, com código do país ou DDD.",
+		"invalid-message": "Escreva uma mensagem entre 10 e 5.000 caracteres.",
+		"unavailable": "Não foi possível enviar agora. Tente mais tarde ou escreva para contato@gleiksoft.dev.",
+		"blocked": "Não foi possível validar o envio. Tente novamente ou entre em contato por email.",
+		"invalid": "Confira os campos indicados e tente novamente.",
+		"session": "Sua sessão expirou. Tente enviar novamente.",
+		"too-fast": "Aguarde alguns segundos antes de enviar.",
+		"rate-limit": "Você atingiu o limite de envios. Aguarde antes de tentar novamente.",
+		"setup-required": "Formulário ainda não configurado neste ambiente. Defina RESEND_API_KEY e ARCJET_KEY e reinicie o servidor."
+	},
+	"ImageViewer": {
+		"zoom-out": "Diminuir zoom",
+		"zoom-in": "Aumentar zoom",
+		"fullscreen": "Tela cheia",
+		"exit-fullscreen": "Sair da tela cheia",
+		"open-new-tab": "Abrir em nova aba",
+		"download": "Baixar imagem",
+		"close": "Fechar",
+		"back": "Voltar"
 	}
 }

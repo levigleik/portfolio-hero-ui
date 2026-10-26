@@ -1,11 +1,13 @@
 import chronoStudy from "../assets/images/projects/chrono-study.png";
+import ecommerce from "../assets/images/projects/ecommerce.webp";
+import ecommerceMobile from "../assets/images/projects/ecommerce-mobile.webp";
 import dispatchSystem from "../assets/images/projects/dispatch-system.png";
-import dlav from "../assets/images/projects/dlav.png";
-import gestaoClinica from "../assets/images/projects/gestao-clinica.png";
+import dlav from "../assets/images/projects/dlav-modern.webp";
+import gestaoClinica from "../assets/images/projects/gestao-clinica-modern.png";
 import jogoDaVelha02 from "../assets/images/projects/jogo-da-velha-02.png";
 import oscManager from "../assets/images/projects/osc-manager.png";
 import pesquisaSatisfacao from "../assets/images/projects/pesquisa-satisfacao.png";
-import reunioes from "../assets/images/projects/reunioes.png";
+import reunioes from "../assets/images/projects/reunioes-modern.png";
 import sauloImoveis from "../assets/images/projects/saulo-imoveis.png";
 import servrent from "../assets/images/projects/servrent.png";
 import tizenIptvOpen from "../assets/images/projects/tizen-iptv-open.png";
@@ -13,7 +15,7 @@ import transferBack from "../assets/images/projects/transfer-back.png";
 import transferCase from "../assets/images/projects/transfer-case.png";
 import transferNestjs from "../assets/images/projects/transfer-nestjs.png";
 import vacationPlan from "../assets/images/projects/vacation-plan.png";
-import viuGanhou from "../assets/images/projects/viu-ganhou.png";
+import viuGanhou from "../assets/images/projects/viu-ganhou-modern.webp";
 
 export const PROJECT_TECHONOLOGIES = [
 	{
@@ -22,6 +24,14 @@ export const PROJECT_TECHONOLOGIES = [
 		techonologies: ["React", "Vite", "Bootstrap", "AdonisJS", "Lucid ORM"],
 		git: null,
 		url: "https://novogestaoclinica.netlify.app",
+	},
+	{
+		name: "ecommerce",
+		photo: ecommerce.src,
+		mobilePhoto: ecommerceMobile.src,
+		techonologies: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "TanStack Query"],
+		git: null,
+		url: null,
 	},
 	{
 		name: "saulo-imoveis",

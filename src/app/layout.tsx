@@ -42,7 +42,7 @@ export default async function RootLayout({
 				<head />
 				<body
 					className={clsx(
-						"min-h-screen overflow-x-hidden font-sans antialiased",
+						"min-h-screen overflow-x-clip font-sans antialiased",
 						fontSans.variable,
 						fontMono.variable,
 						fontCalistoga.variable,
@@ -50,13 +50,9 @@ export default async function RootLayout({
 				>
 					<NextIntlClientProvider>
 						<Providers>
-							<div className="relative min-h-screen overflow-x-hidden">
-								<div className="pointer-events-none fixed left-[-8rem] top-[-6rem] z-0 h-80 w-80 rounded-full bg-[var(--orb-primary)] blur-[110px]" />
-								<div className="pointer-events-none fixed right-[-7rem] top-24 z-0 h-72 w-72 rounded-full bg-[var(--orb-secondary)] blur-[120px]" />
-								<div className="pointer-events-none fixed bottom-[-10rem] left-1/2 z-0 h-96 w-96 -translate-x-1/2 rounded-full bg-[var(--orb-tertiary)] blur-[150px]" />
-								<div className="pointer-events-none fixed inset-0 z-0 opacity-70 [background-image:radial-gradient(var(--grid-dot)_1px,transparent_1px)] [background-size:40px_40px] [mask-image:linear-gradient(to_bottom,rgba(0,0,0,0.95),transparent_96%)]" />
+							<div className="relative min-h-screen">
 								<Navbar />
-								<main className="relative z-10 flex flex-col pb-20">
+								<main id="main-content" className="relative">
 									{children}
 								</main>
 							</div>
