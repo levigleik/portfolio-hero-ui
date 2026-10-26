@@ -46,9 +46,7 @@ export async function GET() {
 
 export async function POST(request: Request) {
 	try {
-		const origin = process.env.CONTACT_SITE_URL
-			? new URL(process.env.CONTACT_SITE_URL).origin
-			: new URL(request.url).origin;
+		const origin = new URL(request.url).origin;
 		if (request.headers.get("origin") !== origin)
 			return respond({error: "blocked"}, 403);
 
