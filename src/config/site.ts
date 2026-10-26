@@ -1,6 +1,6 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Levi Gleik",
+  name: "Gleik Soft",
   description: "Portfólio",
 };

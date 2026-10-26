@@ -1,14 +1,10 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
 import type { ReactNode } from "react";
+import { siteConfig } from "@/config/site";
 
-export async function generateMetadata(): Promise<Metadata> {
-	const t = await getTranslations("Navbar");
-
-	return {
-		title: t("home"),
-	};
-}
+export const metadata: Metadata = {
+	title: { absolute: siteConfig.name },
+};
 
 export default function Layout({ children }: { children: ReactNode }) {
 	return children;

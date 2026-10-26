@@ -6,6 +6,7 @@ import { ArrowUpRight, Menu, X } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { siteConfig } from "@/config/site";
 import LanguageSelector from "./LanguageSelector";
 import ThemeSelector from "./ThemeSelector";
 
@@ -84,14 +85,10 @@ export default function NavbarComp() {
 					<a
 						href="/#hero"
 						className="wordmark"
-						aria-label="Levi Gleik"
+						aria-label={siteConfig.name}
 						onClick={() => setOpen(false)}
 					>
-						<span className="brand-symbol" aria-hidden="true">
-							<i />
-							<i />
-						</span>
-						levi<span>gleik.</span>
+						{siteConfig.name}
 					</a>
 					<nav className="desktop-navigation" aria-label={n("navigation")}>
 						{(["about", "projects", "experience"] as Section[]).map((id) => (

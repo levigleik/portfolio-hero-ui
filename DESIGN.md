@@ -15,7 +15,7 @@ Spacing and scene durations below are portfolio implementation choices, rather t
 
 ## Portfolio implementation
 
-Keep the existing Next.js, next-intl, HeroUI and Framer Motion stack. Use Inter instead of the reference's proprietary font. Use white, neutral gray, `#2563EB` blue and a charcoal technology interlude; preserve an optional dark theme. Main content is capped at 1120px. Headings scale from roughly 35px on small screens to 78px on desktop. Body text stays at readable sizes; labels are secondary.
+Keep the existing Next.js, next-intl, HeroUI and Framer Motion stack. Use Inter instead of the reference's proprietary font. Use white, neutral gray, `#2563EB` blue and a charcoal technology interlude; preserve an optional dark theme. Main content is capped at 1200px. Headings scale from roughly 35px on small screens to 78px on desktop. Body text stays at readable sizes; labels are secondary.
 
 1. Opening: portfolio screenshots and the Gestão Clínica visual concept arranged as floating browser windows. Scrolling moves the title and screens at different speeds and changes perspective/scale.
 2. About: a pinned statement with a continuous typewriter reveal driven directly by scroll position, an orange caret that transfers between browser-wrapped lines, and a gradual scale reduction, followed by the existing biography. A small code token follows the floating-object movement.
@@ -69,7 +69,7 @@ The Ecommerce visual is a neutral interface concept without company names or dep
 
 Résumé access is available through a visible “Ver currículo” button beside the opening project link and another button in the experience heading. Both open the existing locale-specific PDF in a separate tab. These additions preserve the section copy pending the user's approval of proposed editorial cuts.
 
-The blue closing section contains only a centered, slightly darker blue form panel, capped at 760px wide. The invitation headline and introductory copy have been removed. Name and email share a row on desktop, and small screens stack every field. HeroUI v2 supplies name, email, optional telephone and an expanding message textarea. White labels, clear focus borders, inline field errors, an announced success state and a loading submit button complete the interaction. All six locales are supported. The server integration and setup are documented in `docs/contact.md`.
+The dark blue (`#1e40af`) closing section contains only a centered, darker blue form panel, capped at 760px wide. The invitation headline and introductory copy have been removed. Name and email share a row on desktop, and small screens stack every field. HeroUI v2 supplies name, email, optional telephone and an expanding message textarea. White labels, clear focus borders, inline field errors, an announced success state and a loading submit button complete the interaction. All six locales are supported. The server integration and setup are documented in `docs/contact.md`.
 
 ## D’Lav and Viu Ganhou image refresh (2026-10-26)
 
