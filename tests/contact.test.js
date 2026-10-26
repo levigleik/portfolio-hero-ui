@@ -71,7 +71,7 @@ function request(body, options = {}) {
 beforeEach(() => {
 	process.env.RESEND_API_KEY = "re_test_only_not_a_real_credential";
 	process.env.ARCJET_KEY = secret;
-	process.env.CONTACT_SITE_URL = "https://gleiksoft.dev";
+	delete process.env.CONTACT_SITE_URL;
 	delete process.env.CONTACT_FROM_EMAIL;
 	delete process.env.CONTACT_TO_EMAIL;
 	protect.mockReset();
@@ -197,6 +197,20 @@ describe("contact API boundary", () => {
 		expect((await POST(request("not json"))).status).toBe(400);
 		expect((await POST(request("null"))).status).toBe(400);
 		expect(protect).not.toHaveBeenCalled();
+		expect(send).not.toHaveBeenCalled();
+	});
+	test("accepts the actual request origin on localhost and www, even with an obsolete site URL", async () => {
+		process.env.CONTACT_SITE_URL = "https://gleiksoft.dev";
+		for (const origin of ["http://localhost:3005", "https://www.gleiksoft.dev"]) {
+			const response = await POST(
+				new Request(`${origin}/api/contact`, {
+					method: "POST",
+					headers: { origin, "content-type": "text/plain" },
+					body: "diagnostic",
+				}),
+			);
+			expect(response.status).toBe(415);
+		}
 		expect(send).not.toHaveBeenCalled();
 	});
 	test("bounds body bytes even without a Content-Length header", async () => {
