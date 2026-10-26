@@ -103,6 +103,13 @@ export const PROJECT_TECHONOLOGIES = [
 		url: null,
 	},
 	{
+		name: "dispatch-system",
+		photo: dispatchSystem.src,
+		techonologies: ["Vite", "React", "Ant Design", "NestJS", "Prisma"],
+		git: null,
+		url: "http://dispatch-system.netlify.app",
+	},
+	{
 		name: "transfer-case",
 		photo: transferCase.src,
 		techonologies: [
@@ -187,13 +194,6 @@ export const PROJECT_TECHONOLOGIES = [
 		techonologies: ["NextJS", "Framer Motion", "TailwindCSS", "Lottie"],
 		git: null,
 		url: "https://jogo-da-velha-02.vercel.app",
-	},
-	{
-		name: "dispatch-system",
-		photo: dispatchSystem.src,
-		techonologies: ["Vite", "React", "Ant Design", "NestJS", "Prisma"],
-		git: null,
-		url: "http://dispatch-system.netlify.app",
 	},
 	{
 		name: "vacation-plan",
